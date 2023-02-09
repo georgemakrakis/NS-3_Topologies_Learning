@@ -33,6 +33,10 @@ main(int argc, char* argv[])
     // LogComponentEnable ("TcpSocketImpl", LOG_LEVEL_ALL);
     // LogComponentEnable ("PacketSink", LOG_LEVEL_ALL);
 
+    Config::SetDefault("ns3::OnOffApplication::PacketSize", UintegerValue(250));
+    // Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5kb/s"));
+    Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5Mb/s"));
+
     uint32_t nCsma = 4;
     uint32_t nCsmaSecondary = 1;
 
@@ -100,7 +104,7 @@ main(int argc, char* argv[])
     clientHelper.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
     AddressValue remoteAddress (InetSocketAddress(csmaInterfaces.GetAddress(0), port));
     clientHelper.SetAttribute("Remote", remoteAddress);
-    clientHelper.SetAttribute("MaxBytes", UintegerValue(250));
+    // clientHelper.SetAttribute("MaxBytes", UintegerValue(250));
 
     // ApplicationContainer sourceApps = clientHelper.Install(csmaNodes.Get(1));
     // sourceApps = clientHelper.Install(csmaNodes.Get(2));
@@ -130,19 +134,19 @@ main(int argc, char* argv[])
     //PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(interfaces[0].GetAddress(0), port));
     ApplicationContainer sinkAppsSecondary = sinkSecondary.Install(csmaNodesSecondary.Get(0));
     sinkAppsSecondary.Start(Seconds(0.0));
-    sinkAppsSecondary.Stop(Seconds(10.0));
+    sinkAppsSecondary.Stop(Seconds(30.0));
 
     // Add another client to the 192.168.2.0 network with the same characteristics as before.
-     OnOffHelper clientHelperSecondary("ns3::TcpSocketFactory", Address());
+    OnOffHelper clientHelperSecondary("ns3::TcpSocketFactory", Address());
     clientHelperSecondary.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
     clientHelperSecondary.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-    clientHelperSecondary.SetAttribute("MaxBytes", UintegerValue(250));
+    // clientHelperSecondary.SetAttribute("MaxBytes", UintegerValue(250));
 
     AddressValue remoteAddressSecondary (InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
     clientHelperSecondary.SetAttribute("Remote", remoteAddressSecondary);
     ApplicationContainer clientAppsSecondary = clientHelperSecondary.Install(csmaNodesSecondary.Get(1));
     clientAppsSecondary.Start(Seconds(1.0));
-    clientAppsSecondary.Stop(Seconds(10.0));
+    clientAppsSecondary.Stop(Seconds(20.0));
 
     Ipv4GlobalRoutingHelper::PopulateRoutingTables();
     
