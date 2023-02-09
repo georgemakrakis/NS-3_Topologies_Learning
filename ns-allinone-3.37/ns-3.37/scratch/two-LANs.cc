@@ -102,7 +102,8 @@ main(int argc, char* argv[])
     csmaInterfaces = ipv4.Assign(csmaDevices);
 
     // Interfaces for the second subnet.
-    ipv4.SetBase("192.168.2.0", "255.255.255.0");
+    // ipv4.SetBase("192.168.2.0", "255.255.255.0");
+    ipv4.SetBase("10.1.0.0", "255.255.0.0");
     Ipv4InterfaceContainer csmaInterfacesSecondary;
     csmaInterfacesSecondary = ipv4.Assign(csmaDevicesSecondary);
 
