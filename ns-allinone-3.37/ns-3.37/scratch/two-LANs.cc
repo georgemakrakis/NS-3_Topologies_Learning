@@ -1,3 +1,25 @@
+
+// Topology has two servers and many clients in two different subnets, all over CMSA
+//        192.168.1.0/24
+//      (1.2) (1.3)  (1.4)
+//        n1    n2    n3
+//        |     |     |
+//        ============= LAN
+//              |
+//            (1.1)
+//              n0
+//         (2.1)/(2.2)
+//              | 
+//        ============= LAN
+//              | 
+//              n4
+//         (2.1)/(2.2)
+//        192.168.2.0/24
+
+// - Traffic goes from the n1, n2 and n3 to n0
+// - It can also go from n4 to n0 or the other way arround (2.1 to be server or client).
+
+
 // For now this is not needed.
 // #include "two-LANs.h"
 
@@ -33,9 +55,13 @@ main(int argc, char* argv[])
     // LogComponentEnable ("TcpSocketImpl", LOG_LEVEL_ALL);
     // LogComponentEnable ("PacketSink", LOG_LEVEL_ALL);
 
+    // These are parameters for the TCP/Application.
     Config::SetDefault("ns3::OnOffApplication::PacketSize", UintegerValue(250));
-    // Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5kb/s"));
-    Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5Mb/s"));
+    Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5kb/s"));
+    // Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5Mb/s"));
+
+    // Specify if the n0 will be server or client in the second subnet.
+    bool n0_secondary_server = true;
 
     uint32_t nCsma = 4;
     uint32_t nCsmaSecondary = 1;
@@ -44,9 +70,12 @@ main(int argc, char* argv[])
     csmaNodes.Create(nCsma);
 
     NodeContainer csmaNodesSecondary;
+    // We add the previously created node that will be the server also to the second batch of CSMA nodes
     csmaNodesSecondary.Add(csmaNodes.Get(0));
+    // ..and then we create the rest.
     csmaNodesSecondary.Create(nCsmaSecondary);
 
+    // These are for the channel, but there are overriden by the TCP ones?
     CsmaHelper csma;
     csma.SetChannelAttribute("DataRate", StringValue("100Mbps"));
     csma.SetChannelAttribute("Delay", TimeValue(NanoSeconds(6560)));
@@ -59,14 +88,9 @@ main(int argc, char* argv[])
 
     InternetStackHelper stack;
     stack.Install(csmaNodes);
-    // For the secondary ones we should also add stacks to the rest of the nodes, not just the first one.
+    // NOTE: For the secondary ones we should also add stacks to the rest of the nodes, not just the first one.
     stack.Install(csmaNodesSecondary.Get(1));
 
-    //std::vector<NetDeviceContainer> devicesList(nCsma);
-    //for (uint32_t i = 0; i < devicesList.size(); ++i)
-    //{
-    //    devicesList[i] = csma.Install(csmaNodes[i]);
-    //}
     
     //
     // We've got the "hardware" in place.  Now we need to add IP addresses.
@@ -77,27 +101,13 @@ main(int argc, char* argv[])
     Ipv4InterfaceContainer csmaInterfaces;
     csmaInterfaces = ipv4.Assign(csmaDevices);
 
-    // Assgin a second interface to the server node
+    // Interfaces for the second subnet.
     ipv4.SetBase("192.168.2.0", "255.255.255.0");
     Ipv4InterfaceContainer csmaInterfacesSecondary;
     csmaInterfacesSecondary = ipv4.Assign(csmaDevicesSecondary);
 
-    //std::vector<Ipv4InterfaceContainer> csmaInterfacesList(nCsma);
-
-    //for (uint32_t i = 0; i < csmaInterfacesList.size(); ++i)
-    //{
-    //    csmaInterfacesList[i] = ipv4.Assign(csmaDevices[i]);
-    //}
-
-    //NS_LOG_INFO("Create Applications.");
-
-    //
-    // Create a BulkSendApplication and install it on node 0
-    //
-    uint16_t port = 8080; // well-known echo port number
-
-    //BulkSendHelper source("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfaces.GetAddress(1), port));
-    // Set the amount of data to send in bytes.  Zero is unlimited.
+  
+    uint16_t port = 8080;
     
     OnOffHelper clientHelper("ns3::TcpSocketFactory", Address());
     clientHelper.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
@@ -117,36 +127,57 @@ main(int argc, char* argv[])
     }
     clientApps.Start(Seconds(1.0));
     clientApps.Stop(Seconds(10.0));
+    // clientApps.Stop(Seconds(30.0));
 
     //
     // Create a PacketSinkApplication and install it on node 0 with two interfaces
     //
     PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfaces.GetAddress(0), port));
-    //PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), port));
-    //PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(interfaces[0].GetAddress(0), port));
     ApplicationContainer sinkApps = sink.Install(csmaNodes.Get(0));
     sinkApps.Start(Seconds(0.0));
     sinkApps.Stop(Seconds(10.0));
+    // sinkApps.Stop(Seconds(30.0));
 
+    if(n0_secondary_server)
+    {
+        // This is the same server as above but now it is also "attached" to the second network
+        PacketSinkHelper sinkSecondary("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
+        ApplicationContainer sinkAppsSecondary = sinkSecondary.Install(csmaNodesSecondary.Get(0));
+        sinkAppsSecondary.Start(Seconds(0.0));
+        sinkAppsSecondary.Stop(Seconds(10.0));
 
-    PacketSinkHelper sinkSecondary("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
-    //PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), port));
-    //PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(interfaces[0].GetAddress(0), port));
-    ApplicationContainer sinkAppsSecondary = sinkSecondary.Install(csmaNodesSecondary.Get(0));
-    sinkAppsSecondary.Start(Seconds(0.0));
-    sinkAppsSecondary.Stop(Seconds(30.0));
+        // Add another client to the 192.168.2.0 network with the same characteristics as before.
+        OnOffHelper clientHelperSecondary("ns3::TcpSocketFactory", Address());
+        clientHelperSecondary.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
+        clientHelperSecondary.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+        // clientHelperSecondary.SetAttribute("MaxBytes", UintegerValue(250));
 
-    // Add another client to the 192.168.2.0 network with the same characteristics as before.
-    OnOffHelper clientHelperSecondary("ns3::TcpSocketFactory", Address());
-    clientHelperSecondary.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
-    clientHelperSecondary.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-    // clientHelperSecondary.SetAttribute("MaxBytes", UintegerValue(250));
+        AddressValue remoteAddressSecondary (InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
+        clientHelperSecondary.SetAttribute("Remote", remoteAddressSecondary);
+        ApplicationContainer clientAppsSecondary = clientHelperSecondary.Install(csmaNodesSecondary.Get(1));
+        clientAppsSecondary.Start(Seconds(1.0));
+        clientAppsSecondary.Stop(Seconds(10.0));
+    }
+    else
+    {
+         // Below we do the node that belongs ONLY to the 192.168.2.0 network, to be the server.
+        PacketSinkHelper sinkSecondary("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfacesSecondary.GetAddress(1), port));
+        ApplicationContainer sinkAppsSecondary = sinkSecondary.Install(csmaNodesSecondary.Get(1));
+        sinkAppsSecondary.Start(Seconds(0.0));
+        sinkAppsSecondary.Stop(Seconds(30.0));
 
-    AddressValue remoteAddressSecondary (InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
-    clientHelperSecondary.SetAttribute("Remote", remoteAddressSecondary);
-    ApplicationContainer clientAppsSecondary = clientHelperSecondary.Install(csmaNodesSecondary.Get(1));
-    clientAppsSecondary.Start(Seconds(1.0));
-    clientAppsSecondary.Stop(Seconds(20.0));
+        // And now the node 0 in the second network will be a client
+        OnOffHelper clientHelperSecondary("ns3::TcpSocketFactory", Address());
+        clientHelperSecondary.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
+        clientHelperSecondary.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+        // clientHelperSecondary.SetAttribute("MaxBytes", UintegerValue(250));
+
+        AddressValue remoteAddressSecondary (InetSocketAddress(csmaInterfacesSecondary.GetAddress(1), port));
+        clientHelperSecondary.SetAttribute("Remote", remoteAddressSecondary);
+        ApplicationContainer clientAppsSecondary = clientHelperSecondary.Install(csmaNodesSecondary.Get(0));
+        clientAppsSecondary.Start(Seconds(1.0));
+        clientAppsSecondary.Stop(Seconds(10.0));
+    }
 
     Ipv4GlobalRoutingHelper::PopulateRoutingTables();
     
