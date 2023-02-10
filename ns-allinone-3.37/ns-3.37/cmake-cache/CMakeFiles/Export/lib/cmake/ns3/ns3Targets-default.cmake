@@ -25,6 +25,16 @@ set_target_properties(ns3::libtcp-single-client-server PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS ns3::libtcp-single-client-server )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtcp-single-client-server "${_IMPORT_PREFIX}/lib/libns3.37-tcp-single-client-server-default.so" )
 
+# Import target "ns3::libtwo-LANs" for configuration "default"
+set_property(TARGET ns3::libtwo-LANs APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libtwo-LANs PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-two-LANs-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-two-LANs-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libtwo-LANs )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtwo-LANs "${_IMPORT_PREFIX}/lib/libns3.37-two-LANs-default.so" )
+
 # Import target "ns3::libvisualizer" for configuration "default"
 set_property(TARGET ns3::libvisualizer APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libvisualizer PROPERTIES

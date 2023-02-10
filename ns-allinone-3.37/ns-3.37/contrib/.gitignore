@@ -1,5 +1,9 @@
 # Ignore everything by default, contrib sources are coming from other places
-*
+# *
+
+# The above was the default form the repo, I change it to include the new modules 
+# in case we need something more than the .cc file
+
 
 # Include specific files that should be tracked by Git
 !.gitignore

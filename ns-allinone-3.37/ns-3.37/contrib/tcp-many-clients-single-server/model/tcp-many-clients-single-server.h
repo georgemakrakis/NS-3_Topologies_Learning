@@ -1,0 +1,11 @@
+#ifndef TCP_MANY_CLIENTS_SINGLE_SERVER_H
+#define TCP_MANY_CLIENTS_SINGLE_SERVER_H
+
+namespace ns3
+{
+
+/* ... */
+
+}
+
+#endif /* TCP_MANY_CLIENTS_SINGLE_SERVER_H */

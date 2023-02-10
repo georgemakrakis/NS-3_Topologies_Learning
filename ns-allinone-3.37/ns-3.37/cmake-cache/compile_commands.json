@@ -60,6 +60,26 @@
   "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/examples/tcp-single-client-server-example.cc"
 },
 {
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/two-LANs/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibtwo_LANs_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtwo-LANs-test.dir/test/two-LANs-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/test/two-LANs-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/test/two-LANs-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/two-LANs-example.dir/two-LANs-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/examples/two-LANs-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/examples/two-LANs-example.cc"
+},
+{
   "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/visualizer",
   "command": "/usr/bin/c++  -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libvisualizer-obj.dir/model/pyviz.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/src/visualizer/model/pyviz.cc",
   "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/visualizer/model/pyviz.cc"
@@ -7788,6 +7808,11 @@
   "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/scratch",
   "command": "/usr/bin/c++  -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/scratch_scratch-simulator.dir/scratch-simulator.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/scratch-simulator.cc",
   "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/scratch-simulator.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/scratch",
+  "command": "/usr/bin/c++  -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/scratch_neighborhood_topology_v2.dir/neighborhood_topology_v2.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v2.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v2.cc"
 },
 {
   "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/utils",

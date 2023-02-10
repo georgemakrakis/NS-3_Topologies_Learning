@@ -243,6 +243,48 @@ scratch_scratch-simulator/fast:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_scratch-simulator.dir/build.make scratch/CMakeFiles/scratch_scratch-simulator.dir/build
 .PHONY : scratch_scratch-simulator/fast
 
+# Convenience name for target.
+scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/rule
+
+# Convenience name for target.
+scratch_neighborhood_topology_v2: scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/rule
+
+.PHONY : scratch_neighborhood_topology_v2
+
+# fast build rule for target.
+scratch_neighborhood_topology_v2/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/build
+.PHONY : scratch_neighborhood_topology_v2/fast
+
+neighborhood_topology_v2.o: neighborhood_topology_v2.cc.o
+
+.PHONY : neighborhood_topology_v2.o
+
+# target to build an object file
+neighborhood_topology_v2.cc.o:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/neighborhood_topology_v2.cc.o
+.PHONY : neighborhood_topology_v2.cc.o
+
+neighborhood_topology_v2.i: neighborhood_topology_v2.cc.i
+
+.PHONY : neighborhood_topology_v2.i
+
+# target to preprocess a source file
+neighborhood_topology_v2.cc.i:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/neighborhood_topology_v2.cc.i
+.PHONY : neighborhood_topology_v2.cc.i
+
+neighborhood_topology_v2.s: neighborhood_topology_v2.cc.s
+
+.PHONY : neighborhood_topology_v2.s
+
+# target to generate assembly for a file
+neighborhood_topology_v2.cc.s:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/neighborhood_topology_v2.cc.s
+.PHONY : neighborhood_topology_v2.cc.s
+
 scratch-simulator.o: scratch-simulator.cc.o
 
 .PHONY : scratch-simulator.o
@@ -423,6 +465,10 @@ help:
 	@echo "... scratch_tcp-single-client-server"
 	@echo "... scratch_tcp-many-clients-single-server"
 	@echo "... scratch_scratch-simulator"
+	@echo "... scratch_neighborhood_topology_v2"
+	@echo "... neighborhood_topology_v2.o"
+	@echo "... neighborhood_topology_v2.i"
+	@echo "... neighborhood_topology_v2.s"
 	@echo "... scratch-simulator.o"
 	@echo "... scratch-simulator.i"
 	@echo "... scratch-simulator.s"

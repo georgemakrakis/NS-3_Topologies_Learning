@@ -35,9 +35,10 @@ network                   nix-vector-routing        olsr
 point-to-point            point-to-point-layout     propagation               
 sixlowpan                 spectrum                  stats                     
 tap-bridge                tcp-single-client-server  test                      
-topology-read             traffic-control           uan                       
-virtual-net-device        visualizer                wave                      
-wifi                      wimax                     tcp-many-clients-single-server
+topology-read             traffic-control           two-LANs                  
+uan                       virtual-net-device        visualizer                
+wave                      wifi                      wimax                     
+tcp-many-clients-single-server
 
 
 Modules that cannot be built:

@@ -1908,6 +1908,10 @@ ns3/ppp-header.h
 /home/george/workspace/ns-allinone-3.37/ns-3.37/src/core/model/tuple.h
 -
 
+../build/include/ns3/two-LANs.h
+/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.h
+-
+
 ../build/include/ns3/type-id.h
 /home/george/workspace/ns-allinone-3.37/ns-3.37/src/core/model/type-id.h
 -
@@ -2030,6 +2034,14 @@ unordered_map
 vector
 -
 
+/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.cc
+two-LANs-helper.h
+/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.h
+
+/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.h
+ns3/two-LANs.h
+/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/ns3/two-LANs.h
+
 /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.cc
 ns3/applications-module.h
 /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/ns3/applications-module.h
@@ -2055,6 +2067,8 @@ iostream
 -
 string
 -
+
+/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.h
 
 /home/george/workspace/ns-allinone-3.37/ns-3.37/src/applications/helper/bulk-send-helper.h
 ns3/address.h
