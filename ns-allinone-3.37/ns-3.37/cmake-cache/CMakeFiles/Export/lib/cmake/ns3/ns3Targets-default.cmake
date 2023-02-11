@@ -5,6 +5,16 @@
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
 
+# Import target "ns3::libneighborhood_topology_v2" for configuration "default"
+set_property(TARGET ns3::libneighborhood_topology_v2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libneighborhood_topology_v2 PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v2-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-neighborhood_topology_v2-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libneighborhood_topology_v2 )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libneighborhood_topology_v2 "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v2-default.so" )
+
 # Import target "ns3::libtcp-many-clients-single-server" for configuration "default"
 set_property(TARGET ns3::libtcp-many-clients-single-server APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libtcp-many-clients-single-server PROPERTIES

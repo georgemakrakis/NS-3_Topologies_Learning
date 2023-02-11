@@ -17,9 +17,6 @@
 
 // - Traffic goes from the n1, n2 and n3 to n0
 // - It can also go from n4 to n0 or the other way arround (2.1 to be server or client).
-// - MAYBE each n1, n2 etc. in the above should be another server for the home network. 
-// Currently they just "push" send the data but we can have home devices sending some 
-// traffic to them as well.
 
 
 // For now this is not needed.
@@ -64,9 +61,8 @@ main(int argc, char* argv[])
 
     // Specify if the n0 will be server or client in the second subnet.
     bool n0_secondary_server = true;
-    
-    // number of HANs + 1 NAN gateway
-    uint32_t nCsma = 11;
+
+    uint32_t nCsma = 4;
     uint32_t nCsmaSecondary = 1;
 
     NodeContainer csmaNodes;

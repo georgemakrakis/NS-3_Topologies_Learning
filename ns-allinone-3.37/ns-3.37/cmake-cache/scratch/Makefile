@@ -68,17 +68,48 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -92,48 +123,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -169,49 +169,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
+scratch/CMakeFiles/scratch_scratch-simulator.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
 
 # Convenience name for target.
-scratch_subdir_scratch-subdir: scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
+scratch_scratch-simulator: scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
 
-.PHONY : scratch_subdir_scratch-subdir
+.PHONY : scratch_scratch-simulator
 
 # fast build rule for target.
-scratch_subdir_scratch-subdir/fast:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build
-.PHONY : scratch_subdir_scratch-subdir/fast
-
-# Convenience name for target.
-scratch/CMakeFiles/scratch_two-LANs.dir/rule:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_two-LANs.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_two-LANs.dir/rule
-
-# Convenience name for target.
-scratch_two-LANs: scratch/CMakeFiles/scratch_two-LANs.dir/rule
-
-.PHONY : scratch_two-LANs
-
-# fast build rule for target.
-scratch_two-LANs/fast:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_two-LANs.dir/build.make scratch/CMakeFiles/scratch_two-LANs.dir/build
-.PHONY : scratch_two-LANs/fast
-
-# Convenience name for target.
-scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule
-
-# Convenience name for target.
-scratch_tcp-single-client-server: scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule
-
-.PHONY : scratch_tcp-single-client-server
-
-# fast build rule for target.
-scratch_tcp-single-client-server/fast:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_tcp-single-client-server.dir/build.make scratch/CMakeFiles/scratch_tcp-single-client-server.dir/build
-.PHONY : scratch_tcp-single-client-server/fast
+scratch_scratch-simulator/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_scratch-simulator.dir/build.make scratch/CMakeFiles/scratch_scratch-simulator.dir/build
+.PHONY : scratch_scratch-simulator/fast
 
 # Convenience name for target.
 scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/rule:
@@ -229,19 +199,49 @@ scratch_tcp-many-clients-single-server/fast:
 .PHONY : scratch_tcp-many-clients-single-server/fast
 
 # Convenience name for target.
-scratch/CMakeFiles/scratch_scratch-simulator.dir/rule:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
-.PHONY : scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
+scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule
 
 # Convenience name for target.
-scratch_scratch-simulator: scratch/CMakeFiles/scratch_scratch-simulator.dir/rule
+scratch_tcp-single-client-server: scratch/CMakeFiles/scratch_tcp-single-client-server.dir/rule
 
-.PHONY : scratch_scratch-simulator
+.PHONY : scratch_tcp-single-client-server
 
 # fast build rule for target.
-scratch_scratch-simulator/fast:
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_scratch-simulator.dir/build.make scratch/CMakeFiles/scratch_scratch-simulator.dir/build
-.PHONY : scratch_scratch-simulator/fast
+scratch_tcp-single-client-server/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_tcp-single-client-server.dir/build.make scratch/CMakeFiles/scratch_tcp-single-client-server.dir/build
+.PHONY : scratch_tcp-single-client-server/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_two-LANs.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_two-LANs.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_two-LANs.dir/rule
+
+# Convenience name for target.
+scratch_two-LANs: scratch/CMakeFiles/scratch_two-LANs.dir/rule
+
+.PHONY : scratch_two-LANs
+
+# fast build rule for target.
+scratch_two-LANs/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_two-LANs.dir/build.make scratch/CMakeFiles/scratch_two-LANs.dir/build
+.PHONY : scratch_two-LANs/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
+
+# Convenience name for target.
+scratch_subdir_scratch-subdir: scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/rule
+
+.PHONY : scratch_subdir_scratch-subdir
+
+# fast build rule for target.
+scratch_subdir_scratch-subdir/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build
+.PHONY : scratch_subdir_scratch-subdir/fast
 
 # Convenience name for target.
 scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/rule:
@@ -257,6 +257,48 @@ scratch_neighborhood_topology_v2: scratch/CMakeFiles/scratch_neighborhood_topolo
 scratch_neighborhood_topology_v2/fast:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/build
 .PHONY : scratch_neighborhood_topology_v2/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/rule
+
+# Convenience name for target.
+scratch_neighborhood_topology_v1: scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/rule
+
+.PHONY : scratch_neighborhood_topology_v1
+
+# fast build rule for target.
+scratch_neighborhood_topology_v1/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/build
+.PHONY : scratch_neighborhood_topology_v1/fast
+
+neighborhood_topology_v1.o: neighborhood_topology_v1.cc.o
+
+.PHONY : neighborhood_topology_v1.o
+
+# target to build an object file
+neighborhood_topology_v1.cc.o:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/neighborhood_topology_v1.cc.o
+.PHONY : neighborhood_topology_v1.cc.o
+
+neighborhood_topology_v1.i: neighborhood_topology_v1.cc.i
+
+.PHONY : neighborhood_topology_v1.i
+
+# target to preprocess a source file
+neighborhood_topology_v1.cc.i:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/neighborhood_topology_v1.cc.i
+.PHONY : neighborhood_topology_v1.cc.i
+
+neighborhood_topology_v1.s: neighborhood_topology_v1.cc.s
+
+.PHONY : neighborhood_topology_v1.s
+
+# target to generate assembly for a file
+neighborhood_topology_v1.cc.s:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) -f scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/build.make scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/neighborhood_topology_v1.cc.s
+.PHONY : neighborhood_topology_v1.cc.s
 
 neighborhood_topology_v2.o: neighborhood_topology_v2.cc.o
 
@@ -453,19 +495,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... scratch_subdir_scratch-subdir"
-	@echo "... scratch_two-LANs"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... scratch_tcp-single-client-server"
-	@echo "... scratch_tcp-many-clients-single-server"
 	@echo "... scratch_scratch-simulator"
+	@echo "... scratch_tcp-many-clients-single-server"
+	@echo "... install/strip"
+	@echo "... scratch_tcp-single-client-server"
+	@echo "... test"
+	@echo "... scratch_two-LANs"
+	@echo "... scratch_subdir_scratch-subdir"
 	@echo "... scratch_neighborhood_topology_v2"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... scratch_neighborhood_topology_v1"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... neighborhood_topology_v1.o"
+	@echo "... neighborhood_topology_v1.i"
+	@echo "... neighborhood_topology_v1.s"
 	@echo "... neighborhood_topology_v2.o"
 	@echo "... neighborhood_topology_v2.i"
 	@echo "... neighborhood_topology_v2.s"

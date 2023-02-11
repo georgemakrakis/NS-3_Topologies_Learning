@@ -4,6 +4,7 @@
 # single_source_file_scratches at scratch/CMakeLists.txt:57 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/[^.]*.cc")
 set(OLD_GLOB
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v1.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v2.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/scratch-simulator.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/tcp-many-clients-single-server.cc"
@@ -30,6 +31,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES true "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/**")
 set(OLD_GLOB
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v1.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v2.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/scratch-simulator.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/subdir"
