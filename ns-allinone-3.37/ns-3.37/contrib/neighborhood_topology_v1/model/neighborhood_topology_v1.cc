@@ -131,10 +131,16 @@ main(int argc, char* argv[])
 
     // Interfaces for the second network.
     // Both gateways will be in a separate subnet.
-    ipv4.SetBase("10.1.0.0", "255.255.0.0");
+    // ipv4.SetBase("10.1.0.0", "255.255.0.0");
+
+    // Say for now that we can have a /24 but we need to see how to go to the second subnet of a /16 as the above one
+    // when you do GetAddress to interface, you get "Attempted to dereference zero pointer" if number bigger than the nodes
+    // Therefore, there are probably assigned sequentially based on the number of nodes/devices and there is not a "range" statically allocated
+    ipv4.SetBase("10.1.0.0", "255.255.255.0");
     Ipv4InterfaceContainer csmaInterfacesNAN1Secondary;
     csmaInterfacesNAN1Secondary = ipv4.Assign(csmaDevicesNAN1Secondary);
 
+    ipv4.SetBase("10.1.1.0", "255.255.255.0");
     Ipv4InterfaceContainer csmaInterfacesNAN2Secondary;
     csmaInterfacesNAN2Secondary = ipv4.Assign(csmaDevicesNAN2Secondary);
 
@@ -193,9 +199,10 @@ main(int argc, char* argv[])
         sinkAppsNAN1Secondary.Start(Seconds(0.0));
         sinkAppsNAN1Secondary.Stop(Seconds(10.0));
 
-        // ...for NAN2 as well. But let's go to the second subnet.
-        PacketSinkHelper sinkNAN2Secondary("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfacesNAN2Secondary.GetAddress(5), port));
-        ApplicationContainer sinkAppsNAN2Secondary = sinkNAN1Secondary.Install(csmaNodesNAN2Secondary.Get(0));
+        // // ...for NAN2 as well. But let's go to the second subnet.
+        PacketSinkHelper sinkNAN2Secondary("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfacesNAN2Secondary.GetAddress(0), port));
+        // PacketSinkHelper sinkNAN2Secondary("ns3::TcpSocketFactory", InetSocketAddress("10.1.1.1", port));
+        ApplicationContainer sinkAppsNAN2Secondary = sinkNAN2Secondary.Install(csmaNodesNAN2Secondary.Get(0));
         sinkAppsNAN2Secondary.Start(Seconds(0.0));
         sinkAppsNAN2Secondary.Stop(Seconds(10.0));
 
@@ -216,7 +223,8 @@ main(int argc, char* argv[])
         clientHelperSecondary2.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
         clientHelperSecondary2.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
 
-        AddressValue remoteAddressSecondary2 (InetSocketAddress(csmaInterfacesNAN2Secondary.GetAddress(5), port));
+        AddressValue remoteAddressSecondary2 (InetSocketAddress(csmaInterfacesNAN2Secondary.GetAddress(0), port));
+        // AddressValue remoteAddressSecondary2 (InetSocketAddress("10.1.1.1", port));
         clientHelperSecondary2.SetAttribute("Remote", remoteAddressSecondary2);
         ApplicationContainer clientAppsSecondary2 = clientHelperSecondary2.Install(csmaNodesNAN2Secondary.Get(1));
         clientAppsSecondary2.Start(Seconds(1.0));
