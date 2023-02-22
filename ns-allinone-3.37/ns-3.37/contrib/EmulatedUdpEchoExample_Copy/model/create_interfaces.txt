@@ -1,0 +1,16 @@
+sudo ip link add dev virt1 type veth peer name virt2
+sudo ip link set dev virt1 up
+#ip tuntap add tapm mode tap
+#ip link set dev tapm up
+sudo ip link add brm type bridge
+
+sudo ip link set virt1 master brm
+
+sudo ip addr add 10.1.1.1/24 dev brm
+sudo ip addr add 10.1.1.3/24 dev virt2
+
+
+sudo ip link set brm up
+sudo ip link set virt2 up
+
+sudo ip link set virt1 promisc on

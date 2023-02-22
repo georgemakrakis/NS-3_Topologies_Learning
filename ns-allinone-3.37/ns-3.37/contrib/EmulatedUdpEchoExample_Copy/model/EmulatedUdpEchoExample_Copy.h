@@ -1,0 +1,11 @@
+#ifndef EMULATEDUDPECHOEXAMPLE_COPY_H
+#define EMULATEDUDPECHOEXAMPLE_COPY_H
+
+namespace ns3
+{
+
+/* ... */
+
+}
+
+#endif /* EMULATEDUDPECHOEXAMPLE_COPY_H */
