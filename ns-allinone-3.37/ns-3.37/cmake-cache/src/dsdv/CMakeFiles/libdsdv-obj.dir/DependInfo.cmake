@@ -1,35 +1,23 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/helper/dsdv-helper.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-packet-queue.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-packet.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-routing-protocol.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-rtable.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "NS3_ASSERT_ENABLE"
-  "NS3_BUILD_PROFILE_DEBUG"
-  "NS3_LOG_ENABLE"
-  "PROJECT_SOURCE_PATH=\"/home/george/workspace/ns-allinone-3.37/ns-3.37\""
-  "__LINUX__"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../build/include"
-  "/usr/include/python3.8"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/helper/dsdv-helper.cc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/helper/dsdv-helper.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-packet-queue.cc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet-queue.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-packet.cc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-packet.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-routing-protocol.cc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-routing-protocol.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/dsdv/model/dsdv-rtable.cc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o" "gcc" "src/dsdv/CMakeFiles/libdsdv-obj.dir/model/dsdv-rtable.cc.o.d"
   )
 
 # Targets to which this target links.

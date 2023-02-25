@@ -1,39 +1,25 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/mock-net-device.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-examples-test-suite.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-fragmentation-test.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-hc1-test.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-iphc-stateful-test.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-iphc-test.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "NS3_ASSERT_ENABLE"
-  "NS3_BUILD_PROFILE_DEBUG"
-  "NS3_LOG_ENABLE"
-  "NS_TEST_SOURCEDIR=\"src/sixlowpan/test\""
-  "PROJECT_SOURCE_PATH=\"/home/george/workspace/ns-allinone-3.37/ns-3.37\""
-  "__LINUX__"
-  "libsixlowpan_test_EXPORTS"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../build/include"
-  "/usr/include/python3.8"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/mock-net-device.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/mock-net-device.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-examples-test-suite.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-examples-test-suite.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-fragmentation-test.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-fragmentation-test.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-hc1-test.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-hc1-test.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-iphc-stateful-test.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-stateful-test.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/sixlowpan/test/sixlowpan-iphc-test.cc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.o" "gcc" "src/sixlowpan/CMakeFiles/libsixlowpan-test.dir/test/sixlowpan-iphc-test.cc.o.d"
   )
 
 # Targets to which this target links.

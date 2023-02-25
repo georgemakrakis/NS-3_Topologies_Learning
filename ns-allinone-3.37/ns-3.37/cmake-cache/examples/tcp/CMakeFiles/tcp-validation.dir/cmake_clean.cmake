@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/tcp/ns3.37-tcp-validation-default"
   "../../../build/examples/tcp/ns3.37-tcp-validation-default.pdb"
   "CMakeFiles/tcp-validation.dir/tcp-validation.cc.o"
+  "CMakeFiles/tcp-validation.dir/tcp-validation.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

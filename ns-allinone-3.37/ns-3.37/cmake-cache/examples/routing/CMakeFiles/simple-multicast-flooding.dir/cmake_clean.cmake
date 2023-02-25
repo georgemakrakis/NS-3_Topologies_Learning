@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/routing/ns3.37-simple-multicast-flooding-default"
   "../../../build/examples/routing/ns3.37-simple-multicast-flooding-default.pdb"
   "CMakeFiles/simple-multicast-flooding.dir/simple-multicast-flooding.cc.o"
+  "CMakeFiles/simple-multicast-flooding.dir/simple-multicast-flooding.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

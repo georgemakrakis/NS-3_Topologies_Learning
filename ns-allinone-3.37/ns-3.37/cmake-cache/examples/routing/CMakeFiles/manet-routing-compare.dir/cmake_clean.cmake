@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/routing/ns3.37-manet-routing-compare-default"
   "../../../build/examples/routing/ns3.37-manet-routing-compare-default.pdb"
   "CMakeFiles/manet-routing-compare.dir/manet-routing-compare.cc.o"
+  "CMakeFiles/manet-routing-compare.dir/manet-routing-compare.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

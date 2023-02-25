@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/lib/libns3.37-nix-vector-routing-test-default.pdb"
   "../../../build/lib/libns3.37-nix-vector-routing-test-default.so"
   "CMakeFiles/libnix-vector-routing-test.dir/test/nix-test.cc.o"
+  "CMakeFiles/libnix-vector-routing-test.dir/test/nix-test.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

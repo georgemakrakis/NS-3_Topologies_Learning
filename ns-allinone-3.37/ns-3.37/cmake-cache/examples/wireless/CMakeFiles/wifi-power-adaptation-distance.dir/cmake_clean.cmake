@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/wireless/ns3.37-wifi-power-adaptation-distance-default"
   "../../../build/examples/wireless/ns3.37-wifi-power-adaptation-distance-default.pdb"
   "CMakeFiles/wifi-power-adaptation-distance.dir/wifi-power-adaptation-distance.cc.o"
+  "CMakeFiles/wifi-power-adaptation-distance.dir/wifi-power-adaptation-distance.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

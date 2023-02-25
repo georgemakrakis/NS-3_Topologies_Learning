@@ -1,0 +1,11 @@
+#ifndef EMULATEDTCPECHOEXAMPLE_H
+#define EMULATEDTCPECHOEXAMPLE_H
+
+namespace ns3
+{
+
+/* ... */
+
+}
+
+#endif /* EMULATEDTCPECHOEXAMPLE_H */

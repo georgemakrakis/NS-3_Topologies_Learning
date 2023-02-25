@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/lib/libns3.37-two-LANs-test-default.pdb"
   "../../../build/lib/libns3.37-two-LANs-test-default.so"
   "CMakeFiles/libtwo-LANs-test.dir/test/two-LANs-test-suite.cc.o"
+  "CMakeFiles/libtwo-LANs-test.dir/test/two-LANs-test-suite.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

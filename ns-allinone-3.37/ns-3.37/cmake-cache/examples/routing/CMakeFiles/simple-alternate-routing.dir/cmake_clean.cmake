@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/routing/ns3.37-simple-alternate-routing-default"
   "../../../build/examples/routing/ns3.37-simple-alternate-routing-default.pdb"
   "CMakeFiles/simple-alternate-routing.dir/simple-alternate-routing.cc.o"
+  "CMakeFiles/simple-alternate-routing.dir/simple-alternate-routing.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

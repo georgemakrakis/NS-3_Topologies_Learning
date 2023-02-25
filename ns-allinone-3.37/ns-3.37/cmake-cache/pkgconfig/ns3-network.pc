@@ -8,6 +8,6 @@ URL:
 Version: 3.37
 Requires:  ns3-core ns3-stats
 Requires.private: 
-Cflags: -I"${includedir}"  -I/usr/include/python3.8
+Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2 -I/usr/include/python3.10
 Libs: -L"${libdir}" -lns3.37-network-default  -lns3.37-core-default -lns3.37-stats-default -l-lpthread
 Libs.private: -L"${libdir}" 

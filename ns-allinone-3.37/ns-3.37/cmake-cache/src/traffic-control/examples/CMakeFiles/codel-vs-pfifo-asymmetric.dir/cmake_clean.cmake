@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../../build/src/traffic-control/examples/ns3.37-codel-vs-pfifo-asymmetric-default"
   "../../../../build/src/traffic-control/examples/ns3.37-codel-vs-pfifo-asymmetric-default.pdb"
   "CMakeFiles/codel-vs-pfifo-asymmetric.dir/codel-vs-pfifo-asymmetric.cc.o"
+  "CMakeFiles/codel-vs-pfifo-asymmetric.dir/codel-vs-pfifo-asymmetric.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

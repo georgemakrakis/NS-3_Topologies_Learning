@@ -1,30 +1,17 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "HAVE_STDINT_H"
-  "NS3_ASSERT_ENABLE"
-  "NS3_BUILD_PROFILE_DEBUG"
-  "NS3_LOG_ENABLE"
-  "PROJECT_SOURCE_PATH=\"/home/george/workspace/ns-allinone-3.37/ns-3.37\""
-  "__LINUX__"
   )
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../build/include"
-  "/usr/include/python3.8"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.cc" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o" "gcc" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o" "gcc" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.cc" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o" "gcc" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o.d"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o" "gcc" "contrib/two-LANs/CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o.d"
   )
 
 # Targets to which this target links.

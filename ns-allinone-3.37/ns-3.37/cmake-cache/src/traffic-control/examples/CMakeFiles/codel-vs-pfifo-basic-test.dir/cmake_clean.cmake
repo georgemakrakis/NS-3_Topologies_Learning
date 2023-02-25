@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../../build/src/traffic-control/examples/ns3.37-codel-vs-pfifo-basic-test-default"
   "../../../../build/src/traffic-control/examples/ns3.37-codel-vs-pfifo-basic-test-default.pdb"
   "CMakeFiles/codel-vs-pfifo-basic-test.dir/codel-vs-pfifo-basic-test.cc.o"
+  "CMakeFiles/codel-vs-pfifo-basic-test.dir/codel-vs-pfifo-basic-test.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

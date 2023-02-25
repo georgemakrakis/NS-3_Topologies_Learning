@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../../build/src/topology-read/examples/ns3.37-topology-example-sim-default"
   "../../../../build/src/topology-read/examples/ns3.37-topology-example-sim-default.pdb"
   "CMakeFiles/topology-example-sim.dir/topology-example-sim.cc.o"
+  "CMakeFiles/topology-example-sim.dir/topology-example-sim.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

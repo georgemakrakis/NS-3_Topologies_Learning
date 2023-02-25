@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../../build/contrib/two-LANs/examples/ns3.37-two-LANs-example-default"
   "../../../../build/contrib/two-LANs/examples/ns3.37-two-LANs-example-default.pdb"
   "CMakeFiles/two-LANs-example.dir/two-LANs-example.cc.o"
+  "CMakeFiles/two-LANs-example.dir/two-LANs-example.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

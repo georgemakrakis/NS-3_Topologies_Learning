@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/lib/libns3.37-topology-read-test-default.pdb"
   "../../../build/lib/libns3.37-topology-read-test-default.so"
   "CMakeFiles/libtopology-read-test.dir/test/rocketfuel-topology-reader-test-suite.cc.o"
+  "CMakeFiles/libtopology-read-test.dir/test/rocketfuel-topology-reader-test-suite.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

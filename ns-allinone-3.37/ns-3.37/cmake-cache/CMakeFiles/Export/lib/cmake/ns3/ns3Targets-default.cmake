@@ -5,6 +5,26 @@
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
 
+# Import target "ns3::libEmulatedUdpEchoExample_Copy" for configuration "default"
+set_property(TARGET ns3::libEmulatedUdpEchoExample_Copy APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libEmulatedUdpEchoExample_Copy PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdpEchoExample_Copy-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedUdpEchoExample_Copy-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedUdpEchoExample_Copy )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedUdpEchoExample_Copy "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdpEchoExample_Copy-default.so" )
+
+# Import target "ns3::libneighborhood_topology_v1" for configuration "default"
+set_property(TARGET ns3::libneighborhood_topology_v1 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libneighborhood_topology_v1 PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v1-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-neighborhood_topology_v1-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libneighborhood_topology_v1 )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libneighborhood_topology_v1 "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v1-default.so" )
+
 # Import target "ns3::libneighborhood_topology_v2" for configuration "default"
 set_property(TARGET ns3::libneighborhood_topology_v2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libneighborhood_topology_v2 PROPERTIES
@@ -44,16 +64,6 @@ set_target_properties(ns3::libtwo-LANs PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS ns3::libtwo-LANs )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtwo-LANs "${_IMPORT_PREFIX}/lib/libns3.37-two-LANs-default.so" )
-
-# Import target "ns3::libvisualizer" for configuration "default"
-set_property(TARGET ns3::libvisualizer APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libvisualizer PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-visualizer-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-visualizer-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libvisualizer )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libvisualizer "${_IMPORT_PREFIX}/lib/libns3.37-visualizer-default.so" )
 
 # Import target "ns3::libantenna" for configuration "default"
 set_property(TARGET ns3::libantenna APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)

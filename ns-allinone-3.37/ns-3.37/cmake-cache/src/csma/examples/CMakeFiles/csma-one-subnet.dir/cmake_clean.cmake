@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../../build/src/csma/examples/ns3.37-csma-one-subnet-default"
   "../../../../build/src/csma/examples/ns3.37-csma-one-subnet-default.pdb"
   "CMakeFiles/csma-one-subnet.dir/csma-one-subnet.cc.o"
+  "CMakeFiles/csma-one-subnet.dir/csma-one-subnet.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

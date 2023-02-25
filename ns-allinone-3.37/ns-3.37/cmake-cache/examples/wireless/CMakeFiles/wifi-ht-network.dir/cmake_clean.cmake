@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/wireless/ns3.37-wifi-ht-network-default"
   "../../../build/examples/wireless/ns3.37-wifi-ht-network-default.pdb"
   "CMakeFiles/wifi-ht-network.dir/wifi-ht-network.cc.o"
+  "CMakeFiles/wifi-ht-network.dir/wifi-ht-network.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

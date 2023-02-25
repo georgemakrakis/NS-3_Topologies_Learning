@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/traffic-control/ns3.37-red-vs-fengadaptive-default"
   "../../../build/examples/traffic-control/ns3.37-red-vs-fengadaptive-default.pdb"
   "CMakeFiles/red-vs-fengadaptive.dir/red-vs-fengadaptive.cc.o"
+  "CMakeFiles/red-vs-fengadaptive.dir/red-vs-fengadaptive.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

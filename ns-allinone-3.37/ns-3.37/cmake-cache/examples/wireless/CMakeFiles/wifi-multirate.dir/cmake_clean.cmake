@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../build/examples/wireless/ns3.37-wifi-multirate-default"
   "../../../build/examples/wireless/ns3.37-wifi-multirate-default.pdb"
   "CMakeFiles/wifi-multirate.dir/wifi-multirate.cc.o"
+  "CMakeFiles/wifi-multirate.dir/wifi-multirate.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

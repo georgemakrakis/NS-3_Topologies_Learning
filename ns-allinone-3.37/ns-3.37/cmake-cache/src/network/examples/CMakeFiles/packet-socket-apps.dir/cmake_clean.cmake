@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "../../../../build/src/network/examples/ns3.37-packet-socket-apps-default"
   "../../../../build/src/network/examples/ns3.37-packet-socket-apps-default.pdb"
   "CMakeFiles/packet-socket-apps.dir/packet-socket-apps.cc.o"
+  "CMakeFiles/packet-socket-apps.dir/packet-socket-apps.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

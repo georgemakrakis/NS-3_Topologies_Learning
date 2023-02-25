@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/libtcp-many-clients-single-server-obj.dir/helper/tcp-many-clients-single-server-helper.cc.o"
+  "CMakeFiles/libtcp-many-clients-single-server-obj.dir/helper/tcp-many-clients-single-server-helper.cc.o.d"
   "CMakeFiles/libtcp-many-clients-single-server-obj.dir/model/tcp-many-clients-single-server.cc.o"
+  "CMakeFiles/libtcp-many-clients-single-server-obj.dir/model/tcp-many-clients-single-server.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
