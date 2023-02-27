@@ -203,6 +203,8 @@ main(int argc, char* argv[])
     {
         EmuFdNetDeviceHelper* raw = new EmuFdNetDeviceHelper;
         raw->SetDeviceName(deviceName);
+        std::string encapMode("Dix");
+        raw->SetAttribute("EncapsulationMode", StringValue(encapMode));
         helper = raw;
     }
 // #endif
@@ -276,6 +278,8 @@ main(int argc, char* argv[])
         ApplicationContainer clientApps = onoff.Install(node);
         clientApps.Start(Seconds(4.0));
         clientApps.Stop(Seconds(20.0));
+
+        Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
         helper->EnablePcap("fd-client", device);
     }

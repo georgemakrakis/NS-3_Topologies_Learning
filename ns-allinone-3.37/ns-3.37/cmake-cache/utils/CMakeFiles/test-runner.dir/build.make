@@ -73,7 +73,7 @@ utils/CMakeFiles/test-runner.dir/test-runner.cc.o: utils/CMakeFiles/test-runner.
 utils/CMakeFiles/test-runner.dir/test-runner.cc.o: ../utils/test-runner.cc
 utils/CMakeFiles/test-runner.dir/test-runner.cc.o: utils/CMakeFiles/test-runner.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object utils/CMakeFiles/test-runner.dir/test-runner.cc.o"
-	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utils/CMakeFiles/test-runner.dir/test-runner.cc.o -MF CMakeFiles/test-runner.dir/test-runner.cc.o.d -o CMakeFiles/test-runner.dir/test-runner.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/utils/test-runner.cc
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/utils && /usr/bin/ccache /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT utils/CMakeFiles/test-runner.dir/test-runner.cc.o -MF CMakeFiles/test-runner.dir/test-runner.cc.o.d -o CMakeFiles/test-runner.dir/test-runner.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/utils/test-runner.cc
 
 utils/CMakeFiles/test-runner.dir/test-runner.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test-runner.dir/test-runner.cc.i"
