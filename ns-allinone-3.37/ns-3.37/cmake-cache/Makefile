@@ -979,69 +979,69 @@ uninstall_pkgconfig_neighborhood_topology_v1/fast:
 .PHONY : uninstall_pkgconfig_neighborhood_topology_v1/fast
 
 #=============================================================================
-# Target rules for targets named uninstall_pkgconfig_EmulatedTCPEchoExample
+# Target rules for targets named uninstall_pkgconfig_EmulatedUdpEchoExample_Copy
 
 # Build rule for target.
-uninstall_pkgconfig_EmulatedTCPEchoExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall_pkgconfig_EmulatedTCPEchoExample
-.PHONY : uninstall_pkgconfig_EmulatedTCPEchoExample
+uninstall_pkgconfig_EmulatedUdpEchoExample_Copy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall_pkgconfig_EmulatedUdpEchoExample_Copy
+.PHONY : uninstall_pkgconfig_EmulatedUdpEchoExample_Copy
 
 # fast build rule for target.
-uninstall_pkgconfig_EmulatedTCPEchoExample/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build
-.PHONY : uninstall_pkgconfig_EmulatedTCPEchoExample/fast
+uninstall_pkgconfig_EmulatedUdpEchoExample_Copy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build
+.PHONY : uninstall_pkgconfig_EmulatedUdpEchoExample_Copy/fast
 
 #=============================================================================
-# Target rules for targets named libEmulatedTCPEchoExample-obj
+# Target rules for targets named libEmulatedUdpEchoExample_Copy-obj
 
 # Build rule for target.
-libEmulatedTCPEchoExample-obj: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedTCPEchoExample-obj
-.PHONY : libEmulatedTCPEchoExample-obj
+libEmulatedUdpEchoExample_Copy-obj: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedUdpEchoExample_Copy-obj
+.PHONY : libEmulatedUdpEchoExample_Copy-obj
 
 # fast build rule for target.
-libEmulatedTCPEchoExample-obj/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build
-.PHONY : libEmulatedTCPEchoExample-obj/fast
+libEmulatedUdpEchoExample_Copy-obj/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/build
+.PHONY : libEmulatedUdpEchoExample_Copy-obj/fast
 
 #=============================================================================
-# Target rules for targets named libEmulatedTCPEchoExample
+# Target rules for targets named libEmulatedUdpEchoExample_Copy
 
 # Build rule for target.
-libEmulatedTCPEchoExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedTCPEchoExample
-.PHONY : libEmulatedTCPEchoExample
+libEmulatedUdpEchoExample_Copy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedUdpEchoExample_Copy
+.PHONY : libEmulatedUdpEchoExample_Copy
 
 # fast build rule for target.
-libEmulatedTCPEchoExample/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build
-.PHONY : libEmulatedTCPEchoExample/fast
+libEmulatedUdpEchoExample_Copy/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/build
+.PHONY : libEmulatedUdpEchoExample_Copy/fast
 
 #=============================================================================
-# Target rules for targets named libEmulatedTCPEchoExample-test
+# Target rules for targets named libEmulatedUdpEchoExample_Copy-test
 
 # Build rule for target.
-libEmulatedTCPEchoExample-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedTCPEchoExample-test
-.PHONY : libEmulatedTCPEchoExample-test
+libEmulatedUdpEchoExample_Copy-test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedUdpEchoExample_Copy-test
+.PHONY : libEmulatedUdpEchoExample_Copy-test
 
 # fast build rule for target.
-libEmulatedTCPEchoExample-test/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build
-.PHONY : libEmulatedTCPEchoExample-test/fast
+libEmulatedUdpEchoExample_Copy-test/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/build
+.PHONY : libEmulatedUdpEchoExample_Copy-test/fast
 
 #=============================================================================
-# Target rules for targets named EmulatedTCPEchoExample-example
+# Target rules for targets named EmulatedUdpEchoExample_Copy-example
 
 # Build rule for target.
-EmulatedTCPEchoExample-example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EmulatedTCPEchoExample-example
-.PHONY : EmulatedTCPEchoExample-example
+EmulatedUdpEchoExample_Copy-example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EmulatedUdpEchoExample_Copy-example
+.PHONY : EmulatedUdpEchoExample_Copy-example
 
 # fast build rule for target.
-EmulatedTCPEchoExample-example/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build.make contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build
-.PHONY : EmulatedTCPEchoExample-example/fast
+EmulatedUdpEchoExample_Copy-example/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/build.make contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/build
+.PHONY : EmulatedUdpEchoExample_Copy-example/fast
 
 #=============================================================================
 # Target rules for targets named libneighborhood_topology_v1-obj
@@ -6494,7 +6494,7 @@ help:
 	@echo "... sphinx_tutorial"
 	@echo "... test-runner-examples-as-tests"
 	@echo "... uninstall"
-	@echo "... uninstall_pkgconfig_EmulatedTCPEchoExample"
+	@echo "... uninstall_pkgconfig_EmulatedUdpEchoExample_Copy"
 	@echo "... uninstall_pkgconfig_antenna"
 	@echo "... uninstall_pkgconfig_aodv"
 	@echo "... uninstall_pkgconfig_applications"
@@ -6542,7 +6542,7 @@ help:
 	@echo "... uninstall_tap-creator"
 	@echo "... uninstall_tap-device-creator"
 	@echo "... update_doxygen_version"
-	@echo "... EmulatedTCPEchoExample-example"
+	@echo "... EmulatedUdpEchoExample_Copy-example"
 	@echo "... adaptive-red-tests"
 	@echo "... adhoc-aloha-ideal-phy"
 	@echo "... adhoc-aloha-ideal-phy-matrix-propagation-loss-model"
@@ -6639,9 +6639,9 @@ help:
 	@echo "... lena-x2-handover-measures"
 	@echo "... length-example"
 	@echo "... li-ion-energy-source"
-	@echo "... libEmulatedTCPEchoExample"
-	@echo "... libEmulatedTCPEchoExample-obj"
-	@echo "... libEmulatedTCPEchoExample-test"
+	@echo "... libEmulatedUdpEchoExample_Copy"
+	@echo "... libEmulatedUdpEchoExample_Copy-obj"
+	@echo "... libEmulatedUdpEchoExample_Copy-test"
 	@echo "... libantenna"
 	@echo "... libantenna-obj"
 	@echo "... libantenna-test"

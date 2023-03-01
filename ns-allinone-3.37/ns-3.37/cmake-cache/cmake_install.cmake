@@ -215,7 +215,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/pkgconfig/ns3-EmulatedTCPEchoExample.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/pkgconfig/ns3-EmulatedUdpEchoExample_Copy.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -246,7 +246,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCPEchoExample/cmake_install.cmake")
+  include("/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdpEchoExample_Copy/cmake_install.cmake")
   include("/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v1/cmake_install.cmake")
   include("/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v2/cmake_install.cmake")
   include("/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-many-clients-single-server/cmake_install.cmake")

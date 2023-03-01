@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache
 # The main recursive "all" target.
 all: CMakeFiles/stdlib_pch.dir/all
 all: CMakeFiles/stdlib_pch_exec.dir/all
-all: contrib/EmulatedTCPEchoExample/all
+all: contrib/EmulatedUdpEchoExample_Copy/all
 all: contrib/neighborhood_topology_v1/all
 all: contrib/neighborhood_topology_v2/all
 all: contrib/tcp-many-clients-single-server/all
@@ -78,7 +78,7 @@ all: utils/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: contrib/EmulatedTCPEchoExample/preinstall
+preinstall: contrib/EmulatedUdpEchoExample_Copy/preinstall
 preinstall: contrib/neighborhood_topology_v1/preinstall
 preinstall: contrib/neighborhood_topology_v2/preinstall
 preinstall: contrib/tcp-many-clients-single-server/preinstall
@@ -153,8 +153,8 @@ clean: CMakeFiles/uninstall_pkgconfig_tcp-single-client-server.dir/clean
 clean: CMakeFiles/uninstall_pkgconfig_tcp-many-clients-single-server.dir/clean
 clean: CMakeFiles/uninstall_pkgconfig_neighborhood_topology_v2.dir/clean
 clean: CMakeFiles/uninstall_pkgconfig_neighborhood_topology_v1.dir/clean
-clean: CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/clean
-clean: contrib/EmulatedTCPEchoExample/clean
+clean: CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/clean
+clean: contrib/EmulatedUdpEchoExample_Copy/clean
 clean: contrib/neighborhood_topology_v1/clean
 clean: contrib/neighborhood_topology_v2/clean
 clean: contrib/tcp-many-clients-single-server/clean
@@ -167,40 +167,40 @@ clean: utils/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory contrib/EmulatedTCPEchoExample
+# Directory level rules for directory contrib/EmulatedUdpEchoExample_Copy
 
 # Recursive "all" directory target.
-contrib/EmulatedTCPEchoExample/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/all
-contrib/EmulatedTCPEchoExample/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
-contrib/EmulatedTCPEchoExample/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/all
-contrib/EmulatedTCPEchoExample/all: contrib/EmulatedTCPEchoExample/examples/all
-.PHONY : contrib/EmulatedTCPEchoExample/all
+contrib/EmulatedUdpEchoExample_Copy/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/all
+contrib/EmulatedUdpEchoExample_Copy/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
+contrib/EmulatedUdpEchoExample_Copy/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/all
+contrib/EmulatedUdpEchoExample_Copy/all: contrib/EmulatedUdpEchoExample_Copy/examples/all
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/all
 
 # Recursive "preinstall" directory target.
-contrib/EmulatedTCPEchoExample/preinstall: contrib/EmulatedTCPEchoExample/examples/preinstall
-.PHONY : contrib/EmulatedTCPEchoExample/preinstall
+contrib/EmulatedUdpEchoExample_Copy/preinstall: contrib/EmulatedUdpEchoExample_Copy/examples/preinstall
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/preinstall
 
 # Recursive "clean" directory target.
-contrib/EmulatedTCPEchoExample/clean: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/clean
-contrib/EmulatedTCPEchoExample/clean: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/clean
-contrib/EmulatedTCPEchoExample/clean: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/clean
-contrib/EmulatedTCPEchoExample/clean: contrib/EmulatedTCPEchoExample/examples/clean
-.PHONY : contrib/EmulatedTCPEchoExample/clean
+contrib/EmulatedUdpEchoExample_Copy/clean: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/clean
+contrib/EmulatedUdpEchoExample_Copy/clean: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/clean
+contrib/EmulatedUdpEchoExample_Copy/clean: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/clean
+contrib/EmulatedUdpEchoExample_Copy/clean: contrib/EmulatedUdpEchoExample_Copy/examples/clean
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/clean
 
 #=============================================================================
-# Directory level rules for directory contrib/EmulatedTCPEchoExample/examples
+# Directory level rules for directory contrib/EmulatedUdpEchoExample_Copy/examples
 
 # Recursive "all" directory target.
-contrib/EmulatedTCPEchoExample/examples/all: contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/all
-.PHONY : contrib/EmulatedTCPEchoExample/examples/all
+contrib/EmulatedUdpEchoExample_Copy/examples/all: contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/all
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/examples/all
 
 # Recursive "preinstall" directory target.
-contrib/EmulatedTCPEchoExample/examples/preinstall:
-.PHONY : contrib/EmulatedTCPEchoExample/examples/preinstall
+contrib/EmulatedUdpEchoExample_Copy/examples/preinstall:
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/examples/preinstall
 
 # Recursive "clean" directory target.
-contrib/EmulatedTCPEchoExample/examples/clean: contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/clean
-.PHONY : contrib/EmulatedTCPEchoExample/examples/clean
+contrib/EmulatedUdpEchoExample_Copy/examples/clean: contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/clean
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/examples/clean
 
 #=============================================================================
 # Directory level rules for directory contrib/neighborhood_topology_v1
@@ -2736,7 +2736,7 @@ CMakeFiles/uninstall.dir/all: CMakeFiles/uninstall_pkgconfig_tcp-single-client-s
 CMakeFiles/uninstall.dir/all: CMakeFiles/uninstall_pkgconfig_tcp-many-clients-single-server.dir/all
 CMakeFiles/uninstall.dir/all: CMakeFiles/uninstall_pkgconfig_neighborhood_topology_v2.dir/all
 CMakeFiles/uninstall.dir/all: CMakeFiles/uninstall_pkgconfig_neighborhood_topology_v1.dir/all
-CMakeFiles/uninstall.dir/all: CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/all
+CMakeFiles/uninstall.dir/all: CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/all
 CMakeFiles/uninstall.dir/all: src/fd-net-device/CMakeFiles/uninstall_raw-sock-creator.dir/all
 CMakeFiles/uninstall.dir/all: src/fd-net-device/CMakeFiles/uninstall_tap-device-creator.dir/all
 CMakeFiles/uninstall.dir/all: src/tap-bridge/CMakeFiles/uninstall_tap-creator.dir/all
@@ -2852,7 +2852,7 @@ CMakeFiles/test-runner-examples-as-tests.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/all-test-targets.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-CMakeFiles/all-test-targets.dir/all: contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/all
+CMakeFiles/all-test-targets.dir/all: contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/all
 CMakeFiles/all-test-targets.dir/all: contrib/neighborhood_topology_v1/examples/CMakeFiles/neighborhood_topology_v1-example.dir/all
 CMakeFiles/all-test-targets.dir/all: contrib/neighborhood_topology_v2/examples/CMakeFiles/neighborhood_topology_v2-example.dir/all
 CMakeFiles/all-test-targets.dir/all: contrib/tcp-many-clients-single-server/examples/CMakeFiles/tcp-many-clients-single-server-example.dir/all
@@ -4587,134 +4587,134 @@ CMakeFiles/uninstall_pkgconfig_neighborhood_topology_v1.dir/clean:
 .PHONY : CMakeFiles/uninstall_pkgconfig_neighborhood_topology_v1.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir
+# Target rules for target CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir
 
 # All Build rule for target.
-CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build
-.PHONY : CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/all
+CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build
+.PHONY : CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/rule: cmake_check_build_system
+CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 0
-.PHONY : CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/rule
+.PHONY : CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/rule
 
 # Convenience name for target.
-uninstall_pkgconfig_EmulatedTCPEchoExample: CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/rule
-.PHONY : uninstall_pkgconfig_EmulatedTCPEchoExample
+uninstall_pkgconfig_EmulatedUdpEchoExample_Copy: CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/rule
+.PHONY : uninstall_pkgconfig_EmulatedUdpEchoExample_Copy
 
 # clean rule for target.
-CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/clean
-.PHONY : CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/clean
+CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/clean
+.PHONY : CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/clean
 
 #=============================================================================
-# Target rules for target contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir
+# Target rules for target contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir
 
 # All Build rule for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/all: CMakeFiles/stdlib_pch.dir/all
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/depend
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/all
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/all: CMakeFiles/stdlib_pch.dir/all
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/depend
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/build
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/all
 
 # Build rule for subdir invocation for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/rule: cmake_check_build_system
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 0
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/rule
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/rule
 
 # Convenience name for target.
-libEmulatedTCPEchoExample-obj: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/rule
-.PHONY : libEmulatedTCPEchoExample-obj
+libEmulatedUdpEchoExample_Copy-obj: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/rule
+.PHONY : libEmulatedUdpEchoExample_Copy-obj
 
 # clean rule for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/clean:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/clean
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/clean
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/clean:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/clean
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/clean
 
 #=============================================================================
-# Target rules for target contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir
+# Target rules for target contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir
 
 # All Build rule for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/all
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all: src/core/CMakeFiles/libcore.dir/all
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/depend
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/all
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all: src/core/CMakeFiles/libcore.dir/all
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/depend
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/build
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 
 # Build rule for subdir invocation for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/rule: cmake_check_build_system
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 0
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/rule
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/rule
 
 # Convenience name for target.
-libEmulatedTCPEchoExample: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/rule
-.PHONY : libEmulatedTCPEchoExample
+libEmulatedUdpEchoExample_Copy: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/rule
+.PHONY : libEmulatedUdpEchoExample_Copy
 
 # clean rule for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/clean:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/clean
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/clean
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/clean:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/clean
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/clean
 
 #=============================================================================
-# Target rules for target contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir
+# Target rules for target contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir
 
 # All Build rule for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/all: CMakeFiles/stdlib_pch.dir/all
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/all: src/core/CMakeFiles/libcore.dir/all
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/depend
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/all
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/all: CMakeFiles/stdlib_pch.dir/all
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/all: src/core/CMakeFiles/libcore.dir/all
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/depend
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/build
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/all
 
 # Build rule for subdir invocation for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/rule: cmake_check_build_system
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 0
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/rule
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/rule
 
 # Convenience name for target.
-libEmulatedTCPEchoExample-test: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/rule
-.PHONY : libEmulatedTCPEchoExample-test
+libEmulatedUdpEchoExample_Copy-test: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/rule
+.PHONY : libEmulatedUdpEchoExample_Copy-test
 
 # clean rule for target.
-contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/clean
-.PHONY : contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/clean
+contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/build.make contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/clean
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/clean
 
 #=============================================================================
-# Target rules for target contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir
+# Target rules for target contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir
 
 # All Build rule for target.
-contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
-contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/all: src/core/CMakeFiles/libcore.dir/all
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build.make contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/depend
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build.make contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build
-.PHONY : contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/all
+contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
+contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
+contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/all: src/core/CMakeFiles/libcore.dir/all
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/build.make contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/depend
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/build.make contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/build
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/all
 
 # Build rule for subdir invocation for target.
-contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/rule: cmake_check_build_system
+contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles 0
-.PHONY : contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/rule
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/rule
 
 # Convenience name for target.
-EmulatedTCPEchoExample-example: contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/rule
-.PHONY : EmulatedTCPEchoExample-example
+EmulatedUdpEchoExample_Copy-example: contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/rule
+.PHONY : EmulatedUdpEchoExample_Copy-example
 
 # clean rule for target.
-contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/clean:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build.make contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/clean
-.PHONY : contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/clean
+contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/clean:
+	$(MAKE) $(MAKESILENT) -f contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/build.make contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/clean
+.PHONY : contrib/EmulatedUdpEchoExample_Copy/examples/CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/clean
 
 #=============================================================================
 # Target rules for target contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1-obj.dir
@@ -17886,7 +17886,7 @@ examples/wireless/CMakeFiles/wifi-ofdm-eht-validation.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -17955,7 +17955,7 @@ scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18024,7 +18024,7 @@ scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_fd-emu-onoff.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_fd-emu-onoff.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_fd-emu-onoff.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_fd-emu-onoff.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_fd-emu-onoff.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_fd-emu-onoff.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18093,7 +18093,7 @@ scratch/CMakeFiles/scratch_fd-emu-onoff.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18162,7 +18162,7 @@ scratch/CMakeFiles/scratch_neighborhood_topology_v1.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18231,7 +18231,7 @@ scratch/CMakeFiles/scratch_neighborhood_topology_v2.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_scratch-simulator.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_scratch-simulator.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_scratch-simulator.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_scratch-simulator.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_scratch-simulator.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_scratch-simulator.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18300,7 +18300,7 @@ scratch/CMakeFiles/scratch_scratch-simulator.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18369,7 +18369,7 @@ scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_tcp-single-client-server.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_tcp-single-client-server.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_tcp-single-client-server.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_tcp-single-client-server.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_tcp-single-client-server.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_tcp-single-client-server.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18438,7 +18438,7 @@ scratch/CMakeFiles/scratch_tcp-single-client-server.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_two-LANs.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_two-LANs.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_two-LANs.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_two-LANs.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_two-LANs.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_two-LANs.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18507,7 +18507,7 @@ scratch/CMakeFiles/scratch_two-LANs.dir/clean:
 
 # All Build rule for target.
 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all
@@ -18576,8 +18576,8 @@ scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/clean:
 
 # All Build rule for target.
 utils/CMakeFiles/test-runner.dir/all: CMakeFiles/test-runner-examples-as-tests.dir/all
-utils/CMakeFiles/test-runner.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
-utils/CMakeFiles/test-runner.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/all
+utils/CMakeFiles/test-runner.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
+utils/CMakeFiles/test-runner.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/all
 utils/CMakeFiles/test-runner.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 utils/CMakeFiles/test-runner.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1-test.dir/all
 utils/CMakeFiles/test-runner.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
@@ -18735,7 +18735,7 @@ utils/CMakeFiles/bench-packets.dir/clean:
 
 # All Build rule for target.
 utils/CMakeFiles/print-introspected-doxygen.dir/all: CMakeFiles/stdlib_pch_exec.dir/all
-utils/CMakeFiles/print-introspected-doxygen.dir/all: contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/all
+utils/CMakeFiles/print-introspected-doxygen.dir/all: contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/all
 utils/CMakeFiles/print-introspected-doxygen.dir/all: contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/all
 utils/CMakeFiles/print-introspected-doxygen.dir/all: contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/all
 utils/CMakeFiles/print-introspected-doxygen.dir/all: contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/all

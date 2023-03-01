@@ -54,3 +54,6 @@ sudo ip netns del ns2
 # Also to run ns-3 inside namespaces, without setting SUID from sudo we can use firejail.
 # Can be installed using apt, but need to configure network access as in:
 # https://github.com/netblue30/firejail/issues/2638 (changing restricted-network to no, in /etc/firejail/firejail.config)
+# Example:
+
+firejail --noprofile --netns=ns1 ./ns3 run 'scratch/EmulatedUdpEchoExample_Copy.cc --client=true' --enable-sudo --cwd=contrib/EmulatedUdpEchoExample_Copy/

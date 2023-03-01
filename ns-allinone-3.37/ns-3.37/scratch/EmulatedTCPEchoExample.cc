@@ -23,7 +23,8 @@ main(int argc, char* argv[])
     // new_tcpHeader.SetSequenceNumber(SequenceNumber32(5000));
     // Config::Set ("ns3::TcpHeader", new_tcpHeader);
 
-    std::string deviceName("virt1");
+    // std::string deviceName("virt1");
+    std::string deviceName("vpeer1"); // If running inside linux namespaces
     std::string encapMode("Dix");
     bool clientMode = false;
     double stopTime = 10;
