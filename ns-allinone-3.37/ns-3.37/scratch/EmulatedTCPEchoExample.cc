@@ -108,37 +108,37 @@ main(int argc, char* argv[])
     // new_tcpHeader.SetAckNumber(SequenceNumber32(5000));
     // Config::SetDefault ("ns3::TcpHeader", TcpHeader(new_tcpHeader));
 
-    BulkSendHelper source ("ns3::TcpSocketFactory",
-                          (InetSocketAddress(Ipv4Address("10.1.1.3"), 80)));
-    // Set the amount of data to send in bytes.  Zero is unlimited.
-    uint32_t maxBytes = 20;
-    source.SetAttribute ("MaxBytes", UintegerValue (maxBytes));
-    ApplicationContainer sourceApps = source.Install (n.Get (0));
-    sourceApps.Start (Seconds (1.0));
-    sourceApps.Stop (Seconds (stopTime));
+    // BulkSendHelper source ("ns3::TcpSocketFactory",
+    //                       (InetSocketAddress(Ipv4Address("10.1.1.3"), 80)));
+    // // Set the amount of data to send in bytes.  Zero is unlimited.
+    // uint32_t maxBytes = 20;
+    // source.SetAttribute ("MaxBytes", UintegerValue (maxBytes));
+    // ApplicationContainer sourceApps = source.Install (n.Get (0));
+    // sourceApps.Start (Seconds (1.0));
+    // sourceApps.Stop (Seconds (stopTime));
 
-    // OnOffHelper client("ns3::TcpSocketFactory", Address());
-    // client.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
-    // client.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-    // // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
-    // //client.SetAttribute("Interval", TimeValue(interPacketInterval));
-    // std::string dataRate("5kb/s");
-    // client.SetAttribute("DataRate", DataRateValue(dataRate));
-    // client.SetAttribute("PacketSize", UintegerValue(packetSize));
-    // AddressValue remoteAddress (InetSocketAddress(Ipv4Address("10.1.1.3"), 80));
-    // client.SetAttribute("Remote", remoteAddress);
+    OnOffHelper client("ns3::TcpSocketFactory", Address());
+    client.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
+    client.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+    // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
+    client.SetAttribute("Interval", TimeValue(interPacketInterval));
+    std::string dataRate("5kb/s");
+    client.SetAttribute("DataRate", DataRateValue(dataRate));
+    client.SetAttribute("PacketSize", UintegerValue(packetSize));
+    AddressValue remoteAddress (InetSocketAddress(Ipv4Address("10.1.1.3"), 80));
+    client.SetAttribute("Remote", remoteAddress);
 
 
-    // apps = client.Install(n.Get(0));
-    // // int64_t streamIndex = 54879;
-    // // client.AssignStreams(n.Get(0), streamIndex);
-    // apps.Start(Seconds(2.0));
-    // apps.Stop(Seconds(stopTime));
+    apps = client.Install(n.Get(0));
+    // int64_t streamIndex = 54879;
+    // client.AssignStreams(n.Get(0), streamIndex);
+    apps.Start(Seconds(2.0));
+    apps.Stop(Seconds(stopTime));
     // string message = "Hello\n";
     // client.SetFill(apps.Get(0), message);
    
 
-    // Ipv4GlobalRoutingHelper::PopulateRoutingTables();
+    Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
     emu.EnablePcapAll("fd-emu-TCP-echo-COPY", true);
     emu.EnableAsciiAll("fd-emu-TCP-echo-COPY.tr");

@@ -126,7 +126,8 @@ main(int argc, char* argv[])
     std::string dataRate("1000Mb/s");
     bool serverMode = false;
 
-    std::string deviceName("virt1");
+    // std::string deviceName("virt1");
+    std::string deviceName("vpeer1");
     std::string client("10.1.1.1");
     std::string server("10.1.1.3");
     std::string netmask("255.255.255.0");
