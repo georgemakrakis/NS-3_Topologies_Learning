@@ -95,7 +95,8 @@ main(int argc, char* argv[])
 {
     LogComponentEnable ("EmulatedUdpEchoExample_Copy", LOG_LEVEL_ALL);
 
-    std::string deviceName("virt1");
+    // std::string deviceName("virt1");
+    std::string deviceName("vpeer1"); // If running inside linux namespaces
     std::string encapMode("Dix");
     bool clientMode = false;
     bool serverMode = false;
