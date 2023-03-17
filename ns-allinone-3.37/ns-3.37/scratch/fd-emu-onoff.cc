@@ -128,6 +128,7 @@ main(int argc, char* argv[])
 
     // std::string deviceName("virt1");
     std::string deviceName("vpeer1");
+    std::string deviceNameServer("vpeer2");
     std::string client("10.1.1.1");
     std::string server("10.1.1.3");
     std::string netmask("255.255.255.0");
@@ -208,6 +209,16 @@ main(int argc, char* argv[])
         raw->SetAttribute("EncapsulationMode", StringValue(encapMode));
         helper = raw;
     }
+    
+    if (serverMode)
+    {
+        EmuFdNetDeviceHelper* raw = new EmuFdNetDeviceHelper;
+        raw->SetDeviceName(deviceNameServer);
+        std::string encapMode("Dix");
+        raw->SetAttribute("EncapsulationMode", StringValue(encapMode));
+        helper = raw;
+    }
+
 // #endif
 // #ifdef HAVE_NETMAP_USER_H
 //     if (emuMode == "netmap")

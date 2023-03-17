@@ -30,6 +30,8 @@ main(int argc, char* argv[])
     double stopTime = 10;
     uint32_t nNodes = 2;
 
+    uint32_t packetSize = 1400; // bytes
+
     //
     // Allow the user to override any of the defaults at run-time, via command-line
     // arguments
@@ -44,6 +46,8 @@ main(int argc, char* argv[])
     cmd.AddValue("nNodes", "number of nodes to create (>= 2)", nNodes);
 
     cmd.Parse(argc, argv);
+
+    Config::SetDefault("ns3::TcpSocket::SegmentSize", UintegerValue(packetSize));
 
     GlobalValue::Bind("SimulatorImplementationType", StringValue("ns3::RealtimeSimulatorImpl"));
 
@@ -95,7 +99,6 @@ main(int argc, char* argv[])
     // Create a TcpEchoClient application to send Tcp packets
     //
     NS_LOG_INFO("Created client applications.");
-    uint32_t packetSize = 1024;
     uint32_t maxPacketCount = 20;
     Time interPacketInterval = Seconds(0.1);
     
@@ -121,7 +124,7 @@ main(int argc, char* argv[])
     client.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
     client.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
     // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
-    client.SetAttribute("Interval", TimeValue(interPacketInterval));
+    // client.SetAttribute("Interval", TimeValue(interPacketInterval));
     std::string dataRate("5kb/s");
     client.SetAttribute("DataRate", DataRateValue(dataRate));
     client.SetAttribute("PacketSize", UintegerValue(packetSize));
@@ -138,7 +141,7 @@ main(int argc, char* argv[])
     // client.SetFill(apps.Get(0), message);
    
 
-    Ipv4GlobalRoutingHelper::PopulateRoutingTables();
+    // Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
     emu.EnablePcapAll("fd-emu-TCP-echo-COPY", true);
     emu.EnableAsciiAll("fd-emu-TCP-echo-COPY.tr");

@@ -2747,8 +2747,8 @@ TcpSocketBase::SendEmptyPacket(uint8_t flags)
 
     Ptr<Packet> p = Create<Packet>();
     TcpHeader header;
-    // SequenceNumber32 s = m_tcb->m_nextTxSequence;
-    SequenceNumber32 s = SequenceNumber32(5000);
+    SequenceNumber32 s = m_tcb->m_nextTxSequence;
+    // SequenceNumber32 s = SequenceNumber32(5000);
 
     if (flags & TcpHeader::FIN)
     {

@@ -58,4 +58,4 @@ sudo ip netns del ns2
 
 firejail --noprofile --netns=ns1 ./ns3 run 'scratch/EmulatedUdpEchoExample_Copy.cc --client=true' --enable-sudo --cwd=contrib/EmulatedUdpEchoExample_Copy/
 
-#Check if we have to block RST packets
+# Check if we have to block RST packets

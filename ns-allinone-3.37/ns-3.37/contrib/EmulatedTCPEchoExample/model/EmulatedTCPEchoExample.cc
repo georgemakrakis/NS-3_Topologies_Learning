@@ -141,7 +141,7 @@ main(int argc, char* argv[])
     // client.SetFill(apps.Get(0), message);
    
 
-    Ipv4GlobalRoutingHelper::PopulateRoutingTables();
+    // Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
     emu.EnablePcapAll("fd-emu-TCP-echo-COPY", true);
     emu.EnableAsciiAll("fd-emu-TCP-echo-COPY.tr");

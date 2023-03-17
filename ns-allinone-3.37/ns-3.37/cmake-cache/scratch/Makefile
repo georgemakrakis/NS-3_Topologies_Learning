@@ -257,6 +257,34 @@ scratch_scratch-simulator/fast:
 .PHONY : scratch_scratch-simulator/fast
 
 # Convenience name for target.
+scratch/CMakeFiles/scratch_tap-TCP.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_tap-TCP.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_tap-TCP.dir/rule
+
+# Convenience name for target.
+scratch_tap-TCP: scratch/CMakeFiles/scratch_tap-TCP.dir/rule
+.PHONY : scratch_tap-TCP
+
+# fast build rule for target.
+scratch_tap-TCP/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-TCP.dir/build.make scratch/CMakeFiles/scratch_tap-TCP.dir/build
+.PHONY : scratch_tap-TCP/fast
+
+# Convenience name for target.
+scratch/CMakeFiles/scratch_tap-UDP.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_tap-UDP.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_tap-UDP.dir/rule
+
+# Convenience name for target.
+scratch_tap-UDP: scratch/CMakeFiles/scratch_tap-UDP.dir/rule
+.PHONY : scratch_tap-UDP
+
+# fast build rule for target.
+scratch_tap-UDP/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-UDP.dir/build.make scratch/CMakeFiles/scratch_tap-UDP.dir/build
+.PHONY : scratch_tap-UDP/fast
+
+# Convenience name for target.
 scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/rule:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/rule
 .PHONY : scratch/CMakeFiles/scratch_tcp-many-clients-single-server.dir/rule
@@ -504,6 +532,54 @@ subdir/scratch-subdir.cc.s:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/subdir/scratch-subdir.cc.s
 .PHONY : subdir/scratch-subdir.cc.s
 
+tap-TCP.o: tap-TCP.cc.o
+.PHONY : tap-TCP.o
+
+# target to build an object file
+tap-TCP.cc.o:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-TCP.dir/build.make scratch/CMakeFiles/scratch_tap-TCP.dir/tap-TCP.cc.o
+.PHONY : tap-TCP.cc.o
+
+tap-TCP.i: tap-TCP.cc.i
+.PHONY : tap-TCP.i
+
+# target to preprocess a source file
+tap-TCP.cc.i:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-TCP.dir/build.make scratch/CMakeFiles/scratch_tap-TCP.dir/tap-TCP.cc.i
+.PHONY : tap-TCP.cc.i
+
+tap-TCP.s: tap-TCP.cc.s
+.PHONY : tap-TCP.s
+
+# target to generate assembly for a file
+tap-TCP.cc.s:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-TCP.dir/build.make scratch/CMakeFiles/scratch_tap-TCP.dir/tap-TCP.cc.s
+.PHONY : tap-TCP.cc.s
+
+tap-UDP.o: tap-UDP.cc.o
+.PHONY : tap-UDP.o
+
+# target to build an object file
+tap-UDP.cc.o:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-UDP.dir/build.make scratch/CMakeFiles/scratch_tap-UDP.dir/tap-UDP.cc.o
+.PHONY : tap-UDP.cc.o
+
+tap-UDP.i: tap-UDP.cc.i
+.PHONY : tap-UDP.i
+
+# target to preprocess a source file
+tap-UDP.cc.i:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-UDP.dir/build.make scratch/CMakeFiles/scratch_tap-UDP.dir/tap-UDP.cc.i
+.PHONY : tap-UDP.cc.i
+
+tap-UDP.s: tap-UDP.cc.s
+.PHONY : tap-UDP.s
+
+# target to generate assembly for a file
+tap-UDP.cc.s:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_tap-UDP.dir/build.make scratch/CMakeFiles/scratch_tap-UDP.dir/tap-UDP.cc.s
+.PHONY : tap-UDP.cc.s
+
 tcp-many-clients-single-server.o: tcp-many-clients-single-server.cc.o
 .PHONY : tcp-many-clients-single-server.o
 
@@ -596,6 +672,8 @@ help:
 	@echo "... scratch_neighborhood_topology_v2"
 	@echo "... scratch_scratch-simulator"
 	@echo "... scratch_subdir_scratch-subdir"
+	@echo "... scratch_tap-TCP"
+	@echo "... scratch_tap-UDP"
 	@echo "... scratch_tcp-many-clients-single-server"
 	@echo "... scratch_tcp-single-client-server"
 	@echo "... scratch_two-LANs"
@@ -623,6 +701,12 @@ help:
 	@echo "... subdir/scratch-subdir.o"
 	@echo "... subdir/scratch-subdir.i"
 	@echo "... subdir/scratch-subdir.s"
+	@echo "... tap-TCP.o"
+	@echo "... tap-TCP.i"
+	@echo "... tap-TCP.s"
+	@echo "... tap-UDP.o"
+	@echo "... tap-UDP.i"
+	@echo "... tap-UDP.s"
 	@echo "... tcp-many-clients-single-server.o"
 	@echo "... tcp-many-clients-single-server.i"
 	@echo "... tcp-many-clients-single-server.s"
