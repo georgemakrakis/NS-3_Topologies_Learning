@@ -1,0 +1,13 @@
+sudo brctl addbr mybridge
+sudo tunctl -t mytap
+sudo ifconfig mytap hw ether 00:00:00:00:00:01
+sudo ifconfig mytap 0.0.0.0 up
+
+sudo brctl addif mybridge mytap
+sudo brctl addif mybridge vboxnet0
+sudo ifconfig mybridge 192.168.56.2 netmask 255.255.255.0 up
+#sudo ifconfig mybridge 10.1.1.1 netmask 255.255.255.0 up
+
+
+# To send packets from another interface to NS-3 nodes, we "spoof" the src IP.
+sudo iptables -t nat -A POSTROUTING --destination 10.1.1.0/24 -j SNAT --to-source 10.1.1.1

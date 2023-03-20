@@ -35,7 +35,7 @@ neighborhood_topology_v1  neighborhood_topology_v2  netanim
 network                   nix-vector-routing        olsr                      
 point-to-point            point-to-point-layout     propagation               
 sixlowpan                 spectrum                  stats                     
-tap-UDP                   tap-bridge                tcp-single-client-server  
+tap-TCP                   tap-bridge                tcp-single-client-server  
 test                      topology-read             traffic-control           
 two-LANs                  uan                       virtual-net-device        
 wave                      wifi                      wimax                     

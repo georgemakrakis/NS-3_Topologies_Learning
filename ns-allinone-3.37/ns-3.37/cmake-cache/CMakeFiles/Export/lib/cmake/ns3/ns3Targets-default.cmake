@@ -45,15 +45,15 @@ set_target_properties(ns3::libneighborhood_topology_v2 PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS ns3::libneighborhood_topology_v2 )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libneighborhood_topology_v2 "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v2-default.so" )
 
-# Import target "ns3::libtap-UDP" for configuration "default"
-set_property(TARGET ns3::libtap-UDP APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libtap-UDP PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-tap-UDP-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-tap-UDP-default.so"
+# Import target "ns3::libtap-TCP" for configuration "default"
+set_property(TARGET ns3::libtap-TCP APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libtap-TCP PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-tap-TCP-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-tap-TCP-default.so"
   )
 
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libtap-UDP )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtap-UDP "${_IMPORT_PREFIX}/lib/libns3.37-tap-UDP-default.so" )
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libtap-TCP )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtap-TCP "${_IMPORT_PREFIX}/lib/libns3.37-tap-TCP-default.so" )
 
 # Import target "ns3::libtcp-many-clients-single-server" for configuration "default"
 set_property(TARGET ns3::libtcp-many-clients-single-server APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)

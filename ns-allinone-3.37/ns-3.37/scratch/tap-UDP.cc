@@ -28,30 +28,28 @@
 //  |          |
 //  | "thetap" |
 //  +----------+
-//       |           n0            n1            n2            n3
-//       |       +--------+    +--------+    +--------+    +--------+
-//       +-------|  tap   |    |        |    |        |    |        |
-//               | bridge |    |        |    |        |    |        |
-//               +--------+    +--------+    +--------+    +--------+
-//               |  CSMA  |    |  CSMA  |    |  CSMA  |    |  CSMA  |
-//               +--------+    +--------+    +--------+    +--------+
-//                   |             |             |             |
-//                   |             |             |             |
-//                   |             |             |             |
-//                   ===========================================
-//                                 CSMA LAN 10.1.1
+//       |           n0            n1    
+//       |       +--------+    +--------+ 
+//       +-------|  tap   |    |        | 
+//               | bridge |    |        | 
+//               +--------+    +--------+  
+//               |  CSMA  |    |  CSMA  |  
+//               +--------+    +--------+  
+//                   |             |       
+//                   |             |       
+//                   |             |       
+//                   ======================
+//                       CSMA LAN 10.1.1
 //
 // The CSMA device on node zero is:  10.1.1.1
 // The CSMA device on node one is:   10.1.1.2
-// The CSMA device on node two is:   10.1.1.3
-// The CSMA device on node three is: 10.1.1.4
 //
 // Some simple things to do:
 //
-// 1) Ping one of the simulated nodes
+// 1) Use netcat with UPD to receive or send data on one of the simulated nodes
 //
-//    ./ns3 run tap-csma&
-//    ping 10.1.1.2
+//  * When server: nc -u 10.1.1.2 9
+//  * When client: nc -u -v -l 10.1.1.1 9
 //
 
 //#include "tap-UDP.h"
@@ -76,8 +74,12 @@ NS_LOG_COMPONENT_DEFINE("TapUdpExample");
 int
 main(int argc, char* argv[])
 {
-    std::string mode = "ConfigureLocal";
-    std::string tapName = "thetap";
+
+    LogComponentEnable ("TapUdpExample", LOG_LEVEL_ALL);
+    // std::string mode = "ConfigureLocal";
+    std::string mode = "UseBridge";
+    // std::string tapName = "thetap";
+    std::string tapName = "mytap";
 
     bool clientMode = false;
     bool serverMode = false;
@@ -105,7 +107,11 @@ main(int argc, char* argv[])
     stack.Install(nodes);
 
     Ipv4AddressHelper addresses;
+    // addresses.SetBase("192.168.56.0", "255.255.255.0");
     addresses.SetBase("10.1.1.0", "255.255.255.0");
+
+    // addresses.NewAddress(); // burn the 192.168.56.1 address so that 192.168.56.2 is next
+    
     Ipv4InterfaceContainer interfaces = addresses.Assign(devices);
 
     TapBridgeHelper tapBridge;
@@ -117,28 +123,34 @@ main(int argc, char* argv[])
     // We also add UDP server to the second node.
     if (serverMode)
     {
-        
         UdpEchoServerHelper server(9);
+        // UdpEchoServerHelper server(Ipv4Address("192.168.56.3"), 9);
         apps = server.Install(nodes.Get(1));
         apps.Start(Seconds(1.0));
         apps.Stop(Seconds(70));
+
+        std::pair<ns3::Ptr<ns3::Ipv4>, unsigned int> ipv4 = interfaces.Get(1);
+        Ipv4Address iaddr = interfaces.GetAddress (1,0);
+        NS_LOG_INFO ("IP Addresses of server");
+        NS_LOG_INFO (iaddr);
     }
     // or client
     else if (clientMode)
     {
-        UdpEchoClientHelper client(Ipv4Address("10.1.1.1"), 9);
+        UdpEchoClientHelper client(Ipv4Address("192.168.56.2"), 9);
+        // UdpEchoClientHelper client(Ipv4Address("10.1.1.1"), 9);
         // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
         // client.SetAttribute("Interval", TimeValue(interPacketInterval));
         // client.SetAttribute("PacketSize", UintegerValue(packetSize));
         apps = client.Install(nodes.Get(1));
-        apps.Start(Seconds(2.0));
+        apps.Start(Seconds(5.0));
         apps.Stop(Seconds(70));
         std::string message = "Hello\n";
         client.SetFill(apps.Get(0), message);
     }
 
 
-    csma.EnablePcapAll("tap-csma", false);
+    csma.EnablePcapAll("tap-UDP", false);
     Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
     Simulator::Stop(Seconds(60.));

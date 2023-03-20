@@ -953,17 +953,17 @@ uninstall_pkgconfig_tcp-many-clients-single-server/fast:
 .PHONY : uninstall_pkgconfig_tcp-many-clients-single-server/fast
 
 #=============================================================================
-# Target rules for targets named uninstall_pkgconfig_tap-UDP
+# Target rules for targets named uninstall_pkgconfig_tap-TCP
 
 # Build rule for target.
-uninstall_pkgconfig_tap-UDP: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall_pkgconfig_tap-UDP
-.PHONY : uninstall_pkgconfig_tap-UDP
+uninstall_pkgconfig_tap-TCP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall_pkgconfig_tap-TCP
+.PHONY : uninstall_pkgconfig_tap-TCP
 
 # fast build rule for target.
-uninstall_pkgconfig_tap-UDP/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_tap-UDP.dir/build.make CMakeFiles/uninstall_pkgconfig_tap-UDP.dir/build
-.PHONY : uninstall_pkgconfig_tap-UDP/fast
+uninstall_pkgconfig_tap-TCP/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_tap-TCP.dir/build.make CMakeFiles/uninstall_pkgconfig_tap-TCP.dir/build
+.PHONY : uninstall_pkgconfig_tap-TCP/fast
 
 #=============================================================================
 # Target rules for targets named uninstall_pkgconfig_neighborhood_topology_v2
@@ -1226,56 +1226,56 @@ neighborhood_topology_v2-example/fast:
 .PHONY : neighborhood_topology_v2-example/fast
 
 #=============================================================================
-# Target rules for targets named libtap-UDP-obj
+# Target rules for targets named libtap-TCP-obj
 
 # Build rule for target.
-libtap-UDP-obj: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-UDP-obj
-.PHONY : libtap-UDP-obj
+libtap-TCP-obj: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-TCP-obj
+.PHONY : libtap-TCP-obj
 
 # fast build rule for target.
-libtap-UDP-obj/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/CMakeFiles/libtap-UDP-obj.dir/build.make contrib/tap-UDP/CMakeFiles/libtap-UDP-obj.dir/build
-.PHONY : libtap-UDP-obj/fast
+libtap-TCP-obj/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-TCP/CMakeFiles/libtap-TCP-obj.dir/build.make contrib/tap-TCP/CMakeFiles/libtap-TCP-obj.dir/build
+.PHONY : libtap-TCP-obj/fast
 
 #=============================================================================
-# Target rules for targets named libtap-UDP
+# Target rules for targets named libtap-TCP
 
 # Build rule for target.
-libtap-UDP: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-UDP
-.PHONY : libtap-UDP
+libtap-TCP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-TCP
+.PHONY : libtap-TCP
 
 # fast build rule for target.
-libtap-UDP/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/CMakeFiles/libtap-UDP.dir/build.make contrib/tap-UDP/CMakeFiles/libtap-UDP.dir/build
-.PHONY : libtap-UDP/fast
+libtap-TCP/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-TCP/CMakeFiles/libtap-TCP.dir/build.make contrib/tap-TCP/CMakeFiles/libtap-TCP.dir/build
+.PHONY : libtap-TCP/fast
 
 #=============================================================================
-# Target rules for targets named libtap-UDP-test
+# Target rules for targets named libtap-TCP-test
 
 # Build rule for target.
-libtap-UDP-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-UDP-test
-.PHONY : libtap-UDP-test
+libtap-TCP-test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-TCP-test
+.PHONY : libtap-TCP-test
 
 # fast build rule for target.
-libtap-UDP-test/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/CMakeFiles/libtap-UDP-test.dir/build.make contrib/tap-UDP/CMakeFiles/libtap-UDP-test.dir/build
-.PHONY : libtap-UDP-test/fast
+libtap-TCP-test/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-TCP/CMakeFiles/libtap-TCP-test.dir/build.make contrib/tap-TCP/CMakeFiles/libtap-TCP-test.dir/build
+.PHONY : libtap-TCP-test/fast
 
 #=============================================================================
-# Target rules for targets named tap-UDP-example
+# Target rules for targets named tap-TCP-example
 
 # Build rule for target.
-tap-UDP-example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tap-UDP-example
-.PHONY : tap-UDP-example
+tap-TCP-example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tap-TCP-example
+.PHONY : tap-TCP-example
 
 # fast build rule for target.
-tap-UDP-example/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/examples/CMakeFiles/tap-UDP-example.dir/build.make contrib/tap-UDP/examples/CMakeFiles/tap-UDP-example.dir/build
-.PHONY : tap-UDP-example/fast
+tap-TCP-example/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-TCP/examples/CMakeFiles/tap-TCP-example.dir/build.make contrib/tap-TCP/examples/CMakeFiles/tap-TCP-example.dir/build
+.PHONY : tap-TCP-example/fast
 
 #=============================================================================
 # Target rules for targets named libtcp-many-clients-single-server-obj
@@ -6684,7 +6684,7 @@ help:
 	@echo "... uninstall_pkgconfig_sixlowpan"
 	@echo "... uninstall_pkgconfig_spectrum"
 	@echo "... uninstall_pkgconfig_stats"
-	@echo "... uninstall_pkgconfig_tap-UDP"
+	@echo "... uninstall_pkgconfig_tap-TCP"
 	@echo "... uninstall_pkgconfig_tap-bridge"
 	@echo "... uninstall_pkgconfig_tcp-many-clients-single-server"
 	@echo "... uninstall_pkgconfig_tcp-single-client-server"
@@ -6893,9 +6893,9 @@ help:
 	@echo "... libstats"
 	@echo "... libstats-obj"
 	@echo "... libstats-test"
-	@echo "... libtap-UDP"
-	@echo "... libtap-UDP-obj"
-	@echo "... libtap-UDP-test"
+	@echo "... libtap-TCP"
+	@echo "... libtap-TCP-obj"
+	@echo "... libtap-TCP-test"
 	@echo "... libtap-bridge"
 	@echo "... libtap-bridge-obj"
 	@echo "... libtcp-many-clients-single-server"
@@ -7027,7 +7027,7 @@ help:
 	@echo "... stdlib_pch"
 	@echo "... stdlib_pch_exec"
 	@echo "... system-path-examples"
-	@echo "... tap-UDP-example"
+	@echo "... tap-TCP-example"
 	@echo "... tap-creator"
 	@echo "... tap-csma"
 	@echo "... tap-csma-virtual-machine"
