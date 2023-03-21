@@ -14,8 +14,48 @@ using namespace std;
 
 NS_LOG_COMPONENT_DEFINE("EmulatedTCPEchoExample");
 
-int
-main(int argc, char* argv[])
+// The number of bytes to send in this simulation.
+static const uint32_t totalTxBytes = 200;
+static uint32_t currentTxBytes = 0;
+// Perform series of 1040 byte writes (this is a multiple of 26 since
+// we want to detect data splicing in the output stream)
+static const uint32_t writeSize = 1040;
+uint8_t data_S[writeSize];
+
+void WriteUntilBufferFull (Ptr<Socket> localSocket, uint32_t txSpace)
+{
+    while (currentTxBytes < totalTxBytes && localSocket->GetTxAvailable () > 0) 
+    {
+        uint32_t left = totalTxBytes - currentTxBytes;
+        uint32_t dataOffset = currentTxBytes % writeSize;
+        uint32_t toWrite = writeSize - dataOffset;
+        toWrite = std::min (toWrite, left);
+        toWrite = std::min (toWrite, localSocket->GetTxAvailable ());
+        int amountSent = localSocket->Send (&data_S[dataOffset], toWrite, 0);
+        if(amountSent < 0)
+        {
+            // we will be called again when new tx space becomes available.
+            return;
+        }
+        currentTxBytes += amountSent;
+    }
+    localSocket->Close ();
+}
+
+void StartFlow (Ptr<Socket> localSocket,
+                 Ipv4Address servAddress,
+                uint16_t servPort)
+{
+    NS_LOG_LOGIC ("Starting flow at time " <<  Simulator::Now ().GetSeconds ());
+    localSocket->Connect (InetSocketAddress (servAddress, servPort)); //connect
+ 
+    // tell the tcp implementation to call WriteUntilBufferFull again
+    // if we blocked and new tx buffer space becomes available
+    localSocket->SetSendCallback (MakeCallback (&WriteUntilBufferFull));
+    WriteUntilBufferFull (localSocket, localSocket->GetTxAvailable ());
+}
+
+int main(int argc, char* argv[])
 {
     LogComponentEnable ("EmulatedTCPEchoExample", LOG_LEVEL_ALL);
 
@@ -23,8 +63,8 @@ main(int argc, char* argv[])
     // new_tcpHeader.SetSequenceNumber(SequenceNumber32(5000));
     // Config::Set ("ns3::TcpHeader", new_tcpHeader);
 
-    // std::string deviceName("virt1");
-    std::string deviceName("vpeer1"); // If running inside linux namespaces
+    std::string deviceName("enx00e04c653c58");
+    // std::string deviceName("vpeer1"); // If running inside linux namespaces
     std::string encapMode("Dix");
     bool clientMode = false;
     double stopTime = 10;
@@ -120,25 +160,43 @@ main(int argc, char* argv[])
     // sourceApps.Start (Seconds (1.0));
     // sourceApps.Stop (Seconds (stopTime));
 
-    OnOffHelper client("ns3::TcpSocketFactory", Address());
-    client.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
-    client.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-    // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
-    // client.SetAttribute("Interval", TimeValue(interPacketInterval));
-    std::string dataRate("5kb/s");
-    client.SetAttribute("DataRate", DataRateValue(dataRate));
-    client.SetAttribute("PacketSize", UintegerValue(packetSize));
-    AddressValue remoteAddress (InetSocketAddress(Ipv4Address("10.1.1.3"), 80));
-    client.SetAttribute("Remote", remoteAddress);
+    // OnOffHelper client("ns3::TcpSocketFactory", Address());
+    // client.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
+    // client.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+    // // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
+    // // client.SetAttribute("Interval", TimeValue(interPacketInterval));
+    // std::string dataRate("5kb/s");
+    // client.SetAttribute("DataRate", DataRateValue(dataRate));
+    // client.SetAttribute("PacketSize", UintegerValue(packetSize));
+    // AddressValue remoteAddress (InetSocketAddress(Ipv4Address("10.1.1.3"), 80));
+    // client.SetAttribute("Remote", remoteAddress);
 
 
-    apps = client.Install(n.Get(0));
-    // int64_t streamIndex = 54879;
-    // client.AssignStreams(n.Get(0), streamIndex);
-    apps.Start(Seconds(2.0));
-    apps.Stop(Seconds(stopTime));
-    // string message = "Hello\n";
-    // client.SetFill(apps.Get(0), message);
+    // apps = client.Install(n.Get(0));
+    // // int64_t streamIndex = 54879;
+    // // client.AssignStreams(n.Get(0), streamIndex);
+    // apps.Start(Seconds(2.0));
+    // apps.Stop(Seconds(stopTime));
+    //string message = "Hello\n";
+    //client.SetFill(apps.Get(0), message);
+
+    // initialize the tx buffer.
+    for(uint32_t i = 0; i < writeSize; ++i)
+    {
+        char m = toascii (97 + i % 26);
+        data_S[i] = m;
+    }
+
+    // TypeId tid = TypeId::LookupByName("ns3::TcpNewReno");
+    // Config::Set("/NodeList/*/$ns3::TcpL4Protocol/SocketType", TypeIdValue(tid));
+    Ptr<Socket> localSocket = Socket::CreateSocket(n.Get(0), TcpSocketFactory::GetTypeId());
+    localSocket->Bind();
+    Simulator::ScheduleNow (&StartFlow, localSocket, Ipv4Address("10.1.1.3"), 80);
+    // localSocket.Connect(remoteAddress);
+    // Ptr<Packet> packet = Create<Packet> (1024);
+    // TcpHeader TcpHeader;
+    // packet->AddHeader(udTcpHeaderpHeader);
+    // localSocket.Send(packet)
    
 
     // Ipv4GlobalRoutingHelper::PopulateRoutingTables();

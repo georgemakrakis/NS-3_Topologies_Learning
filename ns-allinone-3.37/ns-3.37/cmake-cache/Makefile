@@ -953,6 +953,19 @@ uninstall_pkgconfig_tcp-many-clients-single-server/fast:
 .PHONY : uninstall_pkgconfig_tcp-many-clients-single-server/fast
 
 #=============================================================================
+# Target rules for targets named uninstall_pkgconfig_tap-UDP
+
+# Build rule for target.
+uninstall_pkgconfig_tap-UDP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall_pkgconfig_tap-UDP
+.PHONY : uninstall_pkgconfig_tap-UDP
+
+# fast build rule for target.
+uninstall_pkgconfig_tap-UDP/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_tap-UDP.dir/build.make CMakeFiles/uninstall_pkgconfig_tap-UDP.dir/build
+.PHONY : uninstall_pkgconfig_tap-UDP/fast
+
+#=============================================================================
 # Target rules for targets named uninstall_pkgconfig_tap-TCP
 
 # Build rule for target.
@@ -1003,71 +1016,6 @@ uninstall_pkgconfig_EmulatedUdpEchoExample_Copy: cmake_check_build_system
 uninstall_pkgconfig_EmulatedUdpEchoExample_Copy/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedUdpEchoExample_Copy.dir/build
 .PHONY : uninstall_pkgconfig_EmulatedUdpEchoExample_Copy/fast
-
-#=============================================================================
-# Target rules for targets named uninstall_pkgconfig_EmulatedTCPEchoExample
-
-# Build rule for target.
-uninstall_pkgconfig_EmulatedTCPEchoExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall_pkgconfig_EmulatedTCPEchoExample
-.PHONY : uninstall_pkgconfig_EmulatedTCPEchoExample
-
-# fast build rule for target.
-uninstall_pkgconfig_EmulatedTCPEchoExample/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build.make CMakeFiles/uninstall_pkgconfig_EmulatedTCPEchoExample.dir/build
-.PHONY : uninstall_pkgconfig_EmulatedTCPEchoExample/fast
-
-#=============================================================================
-# Target rules for targets named libEmulatedTCPEchoExample-obj
-
-# Build rule for target.
-libEmulatedTCPEchoExample-obj: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedTCPEchoExample-obj
-.PHONY : libEmulatedTCPEchoExample-obj
-
-# fast build rule for target.
-libEmulatedTCPEchoExample-obj/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-obj.dir/build
-.PHONY : libEmulatedTCPEchoExample-obj/fast
-
-#=============================================================================
-# Target rules for targets named libEmulatedTCPEchoExample
-
-# Build rule for target.
-libEmulatedTCPEchoExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedTCPEchoExample
-.PHONY : libEmulatedTCPEchoExample
-
-# fast build rule for target.
-libEmulatedTCPEchoExample/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/build
-.PHONY : libEmulatedTCPEchoExample/fast
-
-#=============================================================================
-# Target rules for targets named libEmulatedTCPEchoExample-test
-
-# Build rule for target.
-libEmulatedTCPEchoExample-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libEmulatedTCPEchoExample-test
-.PHONY : libEmulatedTCPEchoExample-test
-
-# fast build rule for target.
-libEmulatedTCPEchoExample-test/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build.make contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample-test.dir/build
-.PHONY : libEmulatedTCPEchoExample-test/fast
-
-#=============================================================================
-# Target rules for targets named EmulatedTCPEchoExample-example
-
-# Build rule for target.
-EmulatedTCPEchoExample-example: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EmulatedTCPEchoExample-example
-.PHONY : EmulatedTCPEchoExample-example
-
-# fast build rule for target.
-EmulatedTCPEchoExample-example/fast:
-	$(MAKE) $(MAKESILENT) -f contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build.make contrib/EmulatedTCPEchoExample/examples/CMakeFiles/EmulatedTCPEchoExample-example.dir/build
-.PHONY : EmulatedTCPEchoExample-example/fast
 
 #=============================================================================
 # Target rules for targets named libEmulatedUdpEchoExample_Copy-obj
@@ -1276,6 +1224,58 @@ tap-TCP-example: cmake_check_build_system
 tap-TCP-example/fast:
 	$(MAKE) $(MAKESILENT) -f contrib/tap-TCP/examples/CMakeFiles/tap-TCP-example.dir/build.make contrib/tap-TCP/examples/CMakeFiles/tap-TCP-example.dir/build
 .PHONY : tap-TCP-example/fast
+
+#=============================================================================
+# Target rules for targets named libtap-UDP-obj
+
+# Build rule for target.
+libtap-UDP-obj: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-UDP-obj
+.PHONY : libtap-UDP-obj
+
+# fast build rule for target.
+libtap-UDP-obj/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/CMakeFiles/libtap-UDP-obj.dir/build.make contrib/tap-UDP/CMakeFiles/libtap-UDP-obj.dir/build
+.PHONY : libtap-UDP-obj/fast
+
+#=============================================================================
+# Target rules for targets named libtap-UDP
+
+# Build rule for target.
+libtap-UDP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-UDP
+.PHONY : libtap-UDP
+
+# fast build rule for target.
+libtap-UDP/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/CMakeFiles/libtap-UDP.dir/build.make contrib/tap-UDP/CMakeFiles/libtap-UDP.dir/build
+.PHONY : libtap-UDP/fast
+
+#=============================================================================
+# Target rules for targets named libtap-UDP-test
+
+# Build rule for target.
+libtap-UDP-test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtap-UDP-test
+.PHONY : libtap-UDP-test
+
+# fast build rule for target.
+libtap-UDP-test/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/CMakeFiles/libtap-UDP-test.dir/build.make contrib/tap-UDP/CMakeFiles/libtap-UDP-test.dir/build
+.PHONY : libtap-UDP-test/fast
+
+#=============================================================================
+# Target rules for targets named tap-UDP-example
+
+# Build rule for target.
+tap-UDP-example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tap-UDP-example
+.PHONY : tap-UDP-example
+
+# fast build rule for target.
+tap-UDP-example/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/tap-UDP/examples/CMakeFiles/tap-UDP-example.dir/build.make contrib/tap-UDP/examples/CMakeFiles/tap-UDP-example.dir/build
+.PHONY : tap-UDP-example/fast
 
 #=============================================================================
 # Target rules for targets named libtcp-many-clients-single-server-obj
@@ -6650,7 +6650,6 @@ help:
 	@echo "... sphinx_tutorial"
 	@echo "... test-runner-examples-as-tests"
 	@echo "... uninstall"
-	@echo "... uninstall_pkgconfig_EmulatedTCPEchoExample"
 	@echo "... uninstall_pkgconfig_EmulatedUdpEchoExample_Copy"
 	@echo "... uninstall_pkgconfig_antenna"
 	@echo "... uninstall_pkgconfig_aodv"
@@ -6685,6 +6684,7 @@ help:
 	@echo "... uninstall_pkgconfig_spectrum"
 	@echo "... uninstall_pkgconfig_stats"
 	@echo "... uninstall_pkgconfig_tap-TCP"
+	@echo "... uninstall_pkgconfig_tap-UDP"
 	@echo "... uninstall_pkgconfig_tap-bridge"
 	@echo "... uninstall_pkgconfig_tcp-many-clients-single-server"
 	@echo "... uninstall_pkgconfig_tcp-single-client-server"
@@ -6700,7 +6700,6 @@ help:
 	@echo "... uninstall_tap-creator"
 	@echo "... uninstall_tap-device-creator"
 	@echo "... update_doxygen_version"
-	@echo "... EmulatedTCPEchoExample-example"
 	@echo "... EmulatedUdpEchoExample_Copy-example"
 	@echo "... adaptive-red-tests"
 	@echo "... adhoc-aloha-ideal-phy"
@@ -6798,9 +6797,6 @@ help:
 	@echo "... lena-x2-handover-measures"
 	@echo "... length-example"
 	@echo "... li-ion-energy-source"
-	@echo "... libEmulatedTCPEchoExample"
-	@echo "... libEmulatedTCPEchoExample-obj"
-	@echo "... libEmulatedTCPEchoExample-test"
 	@echo "... libEmulatedUdpEchoExample_Copy"
 	@echo "... libEmulatedUdpEchoExample_Copy-obj"
 	@echo "... libEmulatedUdpEchoExample_Copy-test"
@@ -6896,6 +6892,9 @@ help:
 	@echo "... libtap-TCP"
 	@echo "... libtap-TCP-obj"
 	@echo "... libtap-TCP-test"
+	@echo "... libtap-UDP"
+	@echo "... libtap-UDP-obj"
+	@echo "... libtap-UDP-test"
 	@echo "... libtap-bridge"
 	@echo "... libtap-bridge-obj"
 	@echo "... libtcp-many-clients-single-server"
@@ -7028,6 +7027,7 @@ help:
 	@echo "... stdlib_pch_exec"
 	@echo "... system-path-examples"
 	@echo "... tap-TCP-example"
+	@echo "... tap-UDP-example"
 	@echo "... tap-creator"
 	@echo "... tap-csma"
 	@echo "... tap-csma-virtual-machine"
