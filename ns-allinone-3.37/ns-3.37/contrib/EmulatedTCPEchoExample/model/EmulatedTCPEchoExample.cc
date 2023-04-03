@@ -141,62 +141,68 @@ int main(int argc, char* argv[])
     NS_LOG_INFO("Created client applications.");
     uint32_t maxPacketCount = 20;
     Time interPacketInterval = Seconds(0.1);
-    
-    // UdpEchoClientHelper client(Ipv4Address("10.1.1.3"), 9);
-    // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
-    // client.SetAttribute("Interval", TimeValue(interPacketInterval));
-    // client.SetAttribute("PacketSize", UintegerValue(packetSize));
-    
-    // TcpHeader new_tcpHeader;
-    // new_tcpHeader.SetAckNumber(SequenceNumber32(5000));
-    // Config::SetDefault ("ns3::TcpHeader", TcpHeader(new_tcpHeader));
 
-    // BulkSendHelper source ("ns3::TcpSocketFactory",
-    //                       (InetSocketAddress(Ipv4Address("10.1.1.3"), 80)));
-    // // Set the amount of data to send in bytes.  Zero is unlimited.
-    // uint32_t maxBytes = 20;
-    // source.SetAttribute ("MaxBytes", UintegerValue (maxBytes));
-    // ApplicationContainer sourceApps = source.Install (n.Get (0));
-    // sourceApps.Start (Seconds (1.0));
-    // sourceApps.Stop (Seconds (stopTime));
-
-    // OnOffHelper client("ns3::TcpSocketFactory", Address());
-    // client.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
-    // client.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-    // // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
-    // // client.SetAttribute("Interval", TimeValue(interPacketInterval));
-    // std::string dataRate("5kb/s");
-    // client.SetAttribute("DataRate", DataRateValue(dataRate));
-    // client.SetAttribute("PacketSize", UintegerValue(packetSize));
-    // AddressValue remoteAddress (InetSocketAddress(Ipv4Address("10.1.1.3"), 80));
-    // client.SetAttribute("Remote", remoteAddress);
-
-
-    // apps = client.Install(n.Get(0));
-    // // int64_t streamIndex = 54879;
-    // // client.AssignStreams(n.Get(0), streamIndex);
-    // apps.Start(Seconds(2.0));
-    // apps.Stop(Seconds(stopTime));
-    //string message = "Hello\n";
-    //client.SetFill(apps.Get(0), message);
-
-    // initialize the tx buffer.
-    for(uint32_t i = 0; i < writeSize; ++i)
+    if(clientMode)
     {
-        char m = toascii (97 + i % 26);
-        data_S[i] = m;
-    }
+        // TcpHeader new_tcpHeader;
+        // new_tcpHeader.SetAckNumber(SequenceNumber32(5000));
+        // Config::SetDefault ("ns3::TcpHeader", TcpHeader(new_tcpHeader));
 
-    // TypeId tid = TypeId::LookupByName("ns3::TcpNewReno");
-    // Config::Set("/NodeList/*/$ns3::TcpL4Protocol/SocketType", TypeIdValue(tid));
-    Ptr<Socket> localSocket = Socket::CreateSocket(n.Get(0), TcpSocketFactory::GetTypeId());
-    localSocket->Bind();
-    Simulator::ScheduleNow (&StartFlow, localSocket, Ipv4Address("10.1.1.3"), 80);
-    // localSocket.Connect(remoteAddress);
-    // Ptr<Packet> packet = Create<Packet> (1024);
-    // TcpHeader TcpHeader;
-    // packet->AddHeader(udTcpHeaderpHeader);
-    // localSocket.Send(packet)
+        // BulkSendHelper source ("ns3::TcpSocketFactory",
+        //                       (InetSocketAddress(Ipv4Address("10.1.1.3"), 80)));
+        // // Set the amount of data to send in bytes.  Zero is unlimited.
+        // uint32_t maxBytes = 20;
+        // source.SetAttribute ("MaxBytes", UintegerValue (maxBytes));
+        // ApplicationContainer sourceApps = source.Install (n.Get (0));
+        // sourceApps.Start (Seconds (1.0));
+        // sourceApps.Stop (Seconds (stopTime));
+
+        // OnOffHelper client("ns3::TcpSocketFactory", Address());
+        // client.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
+        // client.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+        // // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
+        // // client.SetAttribute("Interval", TimeValue(interPacketInterval));
+        // std::string dataRate("5kb/s");
+        // client.SetAttribute("DataRate", DataRateValue(dataRate));
+        // client.SetAttribute("PacketSize", UintegerValue(packetSize));
+        // AddressValue remoteAddress (InetSocketAddress(Ipv4Address("10.1.1.3"), 80));
+        // client.SetAttribute("Remote", remoteAddress);
+
+
+        // apps = client.Install(n.Get(0));
+        // // int64_t streamIndex = 54879;
+        // // client.AssignStreams(n.Get(0), streamIndex);
+        // apps.Start(Seconds(2.0));
+        // apps.Stop(Seconds(stopTime));
+        //string message = "Hello\n";
+        //client.SetFill(apps.Get(0), message);
+
+        // initialize the tx buffer.
+        for(uint32_t i = 0; i < writeSize; ++i)
+        {
+            char m = toascii (97 + i % 26);
+            data_S[i] = m;
+        }
+
+        // TypeId tid = TypeId::LookupByName("ns3::TcpNewReno");
+        // Config::Set("/NodeList/*/$ns3::TcpL4Protocol/SocketType", TypeIdValue(tid));
+        Ptr<Socket> localSocket = Socket::CreateSocket(n.Get(0), TcpSocketFactory::GetTypeId());
+        localSocket->Bind();
+        Simulator::ScheduleNow (&StartFlow, localSocket, Ipv4Address("10.1.1.3"), 80);
+        // localSocket.Connect(remoteAddress);
+        // Ptr<Packet> packet = Create<Packet> (1024);
+        // TcpHeader TcpHeader;
+        // packet->AddHeader(udTcpHeaderpHeader);
+        // localSocket.Send(packet)
+    }
+    else
+    {
+        Address sinkLocalAddress(InetSocketAddress(Ipv4Address("10.1.1.2"), 80));
+        PacketSinkHelper sinkHelper("ns3::TcpSocketFactory", sinkLocalAddress);
+        ApplicationContainer sinkApp = sinkHelper.Install(n.Get(0));
+        sinkApp.Start(Seconds(2.0));
+        sinkApp.Stop(Seconds(stopTime));
+    }
    
 
     // Ipv4GlobalRoutingHelper::PopulateRoutingTables();

@@ -98,7 +98,8 @@ main(int argc, char* argv[])
     nodes.Create(2);
 
     CsmaHelper csma;
-    csma.SetChannelAttribute("DataRate", DataRateValue(5000000));
+    // csma.SetChannelAttribute("DataRate", DataRateValue(5000000));
+    csma.SetChannelAttribute("DataRate", DataRateValue(1500));
     csma.SetChannelAttribute("Delay", TimeValue(MilliSeconds(2)));
 
     NetDeviceContainer devices = csma.Install(nodes);
@@ -127,7 +128,7 @@ main(int argc, char* argv[])
         // UdpEchoServerHelper server(Ipv4Address("192.168.56.3"), 9);
         apps = server.Install(nodes.Get(1));
         apps.Start(Seconds(1.0));
-        apps.Stop(Seconds(70));
+        apps.Stop(Seconds(60));
 
         std::pair<ns3::Ptr<ns3::Ipv4>, unsigned int> ipv4 = interfaces.Get(1);
         Ipv4Address iaddr = interfaces.GetAddress (1,0);
@@ -137,14 +138,14 @@ main(int argc, char* argv[])
     // or client
     else if (clientMode)
     {
-        UdpEchoClientHelper client(Ipv4Address("192.168.56.2"), 9);
-        // UdpEchoClientHelper client(Ipv4Address("10.1.1.1"), 9);
+        // UdpEchoClientHelper client(Ipv4Address("192.168.56.2"), 9);
+        UdpEchoClientHelper client(Ipv4Address("10.1.1.1"), 9);
         // client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
         // client.SetAttribute("Interval", TimeValue(interPacketInterval));
         // client.SetAttribute("PacketSize", UintegerValue(packetSize));
         apps = client.Install(nodes.Get(1));
         apps.Start(Seconds(5.0));
-        apps.Stop(Seconds(70));
+        apps.Stop(Seconds(60));
         std::string message = "Hello\n";
         client.SetFill(apps.Get(0), message);
     }
@@ -153,7 +154,7 @@ main(int argc, char* argv[])
     csma.EnablePcapAll("tap-UDP", false);
     Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
-    Simulator::Stop(Seconds(60.));
+    Simulator::Stop(Seconds(62));
     Simulator::Run();
     Simulator::Destroy();
 }
