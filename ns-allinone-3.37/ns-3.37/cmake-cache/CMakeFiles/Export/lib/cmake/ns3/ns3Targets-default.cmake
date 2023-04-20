@@ -5,6 +5,16 @@
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
 
+# Import target "ns3::libEmulatedTCPEchoExample" for configuration "default"
+set_property(TARGET ns3::libEmulatedTCPEchoExample APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libEmulatedTCPEchoExample PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCPEchoExample-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedTCPEchoExample-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedTCPEchoExample )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedTCPEchoExample "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCPEchoExample-default.so" )
+
 # Import target "ns3::libEmulatedUdpEchoExample_Copy" for configuration "default"
 set_property(TARGET ns3::libEmulatedUdpEchoExample_Copy APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libEmulatedUdpEchoExample_Copy PROPERTIES

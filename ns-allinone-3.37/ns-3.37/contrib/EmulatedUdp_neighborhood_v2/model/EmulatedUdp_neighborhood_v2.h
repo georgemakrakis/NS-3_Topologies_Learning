@@ -1,0 +1,11 @@
+#ifndef EMULATEDUDP_NEIGHBORHOOD_V2_H
+#define EMULATEDUDP_NEIGHBORHOOD_V2_H
+
+namespace ns3
+{
+
+/* ... */
+
+}
+
+#endif /* EMULATEDUDP_NEIGHBORHOOD_V2_H */

@@ -201,6 +201,20 @@ scratch_EmulatedUdpEchoExample_Copy/fast:
 .PHONY : scratch_EmulatedUdpEchoExample_Copy/fast
 
 # Convenience name for target.
+scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/rule
+
+# Convenience name for target.
+scratch_EmulatedUdp_neighborhood_v2: scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/rule
+.PHONY : scratch_EmulatedUdp_neighborhood_v2
+
+# fast build rule for target.
+scratch_EmulatedUdp_neighborhood_v2/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/build.make scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/build
+.PHONY : scratch_EmulatedUdp_neighborhood_v2/fast
+
+# Convenience name for target.
 scratch/CMakeFiles/scratch_fd-emu-onoff.dir/rule:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_fd-emu-onoff.dir/rule
 .PHONY : scratch/CMakeFiles/scratch_fd-emu-onoff.dir/rule
@@ -387,6 +401,30 @@ EmulatedUdpEchoExample_Copy.s: EmulatedUdpEchoExample_Copy.cc.s
 EmulatedUdpEchoExample_Copy.cc.s:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/build.make scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/EmulatedUdpEchoExample_Copy.cc.s
 .PHONY : EmulatedUdpEchoExample_Copy.cc.s
+
+EmulatedUdp_neighborhood_v2.o: EmulatedUdp_neighborhood_v2.cc.o
+.PHONY : EmulatedUdp_neighborhood_v2.o
+
+# target to build an object file
+EmulatedUdp_neighborhood_v2.cc.o:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/build.make scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/EmulatedUdp_neighborhood_v2.cc.o
+.PHONY : EmulatedUdp_neighborhood_v2.cc.o
+
+EmulatedUdp_neighborhood_v2.i: EmulatedUdp_neighborhood_v2.cc.i
+.PHONY : EmulatedUdp_neighborhood_v2.i
+
+# target to preprocess a source file
+EmulatedUdp_neighborhood_v2.cc.i:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/build.make scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/EmulatedUdp_neighborhood_v2.cc.i
+.PHONY : EmulatedUdp_neighborhood_v2.cc.i
+
+EmulatedUdp_neighborhood_v2.s: EmulatedUdp_neighborhood_v2.cc.s
+.PHONY : EmulatedUdp_neighborhood_v2.s
+
+# target to generate assembly for a file
+EmulatedUdp_neighborhood_v2.cc.s:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/build.make scratch/CMakeFiles/scratch_EmulatedUdp_neighborhood_v2.dir/EmulatedUdp_neighborhood_v2.cc.s
+.PHONY : EmulatedUdp_neighborhood_v2.cc.s
 
 fd-emu-onoff.o: fd-emu-onoff.cc.o
 .PHONY : fd-emu-onoff.o
@@ -667,6 +705,7 @@ help:
 	@echo "... test"
 	@echo "... scratch_EmulatedTCPEchoExample"
 	@echo "... scratch_EmulatedUdpEchoExample_Copy"
+	@echo "... scratch_EmulatedUdp_neighborhood_v2"
 	@echo "... scratch_fd-emu-onoff"
 	@echo "... scratch_neighborhood_topology_v1"
 	@echo "... scratch_neighborhood_topology_v2"
@@ -683,6 +722,9 @@ help:
 	@echo "... EmulatedUdpEchoExample_Copy.o"
 	@echo "... EmulatedUdpEchoExample_Copy.i"
 	@echo "... EmulatedUdpEchoExample_Copy.s"
+	@echo "... EmulatedUdp_neighborhood_v2.o"
+	@echo "... EmulatedUdp_neighborhood_v2.i"
+	@echo "... EmulatedUdp_neighborhood_v2.s"
 	@echo "... fd-emu-onoff.o"
 	@echo "... fd-emu-onoff.i"
 	@echo "... fd-emu-onoff.s"

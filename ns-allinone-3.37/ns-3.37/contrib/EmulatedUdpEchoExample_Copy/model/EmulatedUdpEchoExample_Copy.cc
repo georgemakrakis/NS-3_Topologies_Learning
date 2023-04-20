@@ -95,7 +95,8 @@ main(int argc, char* argv[])
 {
     LogComponentEnable ("EmulatedUdpEchoExample_Copy", LOG_LEVEL_ALL);
 
-    std::string deviceName("enx00e04c653c58");
+    // std::string deviceName("enx00e04c653c58");
+    std::string deviceName("enx34298f72f07b");
     // std::string deviceName("vpeer1"); // If running inside linux namespaces
     std::string encapMode("Dix");
     bool clientMode = false;
@@ -172,7 +173,10 @@ main(int argc, char* argv[])
     else if (serverMode)
     {
         d = emu.Install(n.Get(0));
+        Ptr<FdNetDevice> dev = d.Get(0)->GetObject<FdNetDevice>();
+        dev->SetAddress(Mac48Address("00:00:00:00:00:02"));
         NS_LOG_INFO("Assign IP Addresses.");
+        ipv4.NewAddress(); // burn the 10.1.1.1 address so that 10.1.1.2 is next
         i = ipv4.Assign(d);
     }
     else
@@ -192,6 +196,10 @@ main(int argc, char* argv[])
         apps = server.Install(n.Get(0));
         apps.Start(Seconds(1.0));
         apps.Stop(Seconds(stopTime));
+
+        Ipv4Address iaddr = i.GetAddress(0,0);
+        NS_LOG_INFO("IP address of server");
+        NS_LOG_INFO(iaddr);
     }
     else if (clientMode)
     {
@@ -237,6 +245,8 @@ main(int argc, char* argv[])
         apps.Start(Seconds(2.0));
         apps.Stop(Seconds(stopTime));
     }
+
+    Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
     emu.EnablePcapAll("fd-emu-udp-echo-COPY", true);
     emu.EnableAsciiAll("fd-emu-udp-echo-COPY.tr");

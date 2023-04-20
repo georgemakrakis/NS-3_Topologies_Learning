@@ -1,0 +1,2 @@
+r 2.00401 ns3::EthernetHeader ( length/type=0x806, source=00:00:00:00:00:02, destination=ff:ff:ff:ff:ff:ff) ns3::ArpHeader (request source mac: 00-06-00:00:00:00:00:02 source ipv4: 192.168.1.2 dest ipv4: 192.168.1.1) Payload (size=18) ns3::EthernetTrailer (fcs=3237980133)
+r 2.01313 ns3::EthernetHeader ( length/type=0x806, source=00:00:00:00:00:01, destination=ff:ff:ff:ff:ff:ff) ns3::ArpHeader (request source mac: 00-06-00:00:00:00:00:01 source ipv4: 192.168.1.1 dest ipv4: 192.168.1.2) Payload (size=18) ns3::EthernetTrailer (fcs=3610217537)

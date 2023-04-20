@@ -7,6 +7,7 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/george/workspace/ns-allinone-3.3
 set(OLD_GLOB
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCPEchoExample.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdpEchoExample_Copy.cc"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdp_neighborhood_v2.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/fd-emu-onoff.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v1.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v2.cc"
@@ -39,6 +40,7 @@ set(OLD_GLOB
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCPEchoExample.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdpEchoExample_Copy.cc"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdp_neighborhood_v2.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/fd-emu-onoff.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v1.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/neighborhood_topology_v2.cc"
