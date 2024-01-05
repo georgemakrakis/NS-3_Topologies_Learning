@@ -25,6 +25,16 @@ set_target_properties(ns3::libEmulatedUdpEchoExample_Copy PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedUdpEchoExample_Copy )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedUdpEchoExample_Copy "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdpEchoExample_Copy-default.so" )
 
+# Import target "ns3::libEmulatedUdp_neighborhood_v2" for configuration "default"
+set_property(TARGET ns3::libEmulatedUdp_neighborhood_v2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libEmulatedUdp_neighborhood_v2 PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdp_neighborhood_v2-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedUdp_neighborhood_v2-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedUdp_neighborhood_v2 )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedUdp_neighborhood_v2 "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdp_neighborhood_v2-default.so" )
+
 # Import target "ns3::libneighborhood_topology_v1" for configuration "default"
 set_property(TARGET ns3::libneighborhood_topology_v1 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libneighborhood_topology_v1 PROPERTIES

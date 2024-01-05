@@ -6,6 +6,7 @@ cmake_policy(SET CMP0009 NEW)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/[^.]*.cc")
 set(OLD_GLOB
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCPEchoExample.cc"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCP_neighborhood.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdpEchoExample_Copy.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdp_neighborhood_v2.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/fd-emu-onoff.cc"
@@ -39,6 +40,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES true "/home/george/workspace/ns-alli
 set(OLD_GLOB
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCPEchoExample.cc"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCP_neighborhood.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdpEchoExample_Copy.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdp_neighborhood_v2.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/fd-emu-onoff.cc"

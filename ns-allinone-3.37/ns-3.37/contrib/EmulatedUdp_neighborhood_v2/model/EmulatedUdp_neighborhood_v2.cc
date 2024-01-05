@@ -19,8 +19,8 @@ main(int argc, char* argv[])
 {
     LogComponentEnable ("EmulatedUdp_neighborhood_v2", LOG_LEVEL_ALL);
 
-    // std::string deviceName("enx00e04c653c58");
-    std::string deviceName("enx34298f72f07b");
+    std::string deviceName("enx00e04c653c58");
+    // std::string deviceName("enx34298f72f07b");
     // std::string deviceName("vpeer1"); // If running inside linux namespaces
     std::string encapMode("Dix");
     bool clientMode = false;

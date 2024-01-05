@@ -187,6 +187,20 @@ scratch_EmulatedTCPEchoExample/fast:
 .PHONY : scratch_EmulatedTCPEchoExample/fast
 
 # Convenience name for target.
+scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/rule
+
+# Convenience name for target.
+scratch_EmulatedTCP_neighborhood: scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/rule
+.PHONY : scratch_EmulatedTCP_neighborhood
+
+# fast build rule for target.
+scratch_EmulatedTCP_neighborhood/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/build.make scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/build
+.PHONY : scratch_EmulatedTCP_neighborhood/fast
+
+# Convenience name for target.
 scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/rule:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/rule
 .PHONY : scratch/CMakeFiles/scratch_EmulatedUdpEchoExample_Copy.dir/rule
@@ -377,6 +391,30 @@ EmulatedTCPEchoExample.s: EmulatedTCPEchoExample.cc.s
 EmulatedTCPEchoExample.cc.s:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/build.make scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/EmulatedTCPEchoExample.cc.s
 .PHONY : EmulatedTCPEchoExample.cc.s
+
+EmulatedTCP_neighborhood.o: EmulatedTCP_neighborhood.cc.o
+.PHONY : EmulatedTCP_neighborhood.o
+
+# target to build an object file
+EmulatedTCP_neighborhood.cc.o:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/build.make scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/EmulatedTCP_neighborhood.cc.o
+.PHONY : EmulatedTCP_neighborhood.cc.o
+
+EmulatedTCP_neighborhood.i: EmulatedTCP_neighborhood.cc.i
+.PHONY : EmulatedTCP_neighborhood.i
+
+# target to preprocess a source file
+EmulatedTCP_neighborhood.cc.i:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/build.make scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/EmulatedTCP_neighborhood.cc.i
+.PHONY : EmulatedTCP_neighborhood.cc.i
+
+EmulatedTCP_neighborhood.s: EmulatedTCP_neighborhood.cc.s
+.PHONY : EmulatedTCP_neighborhood.s
+
+# target to generate assembly for a file
+EmulatedTCP_neighborhood.cc.s:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/build.make scratch/CMakeFiles/scratch_EmulatedTCP_neighborhood.dir/EmulatedTCP_neighborhood.cc.s
+.PHONY : EmulatedTCP_neighborhood.cc.s
 
 EmulatedUdpEchoExample_Copy.o: EmulatedUdpEchoExample_Copy.cc.o
 .PHONY : EmulatedUdpEchoExample_Copy.o
@@ -704,6 +742,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... scratch_EmulatedTCPEchoExample"
+	@echo "... scratch_EmulatedTCP_neighborhood"
 	@echo "... scratch_EmulatedUdpEchoExample_Copy"
 	@echo "... scratch_EmulatedUdp_neighborhood_v2"
 	@echo "... scratch_fd-emu-onoff"
@@ -719,6 +758,9 @@ help:
 	@echo "... EmulatedTCPEchoExample.o"
 	@echo "... EmulatedTCPEchoExample.i"
 	@echo "... EmulatedTCPEchoExample.s"
+	@echo "... EmulatedTCP_neighborhood.o"
+	@echo "... EmulatedTCP_neighborhood.i"
+	@echo "... EmulatedTCP_neighborhood.s"
 	@echo "... EmulatedUdpEchoExample_Copy.o"
 	@echo "... EmulatedUdpEchoExample_Copy.i"
 	@echo "... EmulatedUdpEchoExample_Copy.s"

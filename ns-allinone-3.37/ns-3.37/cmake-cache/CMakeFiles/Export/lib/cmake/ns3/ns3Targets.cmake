@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget ns3::libEmulatedTCPEchoExample ns3::libEmulatedUdpEchoExample_Copy ns3::libneighborhood_topology_v1 ns3::libneighborhood_topology_v2 ns3::libtap-TCP ns3::libtap-UDP ns3::libtcp-many-clients-single-server ns3::libtcp-single-client-server ns3::libtwo-LANs ns3::libantenna ns3::libaodv ns3::libapplications ns3::libbridge ns3::libbuildings ns3::libconfig-store ns3::libcore ns3::libcsma ns3::libcsma-layout ns3::libdsdv ns3::libdsr ns3::libenergy ns3::raw-sock-creator ns3::tap-device-creator ns3::libfd-net-device ns3::libflow-monitor ns3::libinternet ns3::libinternet-apps ns3::liblr-wpan ns3::liblte ns3::libmesh ns3::libmobility ns3::libnetanim ns3::libnetwork ns3::libnix-vector-routing ns3::libolsr ns3::libpoint-to-point ns3::libpoint-to-point-layout ns3::libpropagation ns3::libsixlowpan ns3::libspectrum ns3::libstats ns3::libtap-bridge ns3::tap-creator ns3::libtopology-read ns3::libtraffic-control ns3::libuan ns3::libvirtual-net-device ns3::libwave ns3::libwifi ns3::libwimax)
+foreach(_expectedTarget ns3::libEmulatedTCPEchoExample ns3::libEmulatedUdpEchoExample_Copy ns3::libEmulatedUdp_neighborhood_v2 ns3::libneighborhood_topology_v1 ns3::libneighborhood_topology_v2 ns3::libtap-TCP ns3::libtap-UDP ns3::libtcp-many-clients-single-server ns3::libtcp-single-client-server ns3::libtwo-LANs ns3::libantenna ns3::libaodv ns3::libapplications ns3::libbridge ns3::libbuildings ns3::libconfig-store ns3::libcore ns3::libcsma ns3::libcsma-layout ns3::libdsdv ns3::libdsr ns3::libenergy ns3::raw-sock-creator ns3::tap-device-creator ns3::libfd-net-device ns3::libflow-monitor ns3::libinternet ns3::libinternet-apps ns3::liblr-wpan ns3::liblte ns3::libmesh ns3::libmobility ns3::libnetanim ns3::libnetwork ns3::libnix-vector-routing ns3::libolsr ns3::libpoint-to-point ns3::libpoint-to-point-layout ns3::libpropagation ns3::libsixlowpan ns3::libspectrum ns3::libstats ns3::libtap-bridge ns3::tap-creator ns3::libtopology-read ns3::libtraffic-control ns3::libuan ns3::libvirtual-net-device ns3::libwave ns3::libwifi ns3::libwimax)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -62,6 +62,14 @@ set_target_properties(ns3::libEmulatedTCPEchoExample PROPERTIES
 add_library(ns3::libEmulatedUdpEchoExample_Copy SHARED IMPORTED)
 
 set_target_properties(ns3::libEmulatedUdpEchoExample_Copy PROPERTIES
+  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include;/usr;/usr/include/libxml2;/usr/include/python3.10"
+  INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;ns3::libcore;-lpthread;-Wl,--as-needed"
+)
+
+# Create imported target ns3::libEmulatedUdp_neighborhood_v2
+add_library(ns3::libEmulatedUdp_neighborhood_v2 SHARED IMPORTED)
+
+set_target_properties(ns3::libEmulatedUdp_neighborhood_v2 PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;/usr/include;/usr;/usr/include/libxml2;/usr/include/python3.10"
   INTERFACE_LINK_LIBRARIES "-Wl,--no-as-needed;ns3::libcore;-lpthread;-Wl,--as-needed"
 )

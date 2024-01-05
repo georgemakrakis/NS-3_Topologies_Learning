@@ -121,7 +121,8 @@ int main(int argc, char* argv[])
     Ipv4InterfaceContainer i;
     ApplicationContainer apps;
 
-    ipv4.SetBase("10.1.1.0", "255.255.255.0");
+    // ipv4.SetBase("10.1.1.0", "255.255.255.0");
+    ipv4.SetBase("192.168.99.0", "255.255.255.0");
    
     d = emu.Install(n.Get(0));
     // Note:  incorrect MAC address assignments are one of the confounding
@@ -188,7 +189,8 @@ int main(int argc, char* argv[])
         // Config::Set("/NodeList/*/$ns3::TcpL4Protocol/SocketType", TypeIdValue(tid));
         Ptr<Socket> localSocket = Socket::CreateSocket(n.Get(0), TcpSocketFactory::GetTypeId());
         localSocket->Bind();
-        Simulator::ScheduleNow (&StartFlow, localSocket, Ipv4Address("10.1.1.3"), 80);
+        // Simulator::ScheduleNow (&StartFlow, localSocket, Ipv4Address("10.1.1.3"), 80);
+        Simulator::ScheduleNow (&StartFlow, localSocket, Ipv4Address("192.168.99.4"), 80);
         // localSocket.Connect(remoteAddress);
         // Ptr<Packet> packet = Create<Packet> (1024);
         // TcpHeader TcpHeader;
@@ -197,7 +199,8 @@ int main(int argc, char* argv[])
     }
     else
     {
-        Address sinkLocalAddress(InetSocketAddress(Ipv4Address("10.1.1.2"), 80));
+        // Address sinkLocalAddress(InetSocketAddress(Ipv4Address("10.1.1.2"), 80));
+        Address sinkLocalAddress(InetSocketAddress(Ipv4Address("192.168.99.2"), 80));
         PacketSinkHelper sinkHelper("ns3::TcpSocketFactory", sinkLocalAddress);
         ApplicationContainer sinkApp = sinkHelper.Install(n.Get(0));
         sinkApp.Start(Seconds(2.0));

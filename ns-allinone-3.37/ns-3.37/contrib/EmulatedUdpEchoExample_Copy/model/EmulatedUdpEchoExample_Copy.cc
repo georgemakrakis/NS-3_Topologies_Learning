@@ -95,8 +95,8 @@ main(int argc, char* argv[])
 {
     LogComponentEnable ("EmulatedUdpEchoExample_Copy", LOG_LEVEL_ALL);
 
-    // std::string deviceName("enx00e04c653c58");
-    std::string deviceName("enx34298f72f07b");
+    std::string deviceName("enx00e04c653c58");
+    // std::string deviceName("enx34298f72f07b");
     // std::string deviceName("vpeer1"); // If running inside linux namespaces
     std::string encapMode("Dix");
     bool clientMode = false;
@@ -156,7 +156,8 @@ main(int argc, char* argv[])
     Ipv4InterfaceContainer i;
     ApplicationContainer apps;
 
-    ipv4.SetBase("10.1.1.0", "255.255.255.0");
+    // ipv4.SetBase("10.1.1.0", "255.255.255.0");
+    ipv4.SetBase("192.168.99.0", "255.255.255.0");
     if (clientMode)
     {
         d = emu.Install(n.Get(0));
@@ -210,7 +211,8 @@ main(int argc, char* argv[])
         uint32_t packetSize = 1024;
         uint32_t maxPacketCount = 20;
         Time interPacketInterval = Seconds(0.1);
-        UdpEchoClientHelper client(Ipv4Address("10.1.1.3"), 9);
+        // UdpEchoClientHelper client(Ipv4Address("10.1.1.3"), 9);
+        UdpEchoClientHelper client(Ipv4Address("192.168.99.4"), 9);
         client.SetAttribute("MaxPackets", UintegerValue(maxPacketCount));
         client.SetAttribute("Interval", TimeValue(interPacketInterval));
         client.SetAttribute("PacketSize", UintegerValue(packetSize));
