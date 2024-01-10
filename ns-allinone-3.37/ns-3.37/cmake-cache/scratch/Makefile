@@ -173,6 +173,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+scratch/CMakeFiles/scratch_Echo_TCP.dir/rule:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_Echo_TCP.dir/rule
+.PHONY : scratch/CMakeFiles/scratch_Echo_TCP.dir/rule
+
+# Convenience name for target.
+scratch_Echo_TCP: scratch/CMakeFiles/scratch_Echo_TCP.dir/rule
+.PHONY : scratch_Echo_TCP
+
+# fast build rule for target.
+scratch_Echo_TCP/fast:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_Echo_TCP.dir/build.make scratch/CMakeFiles/scratch_Echo_TCP.dir/build
+.PHONY : scratch_Echo_TCP/fast
+
+# Convenience name for target.
 scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/rule:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/rule
 .PHONY : scratch/CMakeFiles/scratch_EmulatedTCPEchoExample.dir/rule
@@ -367,6 +381,30 @@ scratch_subdir_scratch-subdir: scratch/CMakeFiles/scratch_subdir_scratch-subdir.
 scratch_subdir_scratch-subdir/fast:
 	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build.make scratch/CMakeFiles/scratch_subdir_scratch-subdir.dir/build
 .PHONY : scratch_subdir_scratch-subdir/fast
+
+Echo_TCP.o: Echo_TCP.cc.o
+.PHONY : Echo_TCP.o
+
+# target to build an object file
+Echo_TCP.cc.o:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_Echo_TCP.dir/build.make scratch/CMakeFiles/scratch_Echo_TCP.dir/Echo_TCP.cc.o
+.PHONY : Echo_TCP.cc.o
+
+Echo_TCP.i: Echo_TCP.cc.i
+.PHONY : Echo_TCP.i
+
+# target to preprocess a source file
+Echo_TCP.cc.i:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_Echo_TCP.dir/build.make scratch/CMakeFiles/scratch_Echo_TCP.dir/Echo_TCP.cc.i
+.PHONY : Echo_TCP.cc.i
+
+Echo_TCP.s: Echo_TCP.cc.s
+.PHONY : Echo_TCP.s
+
+# target to generate assembly for a file
+Echo_TCP.cc.s:
+	cd /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache && $(MAKE) $(MAKESILENT) -f scratch/CMakeFiles/scratch_Echo_TCP.dir/build.make scratch/CMakeFiles/scratch_Echo_TCP.dir/Echo_TCP.cc.s
+.PHONY : Echo_TCP.cc.s
 
 EmulatedTCPEchoExample.o: EmulatedTCPEchoExample.cc.o
 .PHONY : EmulatedTCPEchoExample.o
@@ -741,6 +779,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... scratch_Echo_TCP"
 	@echo "... scratch_EmulatedTCPEchoExample"
 	@echo "... scratch_EmulatedTCP_neighborhood"
 	@echo "... scratch_EmulatedUdpEchoExample_Copy"
@@ -755,6 +794,9 @@ help:
 	@echo "... scratch_tcp-many-clients-single-server"
 	@echo "... scratch_tcp-single-client-server"
 	@echo "... scratch_two-LANs"
+	@echo "... Echo_TCP.o"
+	@echo "... Echo_TCP.i"
+	@echo "... Echo_TCP.s"
 	@echo "... EmulatedTCPEchoExample.o"
 	@echo "... EmulatedTCPEchoExample.i"
 	@echo "... EmulatedTCPEchoExample.s"

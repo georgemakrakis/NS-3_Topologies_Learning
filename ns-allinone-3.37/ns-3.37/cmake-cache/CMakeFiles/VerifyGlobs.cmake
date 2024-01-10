@@ -5,6 +5,7 @@ cmake_policy(SET CMP0009 NEW)
 # single_source_file_scratches at scratch/CMakeLists.txt:57 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/[^.]*.cc")
 set(OLD_GLOB
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/Echo_TCP.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCPEchoExample.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCP_neighborhood.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdpEchoExample_Copy.cc"
@@ -38,7 +39,9 @@ endif()
 # scratch_subdirectories at scratch/CMakeLists.txt:64 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES true "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/**")
 set(OLD_GLOB
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/A"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/Echo_TCP.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCPEchoExample.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedTCP_neighborhood.cc"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdpEchoExample_Copy.cc"

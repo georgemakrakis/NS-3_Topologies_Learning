@@ -4,6 +4,8 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
+add_test(ctest-scratch_Echo_TCP "ns3.37-Echo_TCP-default")
+set_tests_properties(ctest-scratch_Echo_TCP PROPERTIES  WORKING_DIRECTORY "/home/george/workspace/ns-allinone-3.37/ns-3.37/build/scratch/" _BACKTRACE_TRIPLES "/home/george/workspace/ns-allinone-3.37/ns-3.37/build-support/macros-and-definitions.cmake;1411;add_test;/home/george/workspace/ns-allinone-3.37/ns-3.37/build-support/macros-and-definitions.cmake;1465;set_runtime_outputdirectory;/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt;47;build_exec;/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt;59;create_scratch;/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt;0;")
 add_test(ctest-scratch_EmulatedTCPEchoExample "ns3.37-EmulatedTCPEchoExample-default")
 set_tests_properties(ctest-scratch_EmulatedTCPEchoExample PROPERTIES  WORKING_DIRECTORY "/home/george/workspace/ns-allinone-3.37/ns-3.37/build/scratch/" _BACKTRACE_TRIPLES "/home/george/workspace/ns-allinone-3.37/ns-3.37/build-support/macros-and-definitions.cmake;1411;add_test;/home/george/workspace/ns-allinone-3.37/ns-3.37/build-support/macros-and-definitions.cmake;1465;set_runtime_outputdirectory;/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt;47;build_exec;/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt;59;create_scratch;/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/CMakeLists.txt;0;")
 add_test(ctest-scratch_EmulatedTCP_neighborhood "ns3.37-EmulatedTCP_neighborhood-default")

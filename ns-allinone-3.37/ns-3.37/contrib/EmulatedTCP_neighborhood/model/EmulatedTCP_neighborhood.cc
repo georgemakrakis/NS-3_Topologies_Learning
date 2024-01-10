@@ -72,7 +72,8 @@ int main(int argc, char* argv[])
     // std::string deviceName("vpeer1"); // If running inside linux namespaces
     std::string encapMode("Dix");
     bool clientMode = false;
-    double stopTime = 10;
+    // double stopTime = 10;
+    double stopTime = 30;
     uint32_t nNodes = 2;
 
     uint32_t packetSize = 1400; // bytes
@@ -174,7 +175,8 @@ int main(int argc, char* argv[])
     OnOffHelper clientHelper("ns3::TcpSocketFactory", Address());
     clientHelper.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
     clientHelper.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-    AddressValue remoteAddress (InetSocketAddress(csmaInterfaces.GetAddress(0), port));
+    // AddressValue remoteAddress (InetSocketAddress(csmaInterfaces.GetAddress(0), port));
+    AddressValue remoteAddress (InetSocketAddress(i.GetAddress(0), 80));
     clientHelper.SetAttribute("Remote", remoteAddress);
 
     
@@ -271,7 +273,7 @@ int main(int argc, char* argv[])
     }
    
 
-    // Ipv4GlobalRoutingHelper::PopulateRoutingTables();
+    Ipv4GlobalRoutingHelper::PopulateRoutingTables();
 
     emu.EnablePcapAll("fd-emu-TCP-echo-COPY", true);
     emu.EnableAsciiAll("fd-emu-TCP-echo-COPY.tr");

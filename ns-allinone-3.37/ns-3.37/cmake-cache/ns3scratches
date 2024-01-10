@@ -1,6 +1,7 @@
 /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/fd-emu-onoff.cc
 /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/tap-TCP.cc
 /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/tap-UDP.cc
+/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/Echo_TCP.cc
 /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/EmulatedUdp_neighborhood_v2.cc
 /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/two-LANs.cc
 /home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/tcp-many-clients-single-server.cc

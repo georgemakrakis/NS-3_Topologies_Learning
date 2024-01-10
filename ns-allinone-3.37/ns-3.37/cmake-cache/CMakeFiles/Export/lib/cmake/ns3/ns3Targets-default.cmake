@@ -15,6 +15,16 @@ set_target_properties(ns3::libEmulatedTCPEchoExample PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedTCPEchoExample )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedTCPEchoExample "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCPEchoExample-default.so" )
 
+# Import target "ns3::libEmulatedTCP_neighborhood" for configuration "default"
+set_property(TARGET ns3::libEmulatedTCP_neighborhood APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libEmulatedTCP_neighborhood PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCP_neighborhood-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedTCP_neighborhood-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedTCP_neighborhood )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedTCP_neighborhood "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCP_neighborhood-default.so" )
+
 # Import target "ns3::libEmulatedUdpEchoExample_Copy" for configuration "default"
 set_property(TARGET ns3::libEmulatedUdpEchoExample_Copy APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libEmulatedUdpEchoExample_Copy PROPERTIES
