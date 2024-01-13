@@ -15,6 +15,7 @@
 #include "ns3/node.h"
 
 #include "ns3/point-to-point-module.h"
+#include "ns3/csma-module.h"
 #include "ns3/packet.h"
 #include "ns3/header.h"
 
@@ -42,13 +43,65 @@ void ReceivePacket (Ptr<Socket> socket)
 void HandleRead(Ptr<Socket> socket) {
     Ptr<Packet> packet;
     Address from;
-    NS_LOG_INFO("Handling ");
+    // NS_LOG_INFO("Handling ");
     while ((packet = socket->RecvFrom(from))) {
         uint8_t buffer[1024];
         packet->CopyData(buffer, packet->GetSize());
         socket->SendTo(buffer, packet->GetSize(), 0, from);
 
         NS_LOG_INFO("Server Received: " << buffer);
+
+        // Print the IP addresses of the packet
+        Ptr<Packet> copy = packet->Copy();
+
+        // // Headers must be removed in the order they're present.
+        // // PppHeader pppHeader;
+        // // copy->RemoveHeader(pppHeader);
+
+        // // NS_LOG_INFO ("This is the P2P header:" << pppHeader);
+
+        // EthernetHeader ethernetHeader ;
+        // copy->RemoveHeader(ethernetHeader);
+
+        // NS_LOG_INFO ("This is the Eth header:" << ethernetHeader);
+
+        // Ipv4Header ipHeader;
+        // copy->RemoveHeader(ipHeader);
+
+        // NS_LOG_INFO ("This is the IP header:" << ipHeader);
+
+        // std::cout << "After: ";
+        // std::cout << copy->ToString() << std::endl;
+
+        // std::cout << "IP PAYLOAD size: ";
+        // uint16_t ipPayloadSize = ipHeader.GetPayloadSize ();
+        // std::cout << ipPayloadSize;
+        // std::cout << std::endl;
+
+        // std::cout << "Source IP: ";
+        // ipHeader.GetSource().Print(std::cout);
+        // std::cout << std::endl;
+
+        // std::cout << "Destination IP: ";
+        // ipHeader.GetDestination().Print(std::cout);
+        // std::cout << std::endl;
+
+        TcpHeader tcpHeader;
+        copy->RemoveHeader(tcpHeader);
+        // copy->PeekHeader(TCPHeader);
+
+        NS_LOG_INFO ("This is the TCP header:" << tcpHeader);
+
+
+        // std::cout << "Source Port: ";
+        // uint16_t srcPort = TCPHeader.GetSourcePort();
+        // std::cout << srcPort;
+        // std::cout << std::endl;
+
+        // std::cout << "Destination Port: ";        
+        // uint16_t dstPort = TCPHeader.GetDestinationPort();
+        // std::cout << dstPort;
+        // std::cout << std::endl;
     }
 }
 
@@ -81,6 +134,28 @@ void HandleRead_Client(Ptr<Socket> socket) {
         uint8_t buffer[1024];
         packet->CopyData(buffer, packet->GetSize());
         NS_LOG_INFO("Received: " << buffer);
+
+        NS_LOG_INFO("FROM: " << InetSocketAddress::ConvertFrom (from).GetIpv4 () << " port " <<
+                             InetSocketAddress::ConvertFrom (from).GetPort ());
+
+        // Print the IP addresses of the packet
+        Ptr<Packet> copy = packet->Copy();
+
+        // Headers must be removed in the order they're present.
+        // PppHeader pppHeader;
+        // copy->RemoveHeader(pppHeader);
+
+        // NS_LOG_INFO ("This is the P2P header:" << pppHeader);
+
+        EthernetHeader ethernetHeader ;
+        copy->RemoveHeader(ethernetHeader);
+
+        NS_LOG_INFO ("This is the Eth header:" << ethernetHeader);
+
+        Ipv4Header ipHeader;
+        copy->RemoveHeader(ipHeader);
+
+        NS_LOG_INFO ("This is the IP header:" << ipHeader);
     }
 }
 
@@ -94,41 +169,12 @@ void SendData(Ptr<Socket> socket) {
     socket->Send(packet);
 }
 
-
-static void GenerateTraffic (Ptr<Socket> socket, uint32_t pktSize,
-                             uint32_t pktCount, Time pktInterval )
-{
-  if (pktCount > 0)
-    {
-      socket->Send (Create<Packet> (pktSize));
-      Simulator::Schedule (pktInterval, &GenerateTraffic,
-                           socket, pktSize,pktCount-1, pktInterval);
-
-    }
-  else
-    {
-      socket->Close ();
-    }
-}
-
-void run_server(NodeContainer nodes, Ipv4InterfaceContainer interfaces) {}
-
-void run_client(NodeContainer nodes, Ipv4InterfaceContainer interfaces) {
-    TypeId tid_client = TypeId::LookupByName("ns3::TcpSocketFactory");
-    Ptr<Socket> clientSocket = Socket::CreateSocket(nodes.Get(1), tid_client);
-    InetSocketAddress remote = InetSocketAddress(interfaces.GetAddress(0), 8080);
-    clientSocket->SetRecvCallback(MakeCallback(&HandleRead_Client));
-    clientSocket->SetSendCallback(MakeCallback(&SendData));
-    
-    clientSocket->Connect(remote);
-}
-
 static void RandomFunction (Ptr<Socket> socket)
 {
     NS_LOG_INFO("HERE!");
 }
 
-static void SendPacket (Ptr<Socket> clientSocket)
+static void SendPacket (Ptr<Socket> clientSocket, Time pktInterval, uint32_t pktCount)
 {
     InetSocketAddress remote = InetSocketAddress("192.168.1.1", 8080);
     clientSocket->Connect(remote);
@@ -136,7 +182,8 @@ static void SendPacket (Ptr<Socket> clientSocket)
     // Simulator::Schedule (Seconds (1.0), &RandomFunction, &clientSocket);
     // SendData(clientSocket);
 
-    uint32_t dataSize = 10;
+    uint32_t dataSize = 50;
+    // uint32_t dataSize = 1;
     uint8_t data[dataSize];
 
     for(int i =0; i < dataSize; i++)
@@ -153,16 +200,35 @@ static void SendPacket (Ptr<Socket> clientSocket)
 
     // Ptr<Packet> packet = Create<Packet>(data, dataSize);
     // Ptr<Packet> packet;
-    Ptr<Packet> packet = Create<Packet>(reinterpret_cast<const uint8_t*>(&data), dataSize);
-    clientSocket->Send(packet);
+    // Ptr<Packet> packet = Create<Packet>(reinterpret_cast<const uint8_t*>(&data), dataSize);
+    // clientSocket->Send(packet);
+
+    if (pktCount > 0)
+    {
+        Ptr<Packet> packet = Create<Packet>(reinterpret_cast<const uint8_t*>(&data), dataSize);
+        
+        // Print the whole packet, but it does not interpret non ASCII
+        // packet->Print (std::cout);
+        // std::cout << std::endl;
+
+        clientSocket->Send(packet);
+        Simulator::Schedule(pktInterval, &SendPacket, clientSocket, pktInterval, pktCount - 1);
+    }
+    else
+    {
+        clientSocket->Close();
+    }
 }
 
 int main() {
+
+    Packet::EnablePrinting();
+
     // Enable logging
     LogComponentEnable("Echo_Client_Server", LOG_LEVEL_ALL);
     uint32_t packetSize = 1000; // bytes
-    uint32_t numPackets = 1;
-    double interval = 2;
+    uint32_t numPackets = 10;
+    double interval = 1;
     double duration = 100;
     
     Time interPacketInterval = Seconds (interval); // transfer objec
@@ -172,11 +238,18 @@ int main() {
     nodes.Create(2);
     
     // Create a simple point-to-point link
-    PointToPointHelper pointToPoint;
-    pointToPoint.SetDeviceAttribute("DataRate", StringValue("5Mbps"));
-    pointToPoint.SetChannelAttribute("Delay", StringValue("2ms"));
+    // PointToPointHelper pointToPoint;
+    // pointToPoint.SetDeviceAttribute("DataRate", StringValue("5Mbps"));
+    // pointToPoint.SetChannelAttribute("Delay", StringValue("2ms"));
+
+    // Create a CSMA channel
+    CsmaHelper csma;
+    csma.SetChannelAttribute("DataRate", StringValue("100Mbps"));
+    csma.SetChannelAttribute("Delay", TimeValue(NanoSeconds(6560)));
+
     NetDeviceContainer devices;
-    devices = pointToPoint.Install(nodes);
+    // devices = pointToPoint.Install(nodes);
+    devices = csma.Install(nodes);
 
     // Install the internet stack on the nodes
     InternetStackHelper stack;
@@ -236,7 +309,9 @@ int main() {
     // Simulator::Schedule (Seconds (1.0), &SendData, &clientSocket);
     Simulator::ScheduleWithContext (clientSocket->GetNode ()->GetId (),
                                     Seconds (1.0), &SendPacket, 
-                                    clientSocket);
+                                    clientSocket,
+                                    interPacketInterval,
+                                    numPackets);
 
     // Simulator::ScheduleWithContext (clientSocket->GetNode ()->GetId (),
     //                               Seconds (1.0), &GenerateTraffic,
@@ -250,7 +325,8 @@ int main() {
     // clientApps.Start(Seconds(1.0));
     // clientApps.Stop(Seconds(10.0));
 
-    pointToPoint.EnablePcapAll ("Echo_Client_Server");
+    // pointToPoint.EnablePcapAll ("Echo_Client_Server");
+    csma.EnablePcapAll ("Echo_Client_Server");
     
     // Run simulation
     NS_LOG_INFO("Run Simulation.");

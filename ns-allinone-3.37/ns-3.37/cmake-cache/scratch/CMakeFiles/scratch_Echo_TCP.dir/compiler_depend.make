@@ -1415,8 +1415,27 @@ scratch/CMakeFiles/scratch_Echo_TCP.dir/Echo_TCP.cc.o: CMakeFiles/stdlib_pch_exe
   ../build/include/ns3/point-to-point-net-device.h \
   ../src/point-to-point/model/point-to-point-net-device.h \
   ../build/include/ns3/ppp-header.h \
-  ../src/point-to-point/model/ppp-header.h
+  ../src/point-to-point/model/ppp-header.h \
+  ../build/include/ns3/csma-module.h \
+  ../build/include/ns3/csma-helper.h \
+  ../src/csma/helper/csma-helper.h \
+  ../build/include/ns3/csma-channel.h \
+  ../src/csma/model/csma-channel.h \
+  ../build/include/ns3/backoff.h \
+  ../src/csma/model/backoff.h \
+  ../build/include/ns3/csma-net-device.h \
+  ../src/csma/model/csma-net-device.h
 
+
+../build/include/ns3/csma-net-device.h:
+
+../src/csma/model/backoff.h:
+
+../build/include/ns3/backoff.h:
+
+../build/include/ns3/csma-channel.h:
+
+../build/include/ns3/csma-module.h:
 
 ../build/include/ns3/ppp-header.h:
 
@@ -1657,6 +1676,8 @@ scratch/CMakeFiles/scratch_Echo_TCP.dir/Echo_TCP.cc.o: CMakeFiles/stdlib_pch_exe
 ../src/applications/model/seq-ts-echo-header.h:
 
 ../build/include/ns3/onoff-application.h:
+
+../src/csma/model/csma-net-device.h:
 
 ../src/applications/helper/on-off-helper.h:
 
@@ -2198,6 +2219,8 @@ scratch/CMakeFiles/scratch_Echo_TCP.dir/Echo_TCP.cc.o: CMakeFiles/stdlib_pch_exe
 
 ../src/core/model/rng-stream.h:
 
+../build/include/ns3/csma-helper.h:
+
 ../src/wifi/model/ht/ht-frame-exchange-manager.h:
 
 ../build/include/ns3/wifi-mac-queue-container.h:
@@ -2538,6 +2561,8 @@ CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx:
 
 ../build/include/ns3/sequence-number.h:
 
+../src/csma/helper/csma-helper.h:
+
 /usr/include/c++/11/iterator:
 
 ../src/wifi/model/ht/ht-capabilities.h:
@@ -2675,6 +2700,8 @@ CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx:
 ../src/lte/model/lte-amc.h:
 
 ../build/include/ns3/wifi-phy-state.h:
+
+../src/csma/model/csma-channel.h:
 
 ../build/include/ns3/queue-limits.h:
 

@@ -1417,4 +1417,13 @@ scratch/CMakeFiles/scratch_Echo_TCP.dir/Echo_TCP.cc.o
  /home/george/workspace/ns-allinone-3.37/ns-3.37/src/point-to-point/model/point-to-point-net-device.h
  /home/george/workspace/ns-allinone-3.37/ns-3.37/build/include/ns3/ppp-header.h
  /home/george/workspace/ns-allinone-3.37/ns-3.37/src/point-to-point/model/ppp-header.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/build/include/ns3/csma-module.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/build/include/ns3/csma-helper.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/src/csma/helper/csma-helper.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/build/include/ns3/csma-channel.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/src/csma/model/csma-channel.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/build/include/ns3/backoff.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/src/csma/model/backoff.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/build/include/ns3/csma-net-device.h
+ /home/george/workspace/ns-allinone-3.37/ns-3.37/src/csma/model/csma-net-device.h
 
