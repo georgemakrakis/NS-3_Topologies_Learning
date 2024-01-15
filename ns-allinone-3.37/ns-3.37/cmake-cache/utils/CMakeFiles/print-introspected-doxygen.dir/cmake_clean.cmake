@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../build/utils/ns3.37-print-introspected-doxygen-default"
   "../../build/utils/ns3.37-print-introspected-doxygen-default.pdb"
   "CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.o"
-  "CMakeFiles/print-introspected-doxygen.dir/print-introspected-doxygen.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

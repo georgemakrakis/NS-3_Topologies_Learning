@@ -5,116 +5,6 @@
 # Commands may need to know the format version.
 set(CMAKE_IMPORT_FILE_VERSION 1)
 
-# Import target "ns3::libEmulatedTCPEchoExample" for configuration "default"
-set_property(TARGET ns3::libEmulatedTCPEchoExample APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libEmulatedTCPEchoExample PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCPEchoExample-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedTCPEchoExample-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedTCPEchoExample )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedTCPEchoExample "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCPEchoExample-default.so" )
-
-# Import target "ns3::libEmulatedTCP_neighborhood" for configuration "default"
-set_property(TARGET ns3::libEmulatedTCP_neighborhood APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libEmulatedTCP_neighborhood PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCP_neighborhood-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedTCP_neighborhood-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedTCP_neighborhood )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedTCP_neighborhood "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedTCP_neighborhood-default.so" )
-
-# Import target "ns3::libEmulatedUdpEchoExample_Copy" for configuration "default"
-set_property(TARGET ns3::libEmulatedUdpEchoExample_Copy APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libEmulatedUdpEchoExample_Copy PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdpEchoExample_Copy-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedUdpEchoExample_Copy-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedUdpEchoExample_Copy )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedUdpEchoExample_Copy "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdpEchoExample_Copy-default.so" )
-
-# Import target "ns3::libEmulatedUdp_neighborhood_v2" for configuration "default"
-set_property(TARGET ns3::libEmulatedUdp_neighborhood_v2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libEmulatedUdp_neighborhood_v2 PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdp_neighborhood_v2-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-EmulatedUdp_neighborhood_v2-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libEmulatedUdp_neighborhood_v2 )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libEmulatedUdp_neighborhood_v2 "${_IMPORT_PREFIX}/lib/libns3.37-EmulatedUdp_neighborhood_v2-default.so" )
-
-# Import target "ns3::libneighborhood_topology_v1" for configuration "default"
-set_property(TARGET ns3::libneighborhood_topology_v1 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libneighborhood_topology_v1 PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v1-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-neighborhood_topology_v1-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libneighborhood_topology_v1 )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libneighborhood_topology_v1 "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v1-default.so" )
-
-# Import target "ns3::libneighborhood_topology_v2" for configuration "default"
-set_property(TARGET ns3::libneighborhood_topology_v2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libneighborhood_topology_v2 PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v2-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-neighborhood_topology_v2-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libneighborhood_topology_v2 )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libneighborhood_topology_v2 "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v2-default.so" )
-
-# Import target "ns3::libtap-TCP" for configuration "default"
-set_property(TARGET ns3::libtap-TCP APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libtap-TCP PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-tap-TCP-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-tap-TCP-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libtap-TCP )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtap-TCP "${_IMPORT_PREFIX}/lib/libns3.37-tap-TCP-default.so" )
-
-# Import target "ns3::libtap-UDP" for configuration "default"
-set_property(TARGET ns3::libtap-UDP APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libtap-UDP PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-tap-UDP-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-tap-UDP-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libtap-UDP )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtap-UDP "${_IMPORT_PREFIX}/lib/libns3.37-tap-UDP-default.so" )
-
-# Import target "ns3::libtcp-many-clients-single-server" for configuration "default"
-set_property(TARGET ns3::libtcp-many-clients-single-server APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libtcp-many-clients-single-server PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-tcp-many-clients-single-server-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-tcp-many-clients-single-server-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libtcp-many-clients-single-server )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtcp-many-clients-single-server "${_IMPORT_PREFIX}/lib/libns3.37-tcp-many-clients-single-server-default.so" )
-
-# Import target "ns3::libtcp-single-client-server" for configuration "default"
-set_property(TARGET ns3::libtcp-single-client-server APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libtcp-single-client-server PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-tcp-single-client-server-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-tcp-single-client-server-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libtcp-single-client-server )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtcp-single-client-server "${_IMPORT_PREFIX}/lib/libns3.37-tcp-single-client-server-default.so" )
-
-# Import target "ns3::libtwo-LANs" for configuration "default"
-set_property(TARGET ns3::libtwo-LANs APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::libtwo-LANs PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-two-LANs-default.so"
-  IMPORTED_SONAME_DEFAULT "libns3.37-two-LANs-default.so"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::libtwo-LANs )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libtwo-LANs "${_IMPORT_PREFIX}/lib/libns3.37-two-LANs-default.so" )
-
 # Import target "ns3::libantenna" for configuration "default"
 set_property(TARGET ns3::libantenna APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libantenna PROPERTIES
@@ -252,6 +142,15 @@ set_target_properties(ns3::tap-device-creator PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS ns3::tap-device-creator )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::tap-device-creator "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-tap-device-creator-default" )
+
+# Import target "ns3::netmap-device-creator" for configuration "default"
+set_property(TARGET ns3::netmap-device-creator APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::netmap-device-creator PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::netmap-device-creator )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::netmap-device-creator "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default" )
 
 # Import target "ns3::libfd-net-device" for configuration "default"
 set_property(TARGET ns3::libfd-net-device APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)

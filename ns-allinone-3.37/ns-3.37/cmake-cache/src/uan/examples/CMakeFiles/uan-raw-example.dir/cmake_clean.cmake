@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../../../build/src/uan/examples/ns3.37-uan-raw-example-default"
   "../../../../build/src/uan/examples/ns3.37-uan-raw-example-default.pdb"
   "CMakeFiles/uan-raw-example.dir/uan-raw-example.cc.o"
-  "CMakeFiles/uan-raw-example.dir/uan-raw-example.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

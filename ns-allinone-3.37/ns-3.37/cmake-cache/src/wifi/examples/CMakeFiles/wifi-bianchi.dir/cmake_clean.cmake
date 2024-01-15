@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../../../build/src/wifi/examples/ns3.37-wifi-bianchi-default"
   "../../../../build/src/wifi/examples/ns3.37-wifi-bianchi-default.pdb"
   "CMakeFiles/wifi-bianchi.dir/wifi-bianchi.cc.o"
-  "CMakeFiles/wifi-bianchi.dir/wifi-bianchi.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

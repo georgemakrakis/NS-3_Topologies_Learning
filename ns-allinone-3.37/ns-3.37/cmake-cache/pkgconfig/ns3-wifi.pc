@@ -8,6 +8,6 @@ URL:
 Version: 3.37
 Requires:  ns3-network ns3-propagation ns3-energy ns3-spectrum ns3-antenna ns3-mobility
 Requires.private: 
-Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2 -I/usr/include/python3.10
+Cflags: -I"${includedir}"  -I/usr/include/python3.8
 Libs: -L"${libdir}" -lns3.37-wifi-default  -lns3.37-network-default -lns3.37-propagation-default -lns3.37-energy-default -lns3.37-spectrum-default -lns3.37-antenna-default -lns3.37-mobility-default -l-lpthread
 Libs.private: -L"${libdir}" 

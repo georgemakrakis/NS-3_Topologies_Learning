@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../build/scratch/ns3.37-scratch-simulator-default"
   "../../build/scratch/ns3.37-scratch-simulator-default.pdb"
   "CMakeFiles/scratch_scratch-simulator.dir/scratch-simulator.cc.o"
-  "CMakeFiles/scratch_scratch-simulator.dir/scratch-simulator.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

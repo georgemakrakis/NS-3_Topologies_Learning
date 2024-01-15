@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../../../build/src/core/examples/ns3.37-sample-show-progress-default"
   "../../../../build/src/core/examples/ns3.37-sample-show-progress-default.pdb"
   "CMakeFiles/sample-show-progress.dir/sample-show-progress.cc.o"
-  "CMakeFiles/sample-show-progress.dir/sample-show-progress.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

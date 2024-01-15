@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -g -DNDEBUG   CMakeFiles/netmap-device-creator.dir/helper/creator-utils.cc.o CMakeFiles/netmap-device-creator.dir/helper/encode-decode.cc.o CMakeFiles/netmap-device-creator.dir/helper/netmap-device-creator.cc.o  -o ../../../build/src/fd-net-device/ns3.37-netmap-device-creator-default  -Wl,--no-as-needed -Wl,--as-needed 

@@ -37,11 +37,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.37-stats-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.37-stats-default.so")
@@ -67,8 +62,6 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
-    "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/stats/model/sqlite-data-output.h"
-    "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/stats/model/sqlite-output.h"
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/stats/helper/file-helper.h"
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/stats/helper/gnuplot-helper.h"
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/stats/model/average.h"

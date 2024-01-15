@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../../../build/src/network/examples/ns3.37-main-packet-header-default"
   "../../../../build/src/network/examples/ns3.37-main-packet-header-default.pdb"
   "CMakeFiles/main-packet-header.dir/main-packet-header.cc.o"
-  "CMakeFiles/main-packet-header.dir/main-packet-header.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

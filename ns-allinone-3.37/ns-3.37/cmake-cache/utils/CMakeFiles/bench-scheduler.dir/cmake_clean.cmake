@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../build/utils/ns3.37-bench-scheduler-default"
   "../../build/utils/ns3.37-bench-scheduler-default.pdb"
   "CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.o"
-  "CMakeFiles/bench-scheduler.dir/bench-scheduler.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

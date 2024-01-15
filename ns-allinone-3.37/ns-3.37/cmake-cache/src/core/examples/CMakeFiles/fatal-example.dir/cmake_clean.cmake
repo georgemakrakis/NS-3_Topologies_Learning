@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../../../build/src/core/examples/ns3.37-fatal-example-default"
   "../../../../build/src/core/examples/ns3.37-fatal-example-default.pdb"
   "CMakeFiles/fatal-example.dir/fatal-example.cc.o"
-  "CMakeFiles/fatal-example.dir/fatal-example.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

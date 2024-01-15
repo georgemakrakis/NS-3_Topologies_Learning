@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../../build/examples/tutorial/ns3.37-third-default"
   "../../../build/examples/tutorial/ns3.37-third-default.pdb"
   "CMakeFiles/third.dir/third.cc.o"
-  "CMakeFiles/third.dir/third.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

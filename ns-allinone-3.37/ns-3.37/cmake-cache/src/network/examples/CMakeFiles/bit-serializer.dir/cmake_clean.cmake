@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "../../../../build/src/network/examples/ns3.37-bit-serializer-default"
   "../../../../build/src/network/examples/ns3.37-bit-serializer-default.pdb"
   "CMakeFiles/bit-serializer.dir/bit-serializer.cc.o"
-  "CMakeFiles/bit-serializer.dir/bit-serializer.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

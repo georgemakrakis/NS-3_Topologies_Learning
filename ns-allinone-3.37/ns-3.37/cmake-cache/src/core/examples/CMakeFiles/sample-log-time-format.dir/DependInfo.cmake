@@ -1,15 +1,27 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/core/examples/sample-log-time-format.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/core/examples/CMakeFiles/sample-log-time-format.dir/sample-log-time-format.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/core/examples/CMakeFiles/sample-log-time-format.dir/sample-log-time-format.cc.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "NS3_ASSERT_ENABLE"
+  "NS3_BUILD_PROFILE_DEBUG"
+  "NS3_LOG_ENABLE"
+  "PROJECT_SOURCE_PATH=\"/home/george/workspace/ns-allinone-3.37/ns-3.37\""
+  "__LINUX__"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/core/examples/sample-log-time-format.cc" "src/core/examples/CMakeFiles/sample-log-time-format.dir/sample-log-time-format.cc.o" "gcc" "src/core/examples/CMakeFiles/sample-log-time-format.dir/sample-log-time-format.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx" "src/core/examples/CMakeFiles/sample-log-time-format.dir/sample-log-time-format.cc.o" "gcc" "src/core/examples/CMakeFiles/sample-log-time-format.dir/sample-log-time-format.cc.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../build/include"
+  "/usr/include/python3.8"
   )
 
 # Targets to which this target links.

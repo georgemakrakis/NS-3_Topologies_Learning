@@ -1,25 +1,46 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/creator-utils.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/creator-utils.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/creator-utils.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/emu-fd-net-device-helper.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/emu-fd-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/emu-fd-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/encode-decode.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/encode-decode.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/encode-decode.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/fd-net-device-helper.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/fd-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/fd-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/netmap-net-device-helper.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/netmap-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/netmap-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/tap-fd-net-device-helper.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/tap-fd-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/tap-fd-net-device-helper.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/model/fd-net-device.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/fd-net-device.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/fd-net-device.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/model/netmap-net-device.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/netmap-net-device.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/netmap-net-device.cc.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "HAVE_NETMAP_USER_H"
+  "HAVE_PACKET_H"
+  "NETMAP_DEV_CREATOR=\"/home/george/workspace/ns-allinone-3.37/ns-3.37/build/src/fd-net-device/ns3.37-netmap-device-creator-default\""
+  "NS3_ASSERT_ENABLE"
+  "NS3_BUILD_PROFILE_DEBUG"
+  "NS3_LOG_ENABLE"
+  "PROJECT_SOURCE_PATH=\"/home/george/workspace/ns-allinone-3.37/ns-3.37\""
+  "RAW_SOCK_CREATOR=\"/home/george/workspace/ns-allinone-3.37/ns-3.37/build/src/fd-net-device/ns3.37-raw-sock-creator-default\""
+  "TAP_DEV_CREATOR=\"/home/george/workspace/ns-allinone-3.37/ns-3.37/build/src/fd-net-device/ns3.37-tap-device-creator-default\""
+  "__LINUX__"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/creator-utils.cc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/creator-utils.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/creator-utils.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/creator-utils.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/creator-utils.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/emu-fd-net-device-helper.cc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/emu-fd-net-device-helper.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/emu-fd-net-device-helper.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/emu-fd-net-device-helper.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/emu-fd-net-device-helper.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/encode-decode.cc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/encode-decode.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/encode-decode.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/encode-decode.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/encode-decode.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/fd-net-device-helper.cc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/fd-net-device-helper.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/fd-net-device-helper.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/fd-net-device-helper.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/fd-net-device-helper.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/tap-fd-net-device-helper.cc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/tap-fd-net-device-helper.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/tap-fd-net-device-helper.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/tap-fd-net-device-helper.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/helper/tap-fd-net-device-helper.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/model/fd-net-device.cc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/fd-net-device.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/fd-net-device.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/fd-net-device.cc.o" "gcc" "src/fd-net-device/CMakeFiles/libfd-net-device-obj.dir/model/fd-net-device.cc.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../build/include"
+  "/usr/include/python3.8"
   )
 
 # Targets to which this target links.

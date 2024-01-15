@@ -1,15 +1,27 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/two-LANs.cc" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/scratch/CMakeFiles/scratch_two-LANs.dir/two-LANs.cc.o"
+  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx" "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/scratch/CMakeFiles/scratch_two-LANs.dir/two-LANs.cc.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "NS3_ASSERT_ENABLE"
+  "NS3_BUILD_PROFILE_DEBUG"
+  "NS3_LOG_ENABLE"
+  "PROJECT_SOURCE_PATH=\"/home/george/workspace/ns-allinone-3.37/ns-3.37\""
+  "__LINUX__"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/scratch/two-LANs.cc" "scratch/CMakeFiles/scratch_two-LANs.dir/two-LANs.cc.o" "gcc" "scratch/CMakeFiles/scratch_two-LANs.dir/two-LANs.cc.o.d"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx" "scratch/CMakeFiles/scratch_two-LANs.dir/two-LANs.cc.o" "gcc" "scratch/CMakeFiles/scratch_two-LANs.dir/two-LANs.cc.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../build/include"
+  "/usr/include/python3.8"
   )
 
 # Targets to which this target links.
@@ -34,17 +46,6 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/buildings/CMakeFiles/libbuildings.dir/DependInfo.cmake"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/applications/CMakeFiles/libapplications.dir/DependInfo.cmake"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/aodv/CMakeFiles/libaodv.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs/CMakeFiles/libtwo-LANs.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-single-client-server/CMakeFiles/libtcp-single-client-server.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-many-clients-single-server/CMakeFiles/libtcp-many-clients-single-server.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-UDP/CMakeFiles/libtap-UDP.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-TCP/CMakeFiles/libtap-TCP.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v2/CMakeFiles/libneighborhood_topology_v2.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v1/CMakeFiles/libneighborhood_topology_v1.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdp_neighborhood_v2/CMakeFiles/libEmulatedUdp_neighborhood_v2.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdpEchoExample_Copy/CMakeFiles/libEmulatedUdpEchoExample_Copy.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCP_neighborhood/CMakeFiles/libEmulatedTCP_neighborhood.dir/DependInfo.cmake"
-  "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCPEchoExample/CMakeFiles/libEmulatedTCPEchoExample.dir/DependInfo.cmake"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/wimax/CMakeFiles/libwimax.dir/DependInfo.cmake"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/wave/CMakeFiles/libwave.dir/DependInfo.cmake"
   "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/uan/CMakeFiles/libuan.dir/DependInfo.cmake"

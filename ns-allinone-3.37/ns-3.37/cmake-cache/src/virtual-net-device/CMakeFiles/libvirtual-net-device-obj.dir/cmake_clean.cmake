@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/libvirtual-net-device-obj.dir/model/virtual-net-device.cc.o"
-  "CMakeFiles/libvirtual-net-device-obj.dir/model/virtual-net-device.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
