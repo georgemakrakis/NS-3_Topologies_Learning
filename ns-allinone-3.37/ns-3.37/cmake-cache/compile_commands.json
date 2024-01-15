@@ -20,6 +20,206 @@
   "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/build-support/empty-main.cc"
 },
 {
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCPEchoExample",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/EmulatedTCPEchoExample/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -DlibEmulatedTCPEchoExample_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedTCPEchoExample-test.dir/test/EmulatedTCPEchoExample-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/test/EmulatedTCPEchoExample-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/test/EmulatedTCPEchoExample-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCPEchoExample",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedTCPEchoExample-obj.dir/model/EmulatedTCPEchoExample.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/model/EmulatedTCPEchoExample.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/model/EmulatedTCPEchoExample.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCPEchoExample",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedTCPEchoExample-obj.dir/helper/EmulatedTCPEchoExample-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/helper/EmulatedTCPEchoExample-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/helper/EmulatedTCPEchoExample-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCPEchoExample/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/EmulatedTCPEchoExample-example.dir/EmulatedTCPEchoExample-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/examples/EmulatedTCPEchoExample-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCPEchoExample/examples/EmulatedTCPEchoExample-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCP_neighborhood",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/EmulatedTCP_neighborhood/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -DlibEmulatedTCP_neighborhood_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedTCP_neighborhood-test.dir/test/EmulatedTCP_neighborhood-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/test/EmulatedTCP_neighborhood-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/test/EmulatedTCP_neighborhood-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCP_neighborhood",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedTCP_neighborhood-obj.dir/model/EmulatedTCP_neighborhood.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/model/EmulatedTCP_neighborhood.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/model/EmulatedTCP_neighborhood.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCP_neighborhood",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedTCP_neighborhood-obj.dir/helper/EmulatedTCP_neighborhood-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/helper/EmulatedTCP_neighborhood-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/helper/EmulatedTCP_neighborhood-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedTCP_neighborhood/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/EmulatedTCP_neighborhood-example.dir/EmulatedTCP_neighborhood-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/examples/EmulatedTCP_neighborhood-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedTCP_neighborhood/examples/EmulatedTCP_neighborhood-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdpEchoExample_Copy",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/EmulatedUdpEchoExample_Copy/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -DlibEmulatedUdpEchoExample_Copy_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedUdpEchoExample_Copy-test.dir/test/EmulatedUdpEchoExample_Copy-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/test/EmulatedUdpEchoExample_Copy-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/test/EmulatedUdpEchoExample_Copy-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdpEchoExample_Copy",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/model/EmulatedUdpEchoExample_Copy.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/model/EmulatedUdpEchoExample_Copy.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/model/EmulatedUdpEchoExample_Copy.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdpEchoExample_Copy",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedUdpEchoExample_Copy-obj.dir/helper/EmulatedUdpEchoExample_Copy-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/helper/EmulatedUdpEchoExample_Copy-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/helper/EmulatedUdpEchoExample_Copy-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdpEchoExample_Copy/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/EmulatedUdpEchoExample_Copy-example.dir/EmulatedUdpEchoExample_Copy-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/examples/EmulatedUdpEchoExample_Copy-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdpEchoExample_Copy/examples/EmulatedUdpEchoExample_Copy-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdp_neighborhood_v2",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/EmulatedUdp_neighborhood_v2/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -DlibEmulatedUdp_neighborhood_v2_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedUdp_neighborhood_v2-test.dir/test/EmulatedUdp_neighborhood_v2-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/test/EmulatedUdp_neighborhood_v2-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/test/EmulatedUdp_neighborhood_v2-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdp_neighborhood_v2",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedUdp_neighborhood_v2-obj.dir/model/EmulatedUdp_neighborhood_v2.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/model/EmulatedUdp_neighborhood_v2.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/model/EmulatedUdp_neighborhood_v2.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdp_neighborhood_v2",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libEmulatedUdp_neighborhood_v2-obj.dir/helper/EmulatedUdp_neighborhood_v2-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/helper/EmulatedUdp_neighborhood_v2-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/helper/EmulatedUdp_neighborhood_v2-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/EmulatedUdp_neighborhood_v2/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/EmulatedUdp_neighborhood_v2-example.dir/EmulatedUdp_neighborhood_v2-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/examples/EmulatedUdp_neighborhood_v2-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/EmulatedUdp_neighborhood_v2/examples/EmulatedUdp_neighborhood_v2-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v1",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/neighborhood_topology_v1/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibneighborhood_topology_v1_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libneighborhood_topology_v1-test.dir/test/neighborhood_topology_v1-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/test/neighborhood_topology_v1-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/test/neighborhood_topology_v1-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v1",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libneighborhood_topology_v1-obj.dir/model/neighborhood_topology_v1.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/model/neighborhood_topology_v1.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/model/neighborhood_topology_v1.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v1",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libneighborhood_topology_v1-obj.dir/helper/neighborhood_topology_v1-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/helper/neighborhood_topology_v1-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/helper/neighborhood_topology_v1-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/neighborhood_topology_v1/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/neighborhood_topology_v1-example.dir/neighborhood_topology_v1-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/examples/neighborhood_topology_v1-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/neighborhood_topology_v1/examples/neighborhood_topology_v1-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-TCP",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/tap-TCP/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibtap_TCP_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtap-TCP-test.dir/test/tap-TCP-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/test/tap-TCP-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/test/tap-TCP-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-TCP",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtap-TCP-obj.dir/model/tap-TCP.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/model/tap-TCP.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/model/tap-TCP.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-TCP",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtap-TCP-obj.dir/helper/tap-TCP-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/helper/tap-TCP-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/helper/tap-TCP-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-TCP/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/tap-TCP-example.dir/tap-TCP-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/examples/tap-TCP-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-TCP/examples/tap-TCP-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-UDP",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/tap-UDP/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibtap_UDP_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtap-UDP-test.dir/test/tap-UDP-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/test/tap-UDP-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/test/tap-UDP-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-UDP",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtap-UDP-obj.dir/model/tap-UDP.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/model/tap-UDP.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/model/tap-UDP.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-UDP",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtap-UDP-obj.dir/helper/tap-UDP-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/helper/tap-UDP-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/helper/tap-UDP-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tap-UDP/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/tap-UDP-example.dir/tap-UDP-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/examples/tap-UDP-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tap-UDP/examples/tap-UDP-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-many-clients-single-server",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/tcp-many-clients-single-server/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibtcp_many_clients_single_server_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtcp-many-clients-single-server-test.dir/test/tcp-many-clients-single-server-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/test/tcp-many-clients-single-server-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/test/tcp-many-clients-single-server-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-many-clients-single-server",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtcp-many-clients-single-server-obj.dir/model/tcp-many-clients-single-server.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/model/tcp-many-clients-single-server.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/model/tcp-many-clients-single-server.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-many-clients-single-server",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtcp-many-clients-single-server-obj.dir/helper/tcp-many-clients-single-server-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/helper/tcp-many-clients-single-server-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/helper/tcp-many-clients-single-server-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-many-clients-single-server/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/tcp-many-clients-single-server-example.dir/tcp-many-clients-single-server-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/examples/tcp-many-clients-single-server-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-many-clients-single-server/examples/tcp-many-clients-single-server-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-single-client-server",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/tcp-single-client-server/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibtcp_single_client_server_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtcp-single-client-server-test.dir/test/tcp-single-client-server-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/test/tcp-single-client-server-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/test/tcp-single-client-server-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-single-client-server",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtcp-single-client-server-obj.dir/model/tcp-single-client-server.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/model/tcp-single-client-server.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/model/tcp-single-client-server.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-single-client-server",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtcp-single-client-server-obj.dir/helper/tcp-single-client-server-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/helper/tcp-single-client-server-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/helper/tcp-single-client-server-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/tcp-single-client-server/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/tcp-single-client-server-example.dir/tcp-single-client-server-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/examples/tcp-single-client-server-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/tcp-single-client-server/examples/tcp-single-client-server-example.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"contrib/two-LANs/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibtwo_LANs_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtwo-LANs-test.dir/test/two-LANs-test-suite.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/test/two-LANs-test-suite.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/test/two-LANs-test-suite.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtwo-LANs-obj.dir/model/two-LANs.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/model/two-LANs.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libtwo-LANs-obj.dir/helper/two-LANs-helper.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/helper/two-LANs-helper.cc"
+},
+{
+  "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/contrib/two-LANs/examples",
+  "command": "/usr/bin/c++  -DHAVE_STDINT_H -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIE   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch_exec.dir/cmake_pch.hxx -o CMakeFiles/two-LANs-example.dir/two-LANs-example.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/examples/two-LANs-example.cc",
+  "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/contrib/two-LANs/examples/two-LANs-example.cc"
+},
+{
   "directory": "/home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/src/antenna",
   "command": "/usr/bin/c++  -DNS3_ASSERT_ENABLE -DNS3_BUILD_PROFILE_DEBUG -DNS3_LOG_ENABLE -DNS_TEST_SOURCEDIR=\\\"src/antenna/test\\\" -DPROJECT_SOURCE_PATH=\\\"/home/george/workspace/ns-allinone-3.37/ns-3.37\\\" -D__LINUX__ -Dlibantenna_test_EXPORTS -I/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include -I/usr/include/python3.8  -O2 -g -DNDEBUG -fPIC   -fno-semantic-interposition -fdiagnostics-color=always -Wall -std=gnu++17 -Winvalid-pch -include /home/george/workspace/ns-allinone-3.37/ns-3.37/cmake-cache/CMakeFiles/stdlib_pch.dir/cmake_pch.hxx -o CMakeFiles/libantenna-test.dir/test/test-angles.cc.o -c /home/george/workspace/ns-allinone-3.37/ns-3.37/src/antenna/test/test-angles.cc",
   "file": "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/antenna/test/test-angles.cc"

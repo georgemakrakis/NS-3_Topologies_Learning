@@ -24,22 +24,28 @@ Tests                         : [32mON[0m
 
 
 Modules configured to be built:
-antenna                   aodv                      applications              
-bridge                    buildings                 config-store              
-core                      csma                      csma-layout               
-dsdv                      dsr                       energy                    
-fd-net-device             flow-monitor              internet                  
-internet-apps             lr-wpan                   lte                       
-mesh                      mobility                  netanim                   
+EmulatedTCPEchoExample    EmulatedTCP_neighborhood  antenna                   
+aodv                      applications              bridge                    
+buildings                 config-store              core                      
+csma                      csma-layout               dsdv                      
+dsr                       energy                    fd-net-device             
+flow-monitor              internet                  internet-apps             
+lr-wpan                   lte                       mesh                      
+mobility                  neighborhood_topology_v1  netanim                   
 network                   nix-vector-routing        olsr                      
 point-to-point            point-to-point-layout     propagation               
 sixlowpan                 spectrum                  stats                     
-tap-bridge                test                      topology-read             
-traffic-control           uan                       virtual-net-device        
-wave                      wifi                      wimax                     
+tap-TCP                   tap-UDP                   tap-bridge                
+tcp-single-client-server  test                      topology-read             
+traffic-control           two-LANs                  uan                       
+virtual-net-device        wave                      wifi                      
+wimax                     EmulatedUdpEchoExample_Copy
+EmulatedUdp_neighborhood_v2
+tcp-many-clients-single-server
 
 
 Modules that cannot be built:
-brite                     click                     mpi                       
-openflow                  visualizer                
+Echo_TCP                  brite                     click                     
+mpi                       openflow                  visualizer                
+
 

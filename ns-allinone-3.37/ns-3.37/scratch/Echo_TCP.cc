@@ -40,30 +40,41 @@ void ReceivePacket (Ptr<Socket> socket)
     }
 }
 
+
 void HandleRead(Ptr<Socket> socket) {
     Ptr<Packet> packet;
     Address from;
     // NS_LOG_INFO("Handling ");
     while ((packet = socket->RecvFrom(from))) {
-        // uint8_t buffer[1024];
-        // packet->CopyData(buffer, packet->GetSize());
-        // NS_LOG_INFO("Server Received: " << buffer);
+        
+
+        // packet->RemoveAtEnd(50);
+        // packet->RemoveAtStart(50);
+
+        uint8_t buffer[1024];
+        packet->CopyData(buffer, packet->GetSize());
+        NS_LOG_INFO("Server Received: " << buffer);
+        NS_LOG_INFO("Server Packet Size: " << packet->GetSize());
+        
+        // TcpHeader tcpHeader;
+        // packet->RemoveHeader(tcpHeader);
+        // // copy->PeekHeader(TCPHeader);
+        // NS_LOG_INFO("This is the TCP header: " << tcpHeader);
+
+        uint32_t flags = 0;
+        flags |= TcpHeader::ACK;
+        flags |= TcpHeader::PSH;
+        // tcpHeader.SetFlags(flags);
+        // tcpHeader.EnableChecksums();
+
+        // NS_LOG_INFO("This is the NEW TCP header: " << tcpHeader);
+        
+        // packet->AddHeader(tcpHeader);
+
+        
         // socket->SendTo(buffer, packet->GetSize(), 0, from);
 
-        char resp[] = "HTTP/1.0 200 OK\r\n"
-        "Server: webserver-c\r\n"
-        "Content-type: text/html\r\n\r\n"
-        "<html>hello, world</html>\r\n"
-        "\r\n";
-
-        uint8_t buffer [strlen(resp)];
-        for(int i =0; i < strlen(resp); i++)
-        {   
-            buffer[i] = resp[i];
-            // data[i] = 65;
-        }
-        uint32_t buffer_len = sizeof(buffer)/sizeof(uint8_t);
-        socket->SendTo(buffer, buffer_len, 0, from);
+        socket->SendTo(buffer, packet->GetSize(), flags, from);
 
         // Print the IP addresses of the packet
         Ptr<Packet> copy = packet->Copy();
@@ -100,11 +111,16 @@ void HandleRead(Ptr<Socket> socket) {
         // ipHeader.GetDestination().Print(std::cout);
         // std::cout << std::endl;
 
-        TcpHeader tcpHeader;
-        copy->RemoveHeader(tcpHeader);
-        // copy->PeekHeader(TCPHeader);
+        // TcpHeader tcpHeader;
+        // copy->RemoveHeader(tcpHeader);
+        // // copy->PeekHeader(TCPHeader);
 
-        NS_LOG_INFO ("This is the TCP header:" << tcpHeader);
+        // uint8_t flags=0;
+        // flags |= TcpHeader::ACK;
+        // flags |= TcpHeader::PSH;
+        // tcpHeader.SetFlags(flags);
+
+        // NS_LOG_INFO ("This is the TCP header:" << tcpHeader);
 
 
         // std::cout << "Source Port: ";
@@ -218,34 +234,35 @@ static void SendPacket (Ptr<Socket> clientSocket, Time pktInterval, uint32_t pkt
     // Simulator::Schedule (Seconds (1.0), &RandomFunction, &clientSocket);
     // SendData(clientSocket);
 
-    // uint32_t dataSize = 50;
-    // uint8_t data[dataSize];
+    uint32_t dataSize = 50;
+    // uint32_t dataSize = 0;
+    uint8_t data[dataSize];
 
-    // for(int i =0; i < dataSize; i++)
-    // {   
-    //     if( i == 0)
-    //     {
-    //         data[i] = 65;
-    //         continue;
-    //     }
-    
-    //     data[i] = data[i-1] + 1;
-    //     // data[i] = 65;
-    // }
-
-    char req[] = "GET / HTTP/1.1\r\n"
-    "Host: www.example.com\r\n"
-    "User-Agent: curl/7.68.0\r\n"
-    "Accept: */*\r\n"
-    "\r\n";
-
-    uint8_t data [strlen(req)];
-    for(int i =0; i < strlen(req); i++)
+    for(int i =0; i < dataSize; i++)
     {   
-        data[i] = req[i];
+        if( i == 0)
+        {
+            data[i] = 65;
+            continue;
+        }
+    
+        data[i] = data[i-1] + 1;
         // data[i] = 65;
     }
-    uint32_t dataSize = sizeof(data)/sizeof(uint8_t);
+
+    // char req[] = "GET / HTTP/1.1\r\n"
+    // "Host: www.example.com\r\n"
+    // "User-Agent: curl/7.68.0\r\n"
+    // "Accept: */*\r\n"
+    // "\r\n";
+
+    // uint8_t data [strlen(req)];
+    // for(int i =0; i < strlen(req); i++)
+    // {   
+    //     data[i] = req[i];
+    //     // data[i] = 65;
+    // }
+    // uint32_t dataSize = sizeof(data)/sizeof(uint8_t);
 
 
     // Ptr<Packet> packet = Create<Packet>(data, dataSize);
@@ -273,6 +290,7 @@ static void SendPacket (Ptr<Socket> clientSocket, Time pktInterval, uint32_t pkt
 int main() {
 
     Packet::EnablePrinting();
+    // PacketMetadata::EnableChecking(),
 
     // Enable logging
     LogComponentEnable("Echo_Client_Server", LOG_LEVEL_ALL);

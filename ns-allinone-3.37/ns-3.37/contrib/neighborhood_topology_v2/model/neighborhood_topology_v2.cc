@@ -43,6 +43,131 @@ using namespace ns3;
 
 NS_LOG_COMPONENT_DEFINE("neighborhood_topology_v2");
 
+uint8_t central_data [1024];
+
+void HandleRead_Client(Ptr<Socket> socket) {
+    Ptr<Packet> packet;
+    Address from;
+    while ((packet = socket->RecvFrom(from))) {
+        uint8_t buffer[1024];
+        packet->CopyData(buffer, packet->GetSize());
+        NS_LOG_INFO("Received: " << buffer);
+
+        Ipv4Address remoteIpv4 = InetSocketAddress::ConvertFrom(from).GetIpv4();
+        NS_LOG_INFO("FROM: " << remoteIpv4 << " port " << InetSocketAddress::ConvertFrom(from).GetPort());
+
+    }
+}
+
+static void SendPacket (Ptr<Socket> clientSocket, Time pktInterval, uint32_t pktCount, InetSocketAddress remote)
+{   
+    // Ptr<TcpSocketBase> myTcpSocket = DynamicCast<TcpSocketBase>(clientSocket);
+    // myTcpSocket->SetTcpNoDelay(true);
+
+    // InetSocketAddress remote = InetSocketAddress("192.168.1.1", 80);
+    clientSocket->Connect(remote);
+    
+    // Simulator::Schedule (Seconds (1.0), &RandomFunction, &clientSocket);
+    // SendData(clientSocket);
+
+    uint32_t dataSize = 50;
+    // uint32_t dataSize = 0;
+    uint8_t data[dataSize];
+    
+    for(int i =0; i < dataSize; i++)
+    {   
+        Ipv4Address remoteIpv4 = InetSocketAddress::ConvertFrom(remote).GetIpv4();
+        if(remoteIpv4 == "10.1.0.1")
+        {
+            NS_LOG_INFO("Second subnet client setting data.");
+            data[i] = 65;
+        }
+        else 
+        {
+            if( i == 0)
+            {
+                data[i] = 65;
+                continue;
+            }
+        
+            data[i] = data[i-1] + 1;
+        }
+        
+        // data[i] = 65;
+    }
+
+    // char req[] = "GET / HTTP/1.1\r\n"
+    // "Host: www.example.com\r\n"
+    // "User-Agent: curl/7.68.0\r\n"
+    // "Accept: */*\r\n"
+    // "\r\n";
+
+    // uint8_t data [strlen(req)];
+    // for(int i =0; i < strlen(req); i++)
+    // {   
+    //     data[i] = req[i];
+    //     // data[i] = 65;
+    // }
+    // uint32_t dataSize = sizeof(data)/sizeof(uint8_t);
+
+
+    // Ptr<Packet> packet = Create<Packet>(data, dataSize);
+    // Ptr<Packet> packet;
+    // Ptr<Packet> packet = Create<Packet>(reinterpret_cast<const uint8_t*>(&data), dataSize);
+    // clientSocket->Send(packet);
+
+    if (pktCount > 0)
+    {
+        Ptr<Packet> packet = Create<Packet>(reinterpret_cast<const uint8_t*>(&data), dataSize);
+        
+        // Print the whole packet, but it does not interpret non ASCII
+        // packet->Print (std::cout);
+        // std::cout << std::endl;
+
+        clientSocket->Send(packet);
+        Simulator::Schedule(pktInterval, &SendPacket, clientSocket, pktInterval, pktCount - 1, remote);
+    }
+    else
+    {
+        clientSocket->Close();
+    }
+}
+
+void HandleRead(Ptr<Socket> socket) {
+    Ptr<Packet> packet;
+    Address from;
+    // NS_LOG_INFO("Handling ");
+    while ((packet = socket->RecvFrom(from))) {
+        
+
+        // packet->RemoveAtEnd(50);
+        // packet->RemoveAtStart(50);
+
+        Ipv4Address remoteIpv4 = InetSocketAddress::ConvertFrom(from).GetIpv4();
+        if(remoteIpv4 == "10.1.0.2")
+        {   
+            NS_LOG_INFO("Second subnet server setting data.");
+            socket->SendTo(central_data, packet->GetSize(), 0, from);
+            return;
+        }
+
+        uint8_t buffer[1024];
+        packet->CopyData(buffer, packet->GetSize());
+        packet->CopyData(central_data, packet->GetSize());
+        NS_LOG_INFO("Server Received: " << buffer);
+        NS_LOG_INFO("Server Packet Size: " << packet->GetSize());
+        
+        socket->SendTo(buffer, packet->GetSize(), 0, from);
+        return;
+    }
+}
+
+void ServerHandleConnectionCreated (Ptr<Socket> s, const Address & addr)
+{
+    s->SetRecvCallback (MakeCallback (&HandleRead));
+    // s->SetSendCallback (MakeCallback (&TcpTestCase::ServerHandleSend, this));
+}
+
 int
 main(int argc, char* argv[])
 {
@@ -54,15 +179,24 @@ main(int argc, char* argv[])
     // LogComponentEnable ("TcpSocketImpl", LOG_LEVEL_ALL);
     // LogComponentEnable ("PacketSink", LOG_LEVEL_ALL);
 
+    // Enable logging
+    LogComponentEnable("neighborhood_topology_v2", LOG_LEVEL_ALL);
+
     // These are parameters for the TCP/Application.
     Config::SetDefault("ns3::OnOffApplication::PacketSize", UintegerValue(250));
     Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5kb/s"));
     // Config::SetDefault("ns3::OnOffApplication::DataRate", StringValue("5Mb/s"));
+    
+    uint32_t numPackets = 10;
+    double interval = 1;
+    double duration = 100;
+    
+    Time interPacketInterval = Seconds (interval);
 
     // Specify if the n0 will be server or client in the second subnet.
     bool n0_secondary_server = true;
 
-    uint32_t nCsma = 4;
+    uint32_t nCsma = 2;
     uint32_t nCsmaSecondary = 1;
 
     NodeContainer csmaNodes;
@@ -121,42 +255,92 @@ main(int argc, char* argv[])
     
     ApplicationContainer clientApps;
     // We start from the i=1 since the first one will be the server
+    // for (uint32_t i = 1; i < nCsma; ++i)
+    // {
+    //     clientApps.Add(clientHelper.Install(csmaNodes.Get(i)));
+    // }
+    // clientApps.Start(Seconds(1.0));
+    // clientApps.Stop(Seconds(10.0));
+
+    TypeId tid_client = TypeId::LookupByName("ns3::TcpSocketFactory");
     for (uint32_t i = 1; i < nCsma; ++i)
     {
-        clientApps.Add(clientHelper.Install(csmaNodes.Get(i)));
+        Ptr<Socket> clientSocket = Socket::CreateSocket(csmaNodes.Get(i), tid_client);
+        InetSocketAddress remote = InetSocketAddress(csmaInterfaces.GetAddress(0), port);
+        clientSocket->SetRecvCallback(MakeCallback(&HandleRead_Client));
+
+        Simulator::ScheduleWithContext (clientSocket->GetNode ()->GetId (),
+                                    Seconds (1.0), &SendPacket, 
+                                    clientSocket,
+                                    interPacketInterval,
+                                    numPackets, remote);
     }
-    clientApps.Start(Seconds(1.0));
-    clientApps.Stop(Seconds(10.0));
-    // clientApps.Stop(Seconds(30.0));
 
     //
     // Create a PacketSinkApplication and install it on node 0 with two interfaces
     //
-    PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfaces.GetAddress(0), port));
-    ApplicationContainer sinkApps = sink.Install(csmaNodes.Get(0));
-    sinkApps.Start(Seconds(0.0));
-    sinkApps.Stop(Seconds(10.0));
-    // sinkApps.Stop(Seconds(30.0));
+    // PacketSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfaces.GetAddress(0), port));
+    // ApplicationContainer sinkApps = sink.Install(csmaNodes.Get(0));
+    // sinkApps.Start(Seconds(0.0));
+    // sinkApps.Stop(Seconds(10.0));
+
+    TypeId tid = TypeId::LookupByName("ns3::TcpSocketFactory");
+    Ptr<Socket> serverSocket = Socket::CreateSocket(csmaNodes.Get(0), tid);
+    InetSocketAddress local = InetSocketAddress(csmaInterfaces.GetAddress(0), port);
+    serverSocket->Bind(local);
+    // serverSocket->SetRecvCallback (MakeCallback (&ReceivePacket));
+    serverSocket->Listen();
+    // serverSocket->SetAcceptCallback(
+    //     MakeCallback(&HandleAccept),
+    //     MakeNullCallback<void, Ptr<Socket>, const Address&>()
+    // );
+
+    serverSocket->SetAcceptCallback (MakeNullCallback<bool, Ptr< Socket >, const Address &> (),
+                               MakeCallback (&ServerHandleConnectionCreated));
+
 
     if(n0_secondary_server)
     {
         // This is the same server as above but now it is also "attached" to the second network
-        PacketSinkHelper sinkSecondary("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
-        ApplicationContainer sinkAppsSecondary = sinkSecondary.Install(csmaNodesSecondary.Get(0));
-        sinkAppsSecondary.Start(Seconds(0.0));
-        sinkAppsSecondary.Stop(Seconds(10.0));
+        // PacketSinkHelper sinkSecondary("ns3::TcpSocketFactory", InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
+        // ApplicationContainer sinkAppsSecondary = sinkSecondary.Install(csmaNodesSecondary.Get(0));
+        // sinkAppsSecondary.Start(Seconds(0.0));
+        // sinkAppsSecondary.Stop(Seconds(10.0));
+
+        TypeId tid = TypeId::LookupByName("ns3::TcpSocketFactory");
+        Ptr<Socket> serverSocket = Socket::CreateSocket(csmaNodesSecondary.Get(0), tid);
+        InetSocketAddress local = InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port);
+        serverSocket->Bind(local);
+        // serverSocket->SetRecvCallback (MakeCallback (&ReceivePacket));
+        serverSocket->Listen();
+        // serverSocket->SetAcceptCallback(
+        //     MakeCallback(&HandleAccept),
+        //     MakeNullCallback<void, Ptr<Socket>, const Address&>()
+        // );
+
+        serverSocket->SetAcceptCallback (MakeNullCallback<bool, Ptr< Socket >, const Address &> (),
+                                MakeCallback (&ServerHandleConnectionCreated));
 
         // Add another client to the 192.168.2.0 network with the same characteristics as before.
-        OnOffHelper clientHelperSecondary("ns3::TcpSocketFactory", Address());
-        clientHelperSecondary.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
-        clientHelperSecondary.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-        // clientHelperSecondary.SetAttribute("MaxBytes", UintegerValue(250));
+        // OnOffHelper clientHelperSecondary("ns3::TcpSocketFactory", Address());
+        // clientHelperSecondary.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
+        // clientHelperSecondary.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
 
-        AddressValue remoteAddressSecondary (InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
-        clientHelperSecondary.SetAttribute("Remote", remoteAddressSecondary);
-        ApplicationContainer clientAppsSecondary = clientHelperSecondary.Install(csmaNodesSecondary.Get(1));
-        clientAppsSecondary.Start(Seconds(1.0));
-        clientAppsSecondary.Stop(Seconds(10.0));
+        // AddressValue remoteAddressSecondary (InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port));
+        // clientHelperSecondary.SetAttribute("Remote", remoteAddressSecondary);
+        // ApplicationContainer clientAppsSecondary = clientHelperSecondary.Install(csmaNodesSecondary.Get(1));
+        // clientAppsSecondary.Start(Seconds(1.0));
+        // clientAppsSecondary.Stop(Seconds(10.0));
+
+        Ptr<Socket> clientSocket = Socket::CreateSocket(csmaNodesSecondary.Get(1), tid_client);
+        InetSocketAddress remote = InetSocketAddress(csmaInterfacesSecondary.GetAddress(0), port);
+        clientSocket->SetRecvCallback(MakeCallback(&HandleRead_Client));
+
+        Simulator::ScheduleWithContext (clientSocket->GetNode ()->GetId (),
+                                    Seconds (1.0), &SendPacket, 
+                                    clientSocket,
+                                    interPacketInterval,
+                                    numPackets, remote);
     }
     else
     {
@@ -191,6 +375,7 @@ main(int argc, char* argv[])
     // csma.EnablePcap("two-LANs", csmaDevices.Get(1), true);
 
     NS_LOG_INFO("Run Simulation.");
+    Simulator::Stop(Seconds(10));
     Simulator::Run();
     Simulator::Destroy();
     NS_LOG_INFO("Done.");

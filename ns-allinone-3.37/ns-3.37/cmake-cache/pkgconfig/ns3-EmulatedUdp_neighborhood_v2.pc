@@ -1,0 +1,13 @@
+exec_prefix="/usr/local/bin"
+libdir="/usr/local/lib"
+includedir="/usr/local/include"
+
+Name: ns3-EmulatedUdp_neighborhood_v2
+Description: 
+URL: 
+Version: 3.37
+Requires:  ns3-core
+Requires.private: 
+Cflags: -I"${includedir}"  -I/usr/include/python3.8
+Libs: -L"${libdir}" -lns3.37-EmulatedUdp_neighborhood_v2-default  -lns3.37-core-default -l-lpthread
+Libs.private: -L"${libdir}" 
