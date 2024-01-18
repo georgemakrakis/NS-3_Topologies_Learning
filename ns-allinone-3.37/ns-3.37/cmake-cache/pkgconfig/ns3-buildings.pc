@@ -8,6 +8,6 @@ URL:
 Version: 3.37
 Requires:  ns3-mobility ns3-propagation
 Requires.private: 
-Cflags: -I"${includedir}"  -I/usr/include/python3.8
-Libs: -L"${libdir}" -lns3.37-buildings-default  -lns3.37-mobility-default -lns3.37-propagation-default -l-lpthread
+Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2 -I/usr/include/python3.10
+Libs: -L"${libdir}" -lns3.37-buildings-default  -lns3.37-mobility-default -lns3.37-propagation-default
 Libs.private: -L"${libdir}" 

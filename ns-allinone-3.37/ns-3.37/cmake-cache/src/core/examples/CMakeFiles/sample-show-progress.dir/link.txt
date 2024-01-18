@@ -1,1 +1,0 @@
-/usr/bin/c++  -O2 -g -DNDEBUG   CMakeFiles/sample-show-progress.dir/sample-show-progress.cc.o  -o ../../../../build/src/core/examples/ns3.37-sample-show-progress-default  -Wl,-rpath,/home/george/workspace/ns-allinone-3.37/ns-3.37/build/lib -Wl,--no-as-needed ../../../../build/lib/libns3.37-core-default.so -Wl,--as-needed -Wl,--no-as-needed -lpthread 

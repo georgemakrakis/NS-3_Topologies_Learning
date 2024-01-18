@@ -34,6 +34,9 @@
 //#include "src/click/model/ipv4-click-routing.h"
 //#include "src/click/helper/click-internet-stack-helper.h"
 
+// #include "amqtt-module.h"
+#include "ns3/amqtt-module.h"
+
 #include <cassert>
 #include <fstream>
 #include <iostream>

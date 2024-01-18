@@ -55,6 +55,16 @@ set_target_properties(ns3::libneighborhood_topology_v1 PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS ns3::libneighborhood_topology_v1 )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libneighborhood_topology_v1 "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v1-default.so" )
 
+# Import target "ns3::libneighborhood_topology_v2" for configuration "default"
+set_property(TARGET ns3::libneighborhood_topology_v2 APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::libneighborhood_topology_v2 PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v2-default.so"
+  IMPORTED_SONAME_DEFAULT "libns3.37-neighborhood_topology_v2-default.so"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::libneighborhood_topology_v2 )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::libneighborhood_topology_v2 "${_IMPORT_PREFIX}/lib/libns3.37-neighborhood_topology_v2-default.so" )
+
 # Import target "ns3::libtap-TCP" for configuration "default"
 set_property(TARGET ns3::libtap-TCP APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libtap-TCP PROPERTIES
@@ -242,15 +252,6 @@ set_target_properties(ns3::tap-device-creator PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS ns3::tap-device-creator )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::tap-device-creator "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-tap-device-creator-default" )
-
-# Import target "ns3::netmap-device-creator" for configuration "default"
-set_property(TARGET ns3::netmap-device-creator APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
-set_target_properties(ns3::netmap-device-creator PROPERTIES
-  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ns3::netmap-device-creator )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::netmap-device-creator "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default" )
 
 # Import target "ns3::libfd-net-device" for configuration "default"
 set_property(TARGET ns3::libfd-net-device APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)

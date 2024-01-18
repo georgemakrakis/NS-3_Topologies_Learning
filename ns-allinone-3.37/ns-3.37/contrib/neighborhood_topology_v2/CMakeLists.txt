@@ -10,6 +10,10 @@ if(${ENABLE_EXAMPLES})
         )
 endif()
 
+#set(external_SO
+#    helper/libns3-amqtt.so
+#)
+
 build_lib(
     LIBNAME neighborhood_topology_v2
     SOURCE_FILES model/neighborhood_topology_v2.cc
@@ -17,6 +21,7 @@ build_lib(
     HEADER_FILES model/neighborhood_topology_v2.h
                  helper/neighborhood_topology_v2-helper.h
     LIBRARIES_TO_LINK ${libcore}
+                 #${external_SO}
     TEST_SOURCES test/neighborhood_topology_v2-test-suite.cc
                  ${examples_as_tests_sources}
 )

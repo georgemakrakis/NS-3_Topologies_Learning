@@ -8,6 +8,6 @@ URL:
 Version: 3.37
 Requires:  ns3-fd-net-device ns3-core ns3-network ns3-spectrum ns3-stats ns3-buildings ns3-virtual-net-device ns3-point-to-point ns3-applications ns3-internet ns3-csma ns3-config-store
 Requires.private: 
-Cflags: -I"${includedir}"  -I/usr/include/python3.8
-Libs: -L"${libdir}" -lns3.37-lte-default  -lns3.37-fd-net-device-default -lns3.37-core-default -lns3.37-network-default -lns3.37-spectrum-default -lns3.37-stats-default -lns3.37-buildings-default -lns3.37-virtual-net-device-default -lns3.37-point-to-point-default -lns3.37-applications-default -lns3.37-internet-default -lns3.37-csma-default -lns3.37-config-store-default -l-lpthread
+Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2 -I/usr/include/python3.10
+Libs: -L"${libdir}" -lns3.37-lte-default  -lns3.37-fd-net-device-default -lns3.37-core-default -lns3.37-network-default -lns3.37-spectrum-default -lns3.37-stats-default -lns3.37-buildings-default -lns3.37-virtual-net-device-default -lns3.37-point-to-point-default -lns3.37-applications-default -lns3.37-internet-default -lns3.37-csma-default -lns3.37-config-store-default
 Libs.private: -L"${libdir}" 

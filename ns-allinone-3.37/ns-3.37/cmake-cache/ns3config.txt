@@ -10,14 +10,14 @@ Examples                      : [32mON[0m
 File descriptor NetDevice     : [32mON[0m
 GNU Scientific Library (GSL)  : [31mOFF (missing dependency)[0m
 GtkConfigStore                : [31mOFF (missing dependency)[0m
-LibXml2 support               : [31mOFF (missing dependency)[0m
+LibXml2 support               : [32mON[0m
 MPI Support                   : OFF (not requested)
 ns-3 Click Integration        : [31mOFF (missing dependency)[0m
 ns-3 OpenFlow Integration     : [31mOFF (missing dependency)[0m
-Netmap emulation FdNetDevice  : [32mON[0m
+Netmap emulation FdNetDevice  : [31mOFF (missing dependency)[0m
 PyViz visualizer              : [31mOFF (missing dependency)[0m
 Python Bindings               : OFF (not requested)
-SQLite support                : [31mOFF (missing dependency)[0m
+SQLite support                : [32mON[0m
 Tap Bridge                    : [32mON[0m
 Tap FdNetDevice               : [32mON[0m
 Tests                         : [32mON[0m
@@ -31,15 +31,15 @@ csma                      csma-layout               dsdv
 dsr                       energy                    fd-net-device             
 flow-monitor              internet                  internet-apps             
 lr-wpan                   lte                       mesh                      
-mobility                  neighborhood_topology_v1  netanim                   
-network                   nix-vector-routing        olsr                      
-point-to-point            point-to-point-layout     propagation               
-sixlowpan                 spectrum                  stats                     
-tap-TCP                   tap-UDP                   tap-bridge                
-tcp-single-client-server  test                      topology-read             
-traffic-control           two-LANs                  uan                       
-virtual-net-device        wave                      wifi                      
-wimax                     EmulatedUdpEchoExample_Copy
+mobility                  neighborhood_topology_v1  neighborhood_topology_v2  
+netanim                   network                   nix-vector-routing        
+olsr                      point-to-point            point-to-point-layout     
+propagation               sixlowpan                 spectrum                  
+stats                     tap-TCP                   tap-UDP                   
+tap-bridge                tcp-single-client-server  test                      
+topology-read             traffic-control           two-LANs                  
+uan                       virtual-net-device        wave                      
+wifi                      wimax                     EmulatedUdpEchoExample_Copy
 EmulatedUdp_neighborhood_v2
 tcp-many-clients-single-server
 

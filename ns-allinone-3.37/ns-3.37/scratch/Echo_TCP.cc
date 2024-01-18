@@ -19,6 +19,9 @@
 #include "ns3/packet.h"
 #include "ns3/header.h"
 
+// #include "ns3/amqtt-module.h"
+#include "amqtt-module.h"
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -61,9 +64,9 @@ void HandleRead(Ptr<Socket> socket) {
         // // copy->PeekHeader(TCPHeader);
         // NS_LOG_INFO("This is the TCP header: " << tcpHeader);
 
-        uint32_t flags = 0;
-        flags |= TcpHeader::ACK;
-        flags |= TcpHeader::PSH;
+        // uint32_t flags = 0;
+        // flags |= TcpHeader::ACK;
+        // flags |= TcpHeader::PSH;
         // tcpHeader.SetFlags(flags);
         // tcpHeader.EnableChecksums();
 
@@ -72,9 +75,9 @@ void HandleRead(Ptr<Socket> socket) {
         // packet->AddHeader(tcpHeader);
 
         
-        // socket->SendTo(buffer, packet->GetSize(), 0, from);
+        socket->SendTo(buffer, packet->GetSize(), 0, from);
 
-        socket->SendTo(buffer, packet->GetSize(), flags, from);
+        // socket->SendTo(buffer, packet->GetSize(), flags, from);
 
         // Print the IP addresses of the packet
         Ptr<Packet> copy = packet->Copy();

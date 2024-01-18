@@ -37,6 +37,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-raw-sock-creator-default" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-raw-sock-creator-default")
@@ -70,22 +75,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/libexec/ns3" TYPE EXECUTABLE FILES "/home/george/workspace/ns-allinone-3.37/ns-3.37/build/src/fd-net-device/ns3.37-netmap-device-creator-default")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.37-fd-net-device-default.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libns3.37-fd-net-device-default.so")
     file(RPATH_CHECK
@@ -112,8 +101,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ns3" TYPE FILE FILES
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/tap-fd-net-device-helper.h"
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/emu-fd-net-device-helper.h"
-    "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/netmap-net-device-helper.h"
-    "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/model/netmap-net-device.h"
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/model/fd-net-device.h"
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/src/fd-net-device/helper/fd-net-device-helper.h"
     "/home/george/workspace/ns-allinone-3.37/ns-3.37/build/include/ns3/fd-net-device-module.h"
