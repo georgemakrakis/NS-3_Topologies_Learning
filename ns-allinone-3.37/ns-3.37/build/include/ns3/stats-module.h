@@ -3,8 +3,6 @@
 #endif 
 #ifndef NS3_MODULE_STATS
     // Module headers: 
-    #include <ns3/sqlite-data-output.h>
-    #include <ns3/sqlite-output.h>
     #include <ns3/file-helper.h>
     #include <ns3/gnuplot-helper.h>
     #include <ns3/average.h>

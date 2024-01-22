@@ -253,6 +253,15 @@ set_target_properties(ns3::tap-device-creator PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS ns3::tap-device-creator )
 list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::tap-device-creator "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-tap-device-creator-default" )
 
+# Import target "ns3::netmap-device-creator" for configuration "default"
+set_property(TARGET ns3::netmap-device-creator APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
+set_target_properties(ns3::netmap-device-creator PROPERTIES
+  IMPORTED_LOCATION_DEFAULT "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS ns3::netmap-device-creator )
+list(APPEND _IMPORT_CHECK_FILES_FOR_ns3::netmap-device-creator "${_IMPORT_PREFIX}/libexec/ns3/ns3.37-netmap-device-creator-default" )
+
 # Import target "ns3::libfd-net-device" for configuration "default"
 set_property(TARGET ns3::libfd-net-device APPEND PROPERTY IMPORTED_CONFIGURATIONS DEFAULT)
 set_target_properties(ns3::libfd-net-device PROPERTIES

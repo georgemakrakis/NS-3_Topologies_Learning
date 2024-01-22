@@ -8,6 +8,6 @@ URL:
 Version: 3.37
 Requires:  ns3-internet ns3-mobility ns3-wimax ns3-wifi ns3-csma ns3-lte ns3-uan ns3-energy ns3-lr-wpan ns3-wave ns3-point-to-point-layout
 Requires.private: 
-Cflags: -I"${includedir}" -I/usr/include -I/usr; -I/usr/include/libxml2 -I/usr/include/python3.10
-Libs: -L"${libdir}" -lns3.37-netanim-default  -lns3.37-internet-default -lns3.37-mobility-default -lns3.37-wimax-default -lns3.37-wifi-default -lns3.37-csma-default -lns3.37-lte-default -lns3.37-uan-default -lns3.37-energy-default -lns3.37-lr-wpan-default -lns3.37-wave-default -lns3.37-point-to-point-layout-default
+Cflags: -I"${includedir}"  -I/usr/include/python3.8
+Libs: -L"${libdir}" -lns3.37-netanim-default  -lns3.37-internet-default -lns3.37-mobility-default -lns3.37-wimax-default -lns3.37-wifi-default -lns3.37-csma-default -lns3.37-lte-default -lns3.37-uan-default -lns3.37-energy-default -lns3.37-lr-wpan-default -lns3.37-wave-default -lns3.37-point-to-point-layout-default -l-lpthread
 Libs.private: -L"${libdir}" 

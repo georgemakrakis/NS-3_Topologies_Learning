@@ -5,6 +5,8 @@
     // Module headers: 
     #include <ns3/tap-fd-net-device-helper.h>
     #include <ns3/emu-fd-net-device-helper.h>
+    #include <ns3/netmap-net-device-helper.h>
+    #include <ns3/netmap-net-device.h>
     #include <ns3/fd-net-device.h>
     #include <ns3/fd-net-device-helper.h>
 #endif 
